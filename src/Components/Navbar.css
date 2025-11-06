@@ -1,0 +1,71 @@
+/* 🌤️ Light Theme Navbar */
+.custom-navbar {
+  background: #40EODO; /* White background */
+  padding: 0.7rem 1.2rem;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+/* 🌟 Brand Logo */
+.brand-logo {
+  height: 50px;
+  object-fit: cover;
+  border-radius: 50%;
+  transition: transform 0.3s ease;
+}
+.brand-logo:hover {
+  transform: scale(1.05);
+}
+
+/* 🖤 Navbar Text */
+.navbar-nav .nav-link {
+  color: #000000 !important; /* Black text */
+  font-weight: 500;
+  letter-spacing: 0.5px;
+  margin: 0 8px;
+  transition: all 0.3s ease;
+}
+
+/* 🟡 Active Link */
+.active-link {
+  color: #007bff !important; /* Blue highlight */
+  font-weight: 600;
+  border-bottom: 2px solid #007bff;
+}
+.contact-link {
+  color: black !important;
+  font-weight: 600;
+}
+
+
+.test-link {
+  color: black !important;
+  font-weight: 600;
+}
+
+
+/* ✨ Hover Effect */
+.navbar-nav .nav-link:hover {
+  color: #007bff !important;
+  transform: scale(1.05);
+}
+
+/* 🧭 Dropdown Menu */
+.dropdown-menu {
+  background-color: #ffffff !important;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+}
+.dropdown-item {
+  color: #000000 !important;
+  transition: all 0.3s ease;
+}
+.dropdown-item:hover {
+  background-color: #f5f5f5 !important;
+  color: #007bff !important;
+}
+
+/* 📱 Mobile Responsive */
+@media (max-width: 991px) {
+  .navbar-nav .nav-link {
+    padding: 10px 0;
+  }
+}

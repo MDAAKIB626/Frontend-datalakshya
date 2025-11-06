@@ -1,0 +1,475 @@
+
+
+
+
+body{
+    background:  #d9d9d9;;
+}
+/* 🌟 General */
+.home {
+  font-family: "Poppins", sans-serif;
+  color: #222;
+  overflow-x: hidden;
+}
+
+h1, h2, h3, h4, h5 {
+  font-weight: 600;
+}
+h6{
+  color:#d9d9d;
+}
+
+p {
+  color: #555;
+  line-height: 1.6;
+}
+
+.btn {
+  display: inline-block;
+  padding: 10px 25px;
+  background: #007bff;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 30px;
+  transition: 0.3s;
+  font-weight: 500;
+}
+
+.btn:hover {
+  background: #0056b3;
+  transform: translateY(-3px);
+}
+
+/* 🏠 Hero Section */
+.hero {
+  position: relative;
+}
+.overlay {
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+}
+.hero-content {
+  position: relative;
+  z-index: 2;
+}
+.hero h1 {
+  font-size: 3rem;
+  font-weight: 700;
+  margin-bottom: 15px;
+}
+.hero p {
+  font-size: 1.2rem;
+  margin-bottom: 25px;
+}
+
+/* courses */
+/* 🧠 Course Images + Buttons */
+.course-img {
+  width: 100%;
+  height: 150px;
+  object-fit: contain;
+  border-radius: 12px;
+  margin-bottom: 15px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.course-img:hover {
+  transform: scale(1.05);
+  box-shadow: 0 6px 12px rgba(0,0,0,0.2);
+}
+
+.btn-course {
+  display: inline-block;
+  background-color: #28a745;
+  color: white;
+  padding: 8px 18px;
+  border-radius: 25px;
+  text-decoration: none;
+  font-weight: 500;
+  transition: background-color 0.3s, transform 0.3s;
+}
+
+.btn-course:hover {
+  background-color: #1e7e34;
+  transform: translateY(-3px);
+}
+
+/* 📘 About Section */
+
+
+   .about {
+  position: relative;
+  top: -120px;
+}
+
+
+/* Container Padding & Hero */
+.container {
+  padding-top: 80px;
+  padding-bottom: 80px;
+  font-family: 'Poppins', sans-serif;
+}
+
+/* Hero Section */
+.text-center h1 {
+  font-size: 3rem;
+  font-weight: 700;
+  color: #007bff;
+  background: linear-gradient(90deg, #007bff, #00c851);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.text-center p.lead {
+  font-size: 1.2rem;
+  color: #6c757d;
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+/* Section Headings */
+h2 {
+  font-size: 2.2rem;
+  margin-bottom: 20px;
+  position: relative;
+}
+
+h2::after {
+  content: '';
+  display: block;
+  width: 60px;
+  height: 4px;
+  background: #28a745;
+  margin-top: 8px;
+  border-radius: 2px;
+}
+
+h2.text-success {
+  color: #28a745 !important;
+}
+
+h2.text-primary {
+  color: #007bff !important;
+}
+
+/* Mission & Vision Images */
+/* Vision Section Styling */
+.vision-box {
+  width: 100%;
+  padding: 40px 0;
+}
+
+.vision-title {
+  text-align: center;
+  font-weight: 700;
+  font-size: 28px;
+  color: #0d6efd; /* blue */
+  margin-bottom: 15px;
+}
+
+.vision-text {
+  text-align: left;
+  font-size: 16px;
+  line-height: 1.7;
+  color: #333;
+}
+
+.vision-img {
+  width: 100%;
+  max-width: 450px;
+  border-radius: 15px;
+  box-shadow: 0 5px 18px rgba(0,0,0,0.15);
+}
+
+/* Mobile view */
+@media (max-width: 768px) {
+  .vision-title {
+    text-align: center;
+  }
+  .vision-text {
+    text-align: justify;
+  }
+  .vision-img {
+    margin-bottom: 20px;
+  }
+}
+
+/* Team Section */
+.text-center h5 {
+  margin-top: 12px;
+  font-size: 1.3rem;
+  font-weight: 600;
+}
+
+.text-center p.text-secondary {
+  font-size: 0.95rem;
+  color: #6c757d;
+}
+
+.rounded-circle {
+  width: 160px;
+  height: 160px;
+  object-fit: cover;
+  border: 5px solid #28a745;
+  transition: transform 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.rounded-circle:hover {
+  transform: scale(1.15);
+  border-color: #007bff;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.25);
+}
+
+/* Call to Action */
+.btn-success {
+  background: linear-gradient(135deg, #28a745, #20c997);
+  border: none;
+  font-size: 1.25rem;
+  padding: 14px 35px;
+  font-weight: 600;
+  border-radius: 50px;
+  transition: all 0.3s ease;
+}
+
+.btn-success:hover {
+  background: linear-gradient(135deg, #20c997, #28a745);
+  transform: translateY(-4px) scale(1.05);
+  box-shadow: 0 10px 25px rgba(0,0,0,0.25);
+}
+
+/* Section Backgrounds */
+.row:nth-child(odd) {
+  background: rgba(0,0,0,0.03);
+  padding: 40px 0;
+  border-radius: 12px;
+  margin-bottom: 40px;
+}
+
+
+
+/* Responsive */
+@media (max-width: 768px) {
+  .img-fluid {
+    max-height: 300px;
+  }
+
+  .rounded-circle {
+    width: 120px;
+    height: 120px;
+  }
+
+  .text-center h1 {
+    font-size: 2.2rem;
+  }
+
+  h2 {
+    font-size: 1.8rem;
+  }
+
+  .btn-success {
+    font-size: 1.1rem;
+    padding: 12px 28px;
+  }
+}
+
+/* 🎓 Auto-Scrolling Courses */
+.courses {
+  padding: 40px 20px;
+  text-align: center;
+}
+.courses h2 {
+  font-size: 2.3rem;
+  color: #007bff;
+  margin-bottom: 40px;
+  text-transform: uppercase;
+}
+
+.course-slider {
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+}
+.course-track {
+  display: flex;
+  width: calc(280px * 16);
+  animation: scrollCourses 25s linear infinite;
+}
+.course-card {
+  background: #fff;
+  border-radius: 15px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+  width: 280px;
+  padding: 25px;
+  margin: 0 15px;
+  text-align: center;
+  flex-shrink: 0;
+  transition: transform 0.3s ease;
+}
+.course-card:hover {
+  transform: translateY(-8px);
+}
+.course-card h3 {
+  color: #007bff;
+  margin-bottom: 10px;
+}
+@keyframes scrollCourses {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
+/* 💬 Reviews */
+.reviews {
+  padding: 100px 20px;
+  background: #f8f9fa;
+  text-align: center;
+}
+.review-slider { width: 100%; overflow: hidden; position: relative; }
+.review-track {
+  display: flex;
+  width: calc(300px * 10);
+  animation: scrollReviews 25s linear infinite;
+}
+.review-card {
+  background: #fff;
+  border-radius: 15px;
+  width: 300px;
+  padding: 30px 20px;
+  margin: 0 15px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+  flex-shrink: 0;
+}
+.review-card img {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 3px solid #007bff;
+  margin-bottom: 15px;
+}
+@keyframes scrollReviews {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+/*whatapps */
+/* WhatsApp section */
+.whatsapp-section {
+  padding: 60px 20px;
+  background: #e9fff3; /* soft whatsapp vibe */
+  border-radius: 12px;
+  margin: 40px 0;
+}
+.whatsapp-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 30px;
+  flex-wrap: wrap;
+}
+.whatsapp-left { flex: 1 1 420px; }
+.whatsapp-right { flex: 0 1 280px; color:#444; }
+
+.whatsapp-section h2 {
+  color: #128C7E; /* WhatsApp green */
+  margin-bottom: 8px;
+}
+.whatsapp-section p {
+  font-size: 16px;
+  margin-bottom: 14px;
+  color: #333;
+}
+
+/* Button with icon */
+.whatsapp-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  background: #25D366;
+  color: #fff;
+  padding: 12px 18px;
+  border-radius: 50px;
+  font-weight: 700;
+  text-decoration: none;
+  box-shadow: 0 6px 18px rgba(37,211,102,0.18);
+  transition: transform .15s ease, box-shadow .15s ease;
+}
+.whatsapp-btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 30px rgba(37,211,102,0.22);
+}
+.whatsapp-icon { width: 22px; height: 22px; }
+
+/* features list */
+.wa-features { list-style: none; padding:0; margin:0; }
+.wa-features li { margin: 8px 0; }
+
+/* Floating button */
+.whatsapp-float {
+  position: fixed;
+  right: 20px;
+  bottom: 20px;
+  background: #25D366;
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 9999;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.2);
+  text-decoration: none;
+}
+.whatsapp-float img { width: 28px; height: 28px; }
+
+
+/* Responsive */
+@media (max-width: 768px) {
+  .whatsapp-content { flex-direction: column; text-align: center; }
+  .whatsapp-right { order: 3; }
+  .whatsapp-left { order: 2; }
+}
+
+
+
+/* 📞 Contact */
+.contact {
+  padding: 80px 20px;
+  text-align: center;
+  background: #f8f9fa;
+}
+.contact h2 {
+  font-size: 2.3rem;
+  color: #007bff;
+  margin-bottom: 40px;
+}
+.contact-form {
+  max-width: 600px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+.contact-form input, .contact-form textarea {
+  width: 100%;
+  padding: 12px 15px;
+  border-radius: 10px;
+  border: 1px solid #ccc;
+  font-size: 1rem;
+}
+.contact-form button {
+  background: #007bff;
+  color: white;
+  border: none;
+  border-radius: 30px;
+  padding: 12px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+.contact-form button:hover { background: #0056b3; }
+
+/* 📱 Responsive */
+@media (max-width: 768px) {
+  .hero h1 { font-size: 2rem; }
+  .course-track { animation: scrollCourses 18s linear infinite; }
+  .review-track { animation: scrollReviews 18s linear infinite; }
+}

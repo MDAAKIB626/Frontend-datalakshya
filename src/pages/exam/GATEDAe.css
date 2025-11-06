@@ -1,0 +1,46 @@
+.gate-da {
+  background-color: #f9f9fb;
+  border-radius: 10px;
+  max-width: 1100px;
+  margin: auto;
+  padding: 40px 30px;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+}
+
+.gate-da h1 {
+  color: #004aad;
+}
+
+.gate-da p, .gate-da li {
+  color: #333;
+  line-height: 1.7;
+  font-size: 1rem;
+}
+
+.gate-da h3 {
+  border-left: 5px solid #007bff;
+  padding-left: 10px;
+  margin-bottom: 15px;
+}
+
+.gate-da ul {
+  margin-left: 20px;
+}
+
+.gate-da a {
+  color: #007bff;
+  text-decoration: none;
+}
+
+.gate-da a:hover {
+  text-decoration: underline;
+}
+
+@media (max-width: 768px) {
+  .gate-da {
+    padding: 20px;
+  }
+  .gate-da h1 {
+    font-size: 1.6rem;
+  }
+}

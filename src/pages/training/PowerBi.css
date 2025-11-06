@@ -1,0 +1,38 @@
+
+
+.container {
+  max-width: 900px;
+}
+
+h1, h3, h4 {
+  font-family: "Poppins", sans-serif;
+}
+
+ul {
+  line-height: 1.8;
+}
+
+.lead {
+  font-size: 1.1rem;
+}
+
+.text-warning {
+  color:#198754 !important;
+}
+
+.text-secondary {
+  color: #6c757d !important;
+}
+
+.text-success {
+  color: #28a745 !important;
+}
+
+@media (max-width: 768px) {
+  .container {
+    padding: 1rem;
+  }
+  h1 {
+    font-size: 1.6rem;
+  }
+}

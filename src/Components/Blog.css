@@ -1,0 +1,47 @@
+/* Premium Card Box */
+.premium-card {
+  background: #ffffff;
+  border: 2px solid #d6d6d6;
+  border-radius: 15px;
+  padding: 25px;
+  box-shadow: 0px 4px 12px rgba(0,0,0,0.12);
+  transition: all 0.3s ease-in-out;
+}
+
+/* Hover Effect */
+.premium-card:hover {
+  box-shadow: 0px 8px 20px rgba(0,0,0,0.18);
+  border-color: #0d6efd;
+  transform: translateY(-4px);
+}
+
+/* Image Styling */
+.premium-img {
+  box-shadow: 0px 4px 12px rgba(0,0,0,0.18);
+  border-radius: 12px;
+  transition: transform 0.3s ease-in-out;
+}
+
+/* Image Hover Scale */
+.premium-img:hover {
+  transform: scale(1.03);
+}
+
+/* Button Styling */
+.premium-btn {
+  padding: 10px 25px;
+  font-weight: 600;
+  border-radius: 8px;
+  transition: 0.3s ease-in-out;
+}
+
+/* Button Hover */
+.premium-btn:hover {
+  background-color: #084298;
+  border-color: #084298;
+}
+
+/* Text improve spacing */
+p {
+  line-height: 1.7;
+}

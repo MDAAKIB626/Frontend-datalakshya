@@ -1,0 +1,47 @@
+.gatecs-container {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 40px 20px;
+  background: #f9f9f9;
+  border-radius: 10px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+.gatecs-title {
+  text-align: center;
+  font-size: 2rem;
+  color: #003366;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.gatecs-intro {
+  font-size: 1.1rem;
+  color: #444;
+  line-height: 1.6;
+  margin-bottom: 30px;
+}
+
+.gatecs-section {
+  margin-bottom: 30px;
+}
+
+.gatecs-section h2 {
+  color: #00509e;
+  font-size: 1.4rem;
+  margin-bottom: 10px;
+}
+
+.gatecs-section ul {
+  margin-left: 20px;
+  line-height: 1.7;
+}
+
+.gatecs-section a {
+  color: #007bff;
+  text-decoration: none;
+}
+
+.gatecs-section a:hover {
+  text-decoration: underline;
+}
