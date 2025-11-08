@@ -1,5 +1,12 @@
 import React from "react";
-import { FaFacebookF, FaTwitter, FaInstagram, FaLinkedinIn } from "react-icons/fa";
+import {
+  FaFacebookF,
+  FaTwitter,
+  FaInstagram,
+  FaLinkedinIn,
+  FaPhoneAlt,
+  FaEnvelope,
+} from "react-icons/fa"; // <-- added phone & email icons
 import "./Footer.css";
 
 const Footer = () => {
@@ -42,7 +49,14 @@ const Footer = () => {
         {/* Connect Section */}
         <div className="footer-section">
           <h1>Connect with us</h1>
-          <h1>+91 9559520191</h1>
+          <div className="contact-info">
+            <p>
+              <FaPhoneAlt className="icon" /> +91 9559520191
+            </p>
+            <p>
+              <FaEnvelope className="icon" /> info@datalakshya.com
+            </p>
+          </div>
           <div className="social-icons">
             <a
               href="https://facebook.com/"

@@ -66,6 +66,37 @@
   font-size: 14px;
 }
 
+.contact-info {
+  margin-top: 10px;
+}
+
+.contact-info p {
+  display: flex;
+  align-items: center;
+  font-size: 1rem;
+  margin: 5px 0;
+  color: #fff;
+}
+
+.contact-info .icon {
+  margin-right: 8px;
+  color: #00aced; /* light blue icon color */
+  font-size: 1.1rem;
+}
+/*conatct ifo */
+   @media (max-width: 768px) {
+  .contact-info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .contact-info p {
+    justify-content: center;
+    text-align: center;
+  }
+}
 /* Tablet view */
 @media (max-width: 1024px) {
   .footer-top {
