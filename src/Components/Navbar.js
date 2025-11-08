@@ -29,17 +29,24 @@ const Navbar = () => {
           <span className="navbar-toggler-icon"></span>
         </button>
 
-        {/* Links */}
+        {/* Navbar links */}
         <div className="collapse navbar-collapse" id="navbarSupportedContent">
           <ul className="navbar-nav ms-auto mb-2 mb-lg-0 align-items-lg-center">
+            {/* Home */}
             <li className="nav-item">
-              <Link className={`nav-link ${isActive("/") ? "active-link" : ""}`} to="/">Home</Link>
+              <Link className={`nav-link ${isActive("/") ? "active-link" : ""}`} to="/">
+                Home
+              </Link>
             </li>
+
+            {/* LakshyaAI */}
             <li className="nav-item">
-              <Link className={`nav-link ${isActive("/blog") ? "active-link" : ""}`} to="/blog">LakshyaAI</Link>
+              <Link className={`nav-link ${isActive("/blog") ? "active-link" : ""}`} to="/blog">
+                LakshyaAI
+              </Link>
             </li>
-              
-            {/*  Exam Dropdown */}
+
+            {/* Exams Dropdown */}
             <li className="nav-item dropdown">
               <Link
                 className="nav-link dropdown-toggle"
@@ -49,16 +56,28 @@ const Navbar = () => {
                 data-bs-toggle="dropdown"
                 aria-expanded="false"
               >
-                 Exams
+                Exams
               </Link>
               <ul className="dropdown-menu fade-menu" aria-labelledby="examDropdown">
-                <li><Link className="dropdown-item" to="/exam/gateda">GATE DA (Data Science & AI)</Link></li>
-                <li><Link className="dropdown-item" to="/exam/gatecs">GATE CS(Computer Science & IT)</Link></li>
-                <li><Link className="dropdown-item" to="/exam/ugenet">UGCNET CS(Computer Science)</Link></li>
+                <li>
+                  <Link className="dropdown-item" to="/exam/gateda">
+                    GATE DA (Data Science & AI)
+                  </Link>
+                </li>
+                <li>
+                  <Link className="dropdown-item" to="/exam/gatecs">
+                    GATE CS (Computer Science & IT)
+                  </Link>
+                </li>
+                <li>
+                  <Link className="dropdown-item" to="/exam/ugenet">
+                    UGCNET CS (Computer Science)
+                  </Link>
+                </li>
               </ul>
             </li>
 
-            {/* Training Dropdown */}
+            {/* Courses Dropdown */}
             <li className="nav-item dropdown">
               <Link
                 className="nav-link dropdown-toggle"
@@ -71,20 +90,54 @@ const Navbar = () => {
                 Courses
               </Link>
               <ul className="dropdown-menu fade-menu" aria-labelledby="trainingDropdown">
-                <li><Link className="dropdown-item" to="/training/ai">Artificial Intelligence</Link></li>
-                <li><Link className="dropdown-item" to="/training/ml">Machine Learning</Link></li>
-                <li><Link className="dropdown-item" to="/training/dataanalytics">Data Analytics</Link></li>
-                <li><Link className="dropdown-item" to="/training/datascience">Data Science</Link></li>
-                <li><Link className="dropdown-item" to="/training/powerbi">Power BI</Link></li>
+                <li>
+                  <Link className="dropdown-item" to="/training/ai">
+                    Artificial Intelligence
+                  </Link>
+                </li>
+                <li>
+                  <Link className="dropdown-item" to="/training/ml">
+                    Machine Learning
+                  </Link>
+                </li>
+                <li>
+                  <Link className="dropdown-item" to="/training/dataanalytics">
+                    Data Analytics
+                  </Link>
+                </li>
+                <li>
+                  <Link className="dropdown-item" to="/training/datascience">
+                    Data Science
+                  </Link>
+                </li>
+                <li>
+                  <Link className="dropdown-item" to="/training/powerbi">
+                    Power BI
+                  </Link>
+                </li>
               </ul>
+            </li>
+
+            {/* ✅ Now both of these are inside the nav list */}
+            <li className="nav-item">
+              <Link
+                className={`nav-link ${isActive("/test") ? "active-link" : ""}`}
+                to="/test"
+              >
+                Lakshya TestUp
+              </Link>
+            </li>
+
+            <li className="nav-item">
+              <Link
+                className={`nav-link ${isActive("/contact") ? "active-link" : ""}`}
+                to="/contact"
+              >
+                Contact Us
+              </Link>
             </li>
           </ul>
         </div>
-         <Link className={`nav-link test-link ${isActive("/test") ? "active-link" : ""}`} to="/test">Lakshya TestUp</Link>
-
-       <Link className={`nav-link contact-link ${isActive("/contact") ? "active-link" : ""}`} to="/contact">Contact Us</Link>
-
-
       </div>
     </nav>
   );

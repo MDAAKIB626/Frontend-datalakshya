@@ -56,51 +56,90 @@ const Home = () => {
         </div>
       </section>
       {/* 🎓 Auto-Scrolling Courses Section */}
-      <section className="courses" id="courses">
-        <h2>Our Popular Courses</h2>
-        <div className="course-slider">
-          <div className="course-track">
-            <div className="course-card">
-              <img src={aiimages} alt="AI" className="course-img" />
-              <h3>Artificial Intelligence</h3>
-              <p>Learn intelligent automation and machine behavior.</p>
-              <a href="/training/ai" className="btn-course">View Course</a>
-            </div>
-            <div className="course-card">
-               <img src={mlimages} alt="ml" className="course-img" />
-              <h3>Machine Learning</h3>
-              <p>Build predictive models using ML algorithms.</p>
-              <a href="/training/ml" className="btn-course">View Course</a>
-            </div>
-            <div className="course-card">
-               <img src={datascienceimages} alt="Datascience" className="course-img" />
-              <h3>Data Science</h3>
-              <p>Explore data visualization and storytelling techniques.</p>
-               <a href="/training/datascience" className="btn-course">View Course</a>
-            </div>
-            <div className="course-card">
-               <img src={ analyticsimages} alt="Dataanalyst" className="course-img" />
-              <h3>Data Analytics</h3>
-              <p>Transform raw data into meaningful insights.</p>
-               <a href="/training/dataanalytics" className="btn-course">View Course</a>
-            </div>
-           
-            <div className="course-card">
-               <img src={  deeplearningimages} alt="Dataanalyst" className="course-img" />
-              <h3>Deep Learning</h3>
-              <p>Work with Neural Networks & CNNs.</p>
-                <a href="/training/deeplearning" className="btn-course">View Course</a>
-            </div>
-           
-            <div className="course-card">
-              <img src={powerbiimages } alt="powerbi" className="course-img" />
-              <h3>Power BI</h3>
-              <p>Learn dashboard creation and analytics visualization.</p>
-               <a href="/training/powerbi" className="btn-course">View Course</a>
-            </div>
-          </div>
-        </div>
-      </section>
+     
+{/* 🎓 Auto-Scrolling Courses Section */}
+<section className="courses" id="courses">
+  <h2>Our Popular Courses</h2>
+  <div className="course-slider">
+    <div className="course-track">
+      {/* 🔹 6 Courses — First Set */}
+      <div className="course-card">
+        <img src={aiimages} alt="AI" className="course-img" />
+        <h3>Artificial Intelligence</h3>
+        <p>Learn intelligent automation and machine behavior.</p>
+        <a href="/training/ai" className="btn-course">View Course</a>
+      </div>
+      <div className="course-card">
+        <img src={mlimages} alt="ml" className="course-img" />
+        <h3>Machine Learning</h3>
+        <p>Build predictive models using ML algorithms.</p>
+        <a href="/training/ml" className="btn-course">View Course</a>
+      </div>
+      <div className="course-card">
+        <img src={datascienceimages} alt="Datascience" className="course-img" />
+        <h3>Data Science</h3>
+        <p>Explore data visualization and storytelling techniques.</p>
+        <a href="/training/datascience" className="btn-course">View Course</a>
+      </div>
+      <div className="course-card">
+        <img src={analyticsimages} alt="Dataanalyst" className="course-img" />
+        <h3>Data Analytics</h3>
+        <p>Transform raw data into meaningful insights.</p>
+        <a href="/training/dataanalytics" className="btn-course">View Course</a>
+      </div>
+      <div className="course-card">
+        <img src={deeplearningimages} alt="Deep Learning" className="course-img" />
+        <h3>Deep Learning</h3>
+        <p>Work with Neural Networks & CNNs.</p>
+        <a href="/training/deeplearning" className="btn-course">View Course</a>
+      </div>
+      <div className="course-card">
+        <img src={powerbiimages} alt="powerbi" className="course-img" />
+        <h3>Power BI</h3>
+        <p>Learn dashboard creation and analytics visualization.</p>
+        <a href="/training/powerbi" className="btn-course">View Course</a>
+      </div>
+
+      {/* 🔹 Duplicate 6 Courses — for circular infinite scroll */}
+      <div className="course-card">
+        <img src={aiimages} alt="AI" className="course-img" />
+        <h3>Artificial Intelligence</h3>
+        <p>Learn intelligent automation and machine behavior.</p>
+        <a href="/training/ai" className="btn-course">View Course</a>
+      </div>
+      <div className="course-card">
+        <img src={mlimages} alt="ml" className="course-img" />
+        <h3>Machine Learning</h3>
+        <p>Build predictive models using ML algorithms.</p>
+        <a href="/training/ml" className="btn-course">View Course</a>
+      </div>
+      <div className="course-card">
+        <img src={datascienceimages} alt="Datascience" className="course-img" />
+        <h3>Data Science</h3>
+        <p>Explore data visualization and storytelling techniques.</p>
+        <a href="/training/datascience" className="btn-course">View Course</a>
+      </div>
+      <div className="course-card">
+        <img src={analyticsimages} alt="Dataanalyst" className="course-img" />
+        <h3>Data Analytics</h3>
+        <p>Transform raw data into meaningful insights.</p>
+        <a href="/training/dataanalytics" className="btn-course">View Course</a>
+      </div>
+      <div className="course-card">
+        <img src={deeplearningimages} alt="Deep Learning" className="course-img" />
+        <h3>Deep Learning</h3>
+        <p>Work with Neural Networks & CNNs.</p>
+        <a href="/training/deeplearning" className="btn-course">View Course</a>
+      </div>
+      <div className="course-card">
+        <img src={powerbiimages} alt="powerbi" className="course-img" />
+        <h3>Power BI</h3>
+        <p>Learn dashboard creation and analytics visualization.</p>
+        <a href="/training/powerbi" className="btn-course">View Course</a>
+      </div>
+    </div>
+  </div>
+</section>
 
       {/* 🧠 About Section */}
       <section className="about" id="about">

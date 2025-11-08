@@ -1,5 +1,4 @@
 import React from "react";
-import { Link } from "react-router-dom";
 import { FaFacebookF, FaTwitter, FaInstagram, FaLinkedinIn } from "react-icons/fa";
 import "./Footer.css";
 
@@ -22,7 +21,7 @@ const Footer = () => {
         <div className="footer-section">
           <h1>Courses</h1>
           <div>
-            <h3>Artificial Intelligent</h3>
+            <h3>Artificial Intelligence</h3>
             <h3>Machine Learning</h3>
             <h3>Data Science</h3>
             <h3>Data Analytics</h3>
@@ -43,11 +42,36 @@ const Footer = () => {
         {/* Connect Section */}
         <div className="footer-section">
           <h1>Connect with us</h1>
+          <h1>+91 9559520191</h1>
           <div className="social-icons">
-            <Link to="#"><FaFacebookF /></Link>
-            <Link to="#"><FaTwitter /></Link>
-            <Link to="#"><FaInstagram /></Link>
-            <Link to="#"><FaLinkedinIn /></Link>
+            <a
+              href="https://facebook.com/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <FaFacebookF />
+            </a>
+            <a
+              href="https://twitter.com/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <FaTwitter />
+            </a>
+            <a
+              href="https://instagram.com/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <FaInstagram />
+            </a>
+            <a
+              href="https://www.linkedin.com/company/data-lakshya/?viewAsMember=true/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <FaLinkedinIn />
+            </a>
           </div>
         </div>
       </div>

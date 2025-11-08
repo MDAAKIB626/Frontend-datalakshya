@@ -274,10 +274,12 @@ h2.text-primary {
 }
 
 /* 🎓 Auto-Scrolling Courses */
+/* 🎓 Auto-Scrolling Courses */
 .courses {
   padding: 40px 20px;
   text-align: center;
 }
+
 .courses h2 {
   font-size: 2.3rem;
   color: #007bff;
@@ -290,11 +292,13 @@ h2.text-primary {
   overflow: hidden;
   position: relative;
 }
+
 .course-track {
   display: flex;
-  width: calc(280px * 16);
+  width: max-content;
   animation: scrollCourses 25s linear infinite;
 }
+
 .course-card {
   background: #fff;
   border-radius: 15px;
@@ -306,17 +310,84 @@ h2.text-primary {
   flex-shrink: 0;
   transition: transform 0.3s ease;
 }
+
 .course-card:hover {
   transform: translateY(-8px);
 }
+
 .course-card h3 {
   color: #007bff;
   margin-bottom: 10px;
 }
-@keyframes scrollCourses {
-  0% { transform: translateX(0); }
-  100% { transform: translateX(-50%); }
+
+.course-img {
+  width: 100%;
+  height: 180px;
+  object-fit: contain;
+  border-radius: 10px;
+  margin-bottom: 10px;
 }
+
+.course-slider:hover .course-track {
+  animation-play-state: paused;
+}
+
+/* 🔁 Seamless Circular Animation */
+@keyframes scrollCourses {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+/* 📱 Responsive Design */
+@media (max-width: 992px) {
+  .course-card {
+    width: 240px;
+    margin: 0 10px;
+  }
+
+  .course-track {
+    animation: scrollCourses 15s linear infinite;
+  }
+}
+
+@media (max-width: 768px) {
+  .courses h2 {
+    font-size: 1.8rem;
+  }
+
+  .course-card {
+    width: 200px;
+    margin: 0 8px;
+  }
+
+  .course-track {
+    animation: scrollCourses 35s linear infinite;
+  }
+}
+
+@media (max-width: 480px) {
+  .courses h2 {
+    font-size: 1.5rem;
+  }
+
+  .course-card {
+    width: 180px;
+    margin: 0 6px;
+  }
+
+  .course-img {
+    height: 140px;
+  }
+
+  .course-track {
+    animation: scrollCourses 40s linear infinite;
+  }
+}
+
 
 /* 💬 Reviews */
 .reviews {
