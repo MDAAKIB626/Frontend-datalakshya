@@ -12,7 +12,7 @@ const Test = () => {
 
         {/* Google Form Button */}
         <a
-          href="https://docs.google.com/forms/d/e/1FAIpQLSfd6uLanybMuUTs3E2WlPvrGRhM-QPzObR07qS9xw1TI32lmA/viewform?usp=header"
+          href="https://docs.google.com/forms/d/e/1FAIpQLSfsvPnX_-fkZHdm5Ats9pwc5yI0jKEAguMlobmEJ_HpvZuFAQ/viewform?usp=publish-editor"
           target="_blank"
           rel="noopener noreferrer"
           className="btn btn-primary w-100 py-2 fw-bold"
