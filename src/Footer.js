@@ -92,7 +92,13 @@ const Footer = () => {
 
       {/* Footer Bottom */}
       <div className="footer-bottom">
-        <p>Copyright © 2025. All Rights Reserved ❤️ HandCrafted by Aakib</p>
+        <p>Copyright © 2025. All Rights Reserved ❤️ HandCrafted by    <a
+              href="https://in.linkedin.com/in/md-aakib-hussain-8a4890301"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+           Aakib
+            </a></p>
       </div>
     </footer>
   );

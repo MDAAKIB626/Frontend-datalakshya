@@ -375,12 +375,13 @@ h2.text-primary {
   }
 
   .course-card {
-    width: 180px;
+    width: 300px;
     margin: 0 6px;
   }
 
   .course-img {
     height: 100px;
+  
   }
 
   .course-track {
