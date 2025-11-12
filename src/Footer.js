@@ -92,7 +92,7 @@ const Footer = () => {
 
       {/* Footer Bottom */}
       <div className="footer-bottom">
-        <p>© 2025 My Website. All rights reserved.</p>
+        <p>Copyright © 2025. All Rights Reserved ❤️ HandCrafted by Aakib</p>
       </div>
     </footer>
   );
