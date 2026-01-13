@@ -22,6 +22,38 @@ p {
   line-height: 1.6;
 }
 
+
+/* ================= HERO TITLE (DATA LAKSHYA COLOR) ================= */
+
+.hero-title {
+  font-size: 3rem;
+  font-weight: 800;
+  color: beige;
+}
+
+/* DATA = Blue */
+.dl-data {
+  color: #1e40af;
+}
+
+/* LAKSHYA = Orange */
+.dl-lakshya {
+  color: #ff6b00;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .hero-title {
+    font-size: 2.2rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero-title {
+    font-size: 1.9rem;
+  }
+}
+
 /* ==================================================
    COMMON BUTTONS
 ================================================== */

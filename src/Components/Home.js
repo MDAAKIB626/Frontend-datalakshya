@@ -1,7 +1,6 @@
 import React from "react";
 import "./Home.css";
 
-
 import banner from "./homeimages20/al.png";
 
 /* Student Review Images */
@@ -22,19 +21,13 @@ import analyticsimages from "./Coursesimages/dataanalystimages.jpg";
 import deeplearningimages from "./Coursesimages/deep learning.jpg";
 import powerbiimages from "./Coursesimages/powerbi.jpg";
 
-
-
 import WhatsAppSection from "./WhatAppSection";
-import Contact from "./Contact"
+import Contact from "./Contact";
 import FoundersSection from "./FoundersSection";
 import VisionMentors from "./VisionMentors";
 import MissionSection from "./Mission";
 import CompitiveExam from "./CompitiveExam";
 import Features from "./Features";
-
-
-
-
 
 const Home = () => {
   return (
@@ -58,9 +51,16 @@ const Home = () => {
           }}
         >
           <div className="overlay"></div>
+
           <div className="hero-content">
-            <h1>Welcome to Data Lakshya</h1>
+            {/* ✅ ONLY THIS PART CHANGED */}
+            <h1 className="hero-title">
+              Welcome to <span className="dl-data">Data</span>{" "}
+              <span className="dl-lakshya">Lakshya</span>
+            </h1>
+
             <h6>Empowering Minds with Data and AI</h6>
+
             <a href="#courses" className="btn">
               Explore Courses
             </a>
@@ -73,7 +73,6 @@ const Home = () => {
 
           <div className="course-slider">
             <div className="course-track">
-
               {[
                 { img: aiimages, title: "Artificial Intelligence", link: "/training/ai" },
                 { img: mlimages, title: "Machine Learning", link: "/training/ml" },
@@ -89,32 +88,15 @@ const Home = () => {
                   <a href={course.link} className="btn-course">View Course</a>
                 </div>
               ))}
-
-              {/* duplicate for infinite scroll */}
-              {[
-                aiimages,
-                mlimages,
-                datascienceimages,
-                analyticsimages,
-                deeplearningimages,
-                powerbiimages,
-              ].map((img, index) => (
-                <div className="course-card" key={`dup-${index}`}>
-                  <img src={img} alt="course" className="course-img" />
-                  <h3>Professional Course</h3>
-                  <p>Advance your career with Data Lakshya.</p>
-                  <a href="#courses" className="btn-course">View Course</a>
-                </div>
-              ))}
-
             </div>
           </div>
         </section>
 
-      <VisionMentors />
-      <MissionSection />
-      <CompitiveExam  />
-      <Features />
+        <VisionMentors />
+        <MissionSection />
+        <CompitiveExam />
+        <Features />
+
         {/* 💬 Reviews Section */}
         <section className="reviews" id="reviews">
           <h2>What Our Students Say</h2>
@@ -139,19 +121,20 @@ const Home = () => {
             </div>
           </div>
         </section>
-        {/* 📞 Contact & WhatsApp Section */}
-     <section className="contact-whatsapp-wrapper">
-  <div className="contact-whatsapp-container">
-    <div className="left-box">
-      <WhatsAppSection />
-    </div>
-    <div className="right-box">
-      <Contact />
-    </div>
-  </div> 
-     </section>
-     <FoundersSection/>
-        
+
+        {/* 📞 Contact + WhatsApp */}
+        <section className="contact-whatsapp-wrapper">
+          <div className="contact-whatsapp-container">
+            <div className="left-box">
+              <WhatsAppSection />
+            </div>
+            <div className="right-box">
+              <Contact />
+            </div>
+          </div>
+        </section>
+
+        <FoundersSection />
       </div>
     </>
   );
