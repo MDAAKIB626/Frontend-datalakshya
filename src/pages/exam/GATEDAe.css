@@ -1,34 +1,83 @@
-.gate-da {
-  background-color: #f9f9fb;
-  border-radius: 10px;
-  max-width: 1100px;
-  margin: auto;
-  padding: 40px 30px;
-  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+/* ================= GLOBAL RESET ================= */
+html,
+body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  overflow-x: hidden;
+  background-color: #e5e5e5;
+  font-family: "Inter", "Segoe UI", Roboto, sans-serif;
 }
 
+/* ================= BOOTSTRAP CONTAINER OVERRIDE ================= */
+/* IMPORTANT: removes left-right space caused by .container */
+.gate-da.container {
+  max-width: 100% !important;
+  width: 100%;
+  padding-left: 80px !important;
+  padding-right: 80px !important;
+  background: #ffffff;
+}
+
+/* ================= PAGE TITLE ================= */
 .gate-da h1 {
-  color: #004aad;
+  font-size: 2.6rem;
+  font-weight: 700;
+  color: #0d6efd;
 }
 
-.gate-da p, .gate-da li {
-  color: #333;
-  line-height: 1.7;
-  font-size: 1rem;
+/* ================= INTRO PARAGRAPH ================= */
+.gate-da .lead {
+  max-width: 1000px;
+  margin: 0 auto 60px;
+  font-size: 1.05rem;
+  color: #4b5563;
 }
 
+/* ================= SECTION BLOCK ================= */
+.gate-da > div {
+  max-width: 1000px;
+  margin: 0 auto 40px;
+  background: #f8fafc;
+  padding: 28px 32px;
+  border-radius: 14px;
+  border: 1px solid #e5e7eb;
+  box-shadow: 0 8px 22px rgba(0, 0, 0, 0.05);
+}
+
+/* ================= SECTION HEADINGS ================= */
 .gate-da h3 {
-  border-left: 5px solid #007bff;
-  padding-left: 10px;
-  margin-bottom: 15px;
+  font-size: 1.45rem;
+  margin-bottom: 14px;
+  color: #0f172a;
 }
 
+.gate-da h4,
+.gate-da h5 {
+  color: #0f172a;
+  font-weight: 600;
+}
+
+/* ================= LIST STYLING ================= */
 .gate-da ul {
-  margin-left: 20px;
+  padding-left: 20px;
 }
 
+.gate-da ul li {
+  margin-bottom: 8px;
+  font-size: 1rem;
+  color: #1f2937;
+}
+
+/* Nested list (Exam Pattern section) */
+.gate-da ul ul {
+  margin-top: 8px;
+}
+
+/* ================= LINKS ================= */
 .gate-da a {
-  color: #007bff;
+  color: #2563eb;
+  font-weight: 500;
   text-decoration: none;
 }
 
@@ -36,11 +85,40 @@
   text-decoration: underline;
 }
 
-@media (max-width: 768px) {
-  .gate-da {
-    padding: 20px;
+/* ================= CENTERED SECTIONS ================= */
+.gate-da .text-center {
+  background: #f8fafc;
+}
+
+/* ================= RESPONSIVE ================= */
+@media (max-width: 1024px) {
+  .gate-da.container {
+    padding-left: 40px !important;
+    padding-right: 40px !important;
   }
+}
+
+@media (max-width: 768px) {
+  .gate-da.container {
+    padding-left: 20px !important;
+    padding-right: 20px !important;
+  }
+
+  .gate-da h1 {
+    font-size: 2rem;
+  }
+
+  .gate-da .lead {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
   .gate-da h1 {
     font-size: 1.6rem;
+  }
+
+  .gate-da > div {
+    padding: 22px;
   }
 }

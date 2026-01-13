@@ -1,149 +1,178 @@
-/* Footer container */
+/* ================= FOOTER MAIN ================= */
 .footer {
-  background: #111;
+  position: relative;
+  background: linear-gradient(
+    135deg,
+    #0b0b0b,
+    #1a0f14,
+    #2b1015
+  );
   color: #fff;
-  display: flex;
-  flex-direction: column;
-  padding: 40px 20px 20px;
-  font-family: Arial, sans-serif;
-  width: 100%;
-  box-sizing: border-box;
+  padding: 70px 40px 25px;
+  font-family: "Poppins", Arial, sans-serif;
+  overflow: hidden;
 }
 
-/* Top section with multiple columns */
+/* Wave / glow effect */
+.footer::before {
+  content: "";
+  position: absolute;
+  top: -140px;
+  left: 0;
+  width: 100%;
+  height: 260px;
+  background: radial-gradient(
+    ellipse at center,
+    rgba(255, 90, 90, 0.35),
+    transparent 70%
+  );
+}
+
+/* ================= FOOTER TOP ================= */
 .footer-top {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
-  margin-bottom: 20px;
+  gap: 35px;
+  position: relative;
+  z-index: 2;
 }
 
-/* Each footer column */
+/* ================= FOOTER SECTIONS ================= */
 .footer-section {
-  flex: 1 1 220px;
-  margin: 10px;
+  flex: 1 1 230px;
 }
 
-/* Main headings (h1) */
+/* Section headings */
 .footer-section h1 {
-  font-size: 20px;
-  margin-bottom: 15px;
-  color: gold;
+  font-size: 18px;
+  font-weight: 600;
+  margin-bottom: 18px;
+  position: relative;
 }
 
-/* Subheadings / links (h3) */
+/* Underline like PW Skills */
+.footer-section h1::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -7px;
+  width: 45px;
+  height: 3px;
+  background: linear-gradient(to right, #ff6a00, #ff2d55);
+  border-radius: 3px;
+}
+
+/* Links */
 .footer-section h3 {
-  font-size: 16px;
-  margin: 5px 0;
-  font-weight: normal;
-  color: #fff;
+  font-size: 15px;
+  font-weight: 400;
+  margin: 9px 0;
+  color: #d6d6d6;
   cursor: pointer;
-  transition: color 0.3s;
+  transition: all 0.3s ease;
 }
 
 .footer-section h3:hover {
-  color: gold;
+  color: #ff6a00;
+  transform: translateX(6px);
 }
 
-/* Social icons */
-.social-icons a {
-  display: inline-block;
-  margin-right: 10px;
-  color: #fff;
-  font-size: 20px;
-  transition: color 0.3s;
-}
-
-.social-icons a:hover {
-  color: gold;
-}
-
-/* Bottom copyright */
-.footer-bottom {
-  text-align: center;
-  border-top: 1px solid #333;
-  padding-top: 15px;
-  font-size: 14px;
-}
-
-.contact-info {
-  margin-top: 10px;
-}
-
+/* ================= CONTACT INFO ================= */
 .contact-info p {
   display: flex;
   align-items: center;
-  font-size: 1rem;
-  margin: 5px 0;
-  color: #fff;
+  font-size: 14px;
+  margin: 10px 0;
+  color: #dcdcdc;
 }
 
 .contact-info .icon {
-  margin-right: 8px;
-  color: #00aced; /* light blue icon color */
-  font-size: 1.1rem;
+  margin-right: 10px;
+  color: #ff6a00;
+  font-size: 15px;
 }
-/*conatct ifo */
-   @media (max-width: 768px) {
-  .contact-info {
-    display: flex;
+
+/* ================= SOCIAL ICONS ================= */
+.social-icons {
+  margin-top: 15px;
+}
+
+.social-icons a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 38px;
+  height: 38px;
+  margin-right: 10px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.08);
+  color: #fff;
+  font-size: 16px;
+  transition: all 0.3s ease;
+}
+
+.social-icons a:hover {
+  background: linear-gradient(135deg, #ff6a00, #ff2d55);
+  transform: translateY(-4px);
+}
+
+/* ================= FOOTER BOTTOM ================= */
+.footer-bottom {
+  margin-top: 45px;
+  padding-top: 18px;
+  border-top: 1px solid rgba(255, 255, 255, 0.15);
+  text-align: center;
+  font-size: 13px;
+  color: #aaa;
+}
+
+.footer-bottom a {
+  color: #ff6a00;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.footer-bottom a:hover {
+  text-decoration: underline;
+}
+
+/* ================= RESPONSIVE ================= */
+
+/* Tablet */
+@media (max-width: 1024px) {
+  .footer-top {
+    justify-content: space-around;
+  }
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+  .footer {
+    padding: 60px 20px 20px;
+  }
+
+  .footer-top {
     flex-direction: column;
     align-items: center;
-    justify-content: center;
+    text-align: center;
+  }
+
+  .footer-section h1::after {
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  .footer-section h3:hover {
+    transform: none;
   }
 
   .contact-info p {
     justify-content: center;
-    text-align: center;
-  }
-}
-/* Tablet view */
-@media (max-width: 1024px) {
-  .footer-top {
-    flex-wrap: wrap;
-    justify-content: space-around;
-  }
-
-  .footer-section {
-    flex: 1 1 200px;
-    margin: 10px;
   }
 }
 
-/* Mobile view (<768px) - center all sections */
-@media (max-width: 768px) {
-  .footer-top {
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .footer-section {
-    width: 100%;
-    margin-bottom: 20px;
-    text-align: center;
-  }
-
-  .footer-section h1,
-  .footer-section h3 {
-    text-align: center;
-  }
-
-  /* Font sizes for mobile */
-  .footer-section h1 {
-    font-size: 18px;
-  }
-
-  .footer-section h3 {
-    font-size: 15px;
-  }
-
-  .social-icons a {
-    font-size: 18px;
-    margin-right: 8px;
-  }
-}
-
-/* Extra small screens (<480px) */
+/* Small mobile */
 @media (max-width: 480px) {
   .footer-section h1 {
     font-size: 16px;
@@ -151,10 +180,5 @@
 
   .footer-section h3 {
     font-size: 14px;
-  }
-
-  .social-icons a {
-    font-size: 16px;
-    margin-right: 6px;
   }
 }

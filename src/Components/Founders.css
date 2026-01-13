@@ -1,0 +1,188 @@
+/* ===============================
+   FOUNDERS HERO SECTION (FOOTER THEME)
+================================ */
+
+.founders-hero {
+  width: 100%;
+  padding: 110px 60px;
+  background:
+    radial-gradient(
+      circle at bottom right,
+      rgba(255, 85, 0, 0.18),
+      transparent 45%
+    ),
+    linear-gradient(135deg, #0b0b0b, #1a0f0f, #0b0b0b);
+  color: #ffffff;
+}
+
+/* CONTAINER */
+.founders-container {
+  max-width: 1000px;
+  margin: auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 50px;
+}
+
+/* ===============================
+   LEFT CONTENT
+================================ */
+
+.founders-left {
+  flex: 1;
+}
+
+.founders-badge {
+  display: inline-block;
+  padding: 6px 18px;
+  border: 1px solid #ff6b00;
+  border-radius: 20px;
+  font-size: 14px;
+  margin-bottom: 22px;
+  color: #ff6b00;
+}
+
+/* QUOTE (FOOTER STYLE BLUE) */
+.founders-quote {
+  font-size: 42px;
+  font-weight: 700;
+  line-height: 1.35;
+  color: #2f80ff;
+}
+
+.founders-quote span {
+  color: #2f80ff;
+}
+
+/* ===============================
+   RIGHT IMAGES + NAME
+================================ */
+
+.founders-right {
+  flex: 1;
+  position: relative;
+  height: 460px;
+}
+
+/* CARD */
+.founder-card {
+  position: absolute;
+  bottom: 0;
+  text-align: center;
+}
+
+/* IMAGE */
+.founder-img {
+  width: 260px;
+  height: 340px;
+  object-fit: cover;
+  border-radius: 18px;
+  box-shadow: 0 25px 60px rgba(0,0,0,0.7);
+  transition: transform 0.4s ease;
+}
+
+.founder-img:hover {
+  transform: translateY(-10px);
+}
+
+/* NAME BELOW IMAGE */
+.founder-info {
+  margin-top: 14px;
+}
+
+.founder-info h4 {
+  margin: 0;
+  font-size: 18px;
+  color: #ffffff;
+}
+
+.founder-info p {
+  margin: 4px 0 0;
+  font-size: 14px;
+  color: #cfcfcf;
+}
+
+/* POSITIONS */
+.left-img {
+  left: 40px;
+  z-index: 2;
+}
+
+.right-img {
+  right: 0;
+  opacity: 0.95;
+}
+
+/* ===============================
+   RESPONSIVE (UNCHANGED BUT POLISHED)
+================================ */
+
+/* Tablet */
+@media (max-width: 992px) {
+  .founders-container {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .founders-right {
+    position: relative;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    margin-top: 40px;
+  }
+
+  .founder-card {
+    position: relative;
+  }
+
+  .left-img,
+  .right-img {
+    left: auto;
+    right: auto;
+    opacity: 1;
+  }
+}
+
+/* Mobile */
+@media (max-width: 576px) {
+  .founders-hero {
+    padding: 70px 18px;
+  }
+
+  .founders-quote {
+    font-size: 26px;
+    line-height: 1.4;
+  }
+
+  .founders-right {
+    flex-direction: column;
+    align-items: center;
+    gap: 24px;
+  }
+
+  .founder-img {
+    width: 200px;
+    height: 260px;
+  }
+
+  .founder-info h4 {
+    font-size: 16px;
+  }
+
+  .founder-info p {
+    font-size: 13px;
+  }
+}
+/* SINGLE FOUNDER CENTER ALIGN */
+.single-founder {
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+}
+
+.single-founder .founder-card {
+  position: relative;
+}

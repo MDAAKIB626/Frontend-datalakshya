@@ -1,72 +1,111 @@
-/* 🌤️ Light Theme Navbar */
+/* =================== NAVBAR BASE =================== */
 .custom-navbar {
-  background: #40EODO; /* White background */
-  padding: 0.7rem 1.2rem;
-  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  background: #ffffff;
+  border-bottom: 1px solid #ececec;
+  padding: 10px 0;
+  z-index: 999;
 }
 
-/* 🌟 Brand Logo */
+.navbar-brand {
+  text-decoration: none;
+}
+
+/* =================== LOGO + BRAND =================== */
 .brand-logo {
-  height: 50px;
-  object-fit: cover;
-  border-radius: 50%;
-  transition: transform 0.3s ease;
-}
-.brand-logo:hover {
-  transform: scale(1.05);
+  height: 42px;
+  width: auto;
 }
 
-/* 🖤 Navbar Text */
+.Navbar-text {
+  margin: 0;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 1;
+}
+
+.brand-main {
+  color: #2DB4F8;
+}
+
+.brand-highlight {
+  color: #ff6b00;
+  margin-left: 4px;
+}
+
+/* =================== NAV LINKS =================== */
 .navbar-nav .nav-link {
-  color: #000000 !important; /* Black text */
+  color: #222 !important;
   font-weight: 500;
-  letter-spacing: 0.5px;
-  margin: 0 8px;
-  transition: all 0.3s ease;
+  padding: 10px 14px;
+  font-size: 15px;
+  transition: color 0.3s ease;
 }
 
-/* 🟡 Active Link */
-.active-link {
-  color: #007bff !important; /* Blue highlight */
-  font-weight: 600;
-  border-bottom: 2px solid #007bff;
-}
-.contact-link {
-  color: black !important;
-  font-weight: 600;
-}
-
-
-.test-link {
-  color: black !important;
-  font-weight: 600;
-}
-
-
-/* ✨ Hover Effect */
 .navbar-nav .nav-link:hover {
-  color: #007bff !important;
-  transform: scale(1.05);
+  color: #ff6b00 !important;
 }
 
-/* 🧭 Dropdown Menu */
-.dropdown-menu {
-  background-color: #ffffff !important;
-  border: 1px solid rgba(0, 0, 0, 0.1);
+/* ACTIVE LINK */
+.active-link {
+  color: #ff6b00 !important;
+  font-weight: 600;
 }
+
+/* =================== DROPDOWN =================== */
+.dropdown-menu {
+  border-radius: 10px;
+  border: 1px solid #eee;
+  padding: 8px 0;
+  margin-top: 10px;
+  min-width: 240px;
+}
+
 .dropdown-item {
-  color: #000000 !important;
+  font-size: 14px;
+  padding: 10px 18px;
+  color: #222;
   transition: all 0.3s ease;
 }
+
 .dropdown-item:hover {
-  background-color: #f5f5f5 !important;
-  color: #007bff !important;
+  background: #fff5ee;
+  color: #ff6b00;
 }
 
+/* ACTIVE DROPDOWN ITEM */
+.active-dropdown {
+  background: #fff5ee;
+  color: #ff6b00;
+  font-weight: 600;
+}
 
-/* 📱 Mobile Responsive */
-@media (max-width: 991px) {
+/* FADE ANIMATION */
+.fade-menu {
+  animation: fadeDown 0.25s ease;
+}
+
+@keyframes fadeDown {
+  from {
+    opacity: 0;
+    transform: translateY(-6px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* =================== MOBILE =================== */
+@media (max-width: 992px) {
+  .navbar-nav {
+    padding-top: 12px;
+  }
+
   .navbar-nav .nav-link {
-    padding: 10px 0;
+    padding: 12px 16px;
+  }
+
+  .dropdown-menu {
+    margin-top: 4px;
   }
 }

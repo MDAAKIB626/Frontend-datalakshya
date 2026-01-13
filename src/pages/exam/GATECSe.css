@@ -1,47 +1,120 @@
-.gatecs-container {
-  max-width: 1000px;
-  margin: 0 auto;
-  padding: 40px 20px;
-  background: #f9f9f9;
-  border-radius: 10px;
-  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+/* ================= GLOBAL RESET ================= */
+* {
+  box-sizing: border-box;
 }
 
+html,
+body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  overflow-x: hidden;
+  font-family: "Inter", "Segoe UI", Roboto, sans-serif;
+  background-color: #e5e5e5; /* page background */
+}
+
+/* ================= MAIN CONTAINER ================= */
+.gatecs-container {
+  width: 100%;
+  padding: 60px 80px;      /* left-right spacing via padding */
+  background-color: #ffffff;
+}
+
+/* ================= PAGE TITLE ================= */
 .gatecs-title {
   text-align: center;
-  font-size: 2rem;
-  color: #003366;
-  font-weight: bold;
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #0f172a;
   margin-bottom: 20px;
 }
 
+/* ================= INTRO TEXT ================= */
 .gatecs-intro {
-  font-size: 1.1rem;
-  color: #444;
-  line-height: 1.6;
-  margin-bottom: 30px;
-}
-
-.gatecs-section {
-  margin-bottom: 30px;
-}
-
-.gatecs-section h2 {
-  color: #00509e;
-  font-size: 1.4rem;
-  margin-bottom: 10px;
-}
-
-.gatecs-section ul {
-  margin-left: 20px;
+  max-width: 1000px;
+  margin: 0 auto 50px;
+  text-align: center;
+  font-size: 1.05rem;
   line-height: 1.7;
+  color: #374151;
 }
 
+/* ================= SECTION CARD ================= */
+.gatecs-section {
+  max-width: 1000px;
+  margin: 0 auto 35px;
+  background: #f8fafc;
+  padding: 30px 32px;
+  border-radius: 12px;
+  border: 1px solid #e5e7eb;
+  box-shadow: 0 8px 22px rgba(0, 0, 0, 0.05);
+}
+
+/* ================= SECTION HEADING ================= */
+.gatecs-section h2 {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #0f172a;
+  margin-bottom: 14px;
+}
+
+/* ================= PARAGRAPH ================= */
+.gatecs-section p {
+  color: #374151;
+  margin-bottom: 14px;
+  line-height: 1.6;
+}
+
+/* ================= LIST ================= */
+.gatecs-section ul {
+  margin: 0;
+  padding-left: 22px;
+}
+
+.gatecs-section ul li {
+  margin-bottom: 8px;
+  font-size: 1rem;
+  color: #1f2937;
+}
+
+/* ================= LINKS ================= */
 .gatecs-section a {
-  color: #007bff;
+  color: #2563eb;
+  font-weight: 500;
   text-decoration: none;
 }
 
 .gatecs-section a:hover {
   text-decoration: underline;
+}
+
+/* ================= RESPONSIVE ================= */
+@media (max-width: 1024px) {
+  .gatecs-container {
+    padding: 50px 40px;
+  }
+}
+
+@media (max-width: 768px) {
+  .gatecs-container {
+    padding: 40px 20px;
+  }
+
+  .gatecs-title {
+    font-size: 2rem;
+  }
+
+  .gatecs-intro {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .gatecs-title {
+    font-size: 1.6rem;
+  }
+
+  .gatecs-section {
+    padding: 22px;
+  }
 }
