@@ -1,7 +1,6 @@
 import React from "react";
 import "./Home.css";
 
-import banner from "./homeimages20/bannerimg.jpeg";
 
 /* Student Review Images */
 import studentimg1 from "./homeimages20/studentimg1.jpg";
