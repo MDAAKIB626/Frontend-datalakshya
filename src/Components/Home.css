@@ -123,6 +123,7 @@ p {
 .courses {
   padding: 60px 20px;
   text-align: center;
+  background-color:#ced9e0 ;
 }
 
 .courses h2 {
@@ -143,7 +144,7 @@ p {
 
 .course-card {
   width: 280px;
-  background: #fff;
+  background: #eff0e6;
   padding: 25px;
   margin: 0 15px;
   border-radius: 16px;
@@ -162,6 +163,7 @@ p {
   height: 180px;
   object-fit: contain;
   margin-bottom: 15px;
+   
 }
 
 .course-slider:hover .course-track {
@@ -198,7 +200,7 @@ p {
 
 .reviews {
   padding: 90px 20px;
-  background: #f8f9fa;
+  background:#d0ced6;
   text-align: center;
 }
 
@@ -214,7 +216,7 @@ p {
 
 .review-card {
   width: 300px;
-  background: #fff;
+  background: #f2f2ed;
   padding: 30px 20px;
   margin: 0 15px;
   border-radius: 16px;

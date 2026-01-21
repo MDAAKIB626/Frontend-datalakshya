@@ -1,49 +1,70 @@
 import React from "react";
 import "./Mission.css";
-
+import mission from "./homeimages20/aboutimage.jpeg";
 const Mission = () => {
   return (
     <section className="mission-section">
       <div className="mission-container">
-        <h2 className="mission-title">Our Mission</h2>
-        <p className="mission-subtitle">
-          Shaping future-ready professionals in Data, AI & Emerging Technologies
-        </p>
 
-        <div className="mission-cards">
-          <div className="mission-card">
-            <h3>🎯 Industry Focused Learning</h3>
+        {/* TITLE */}
+        <div className="mission-header">
+          <h2>ABOUT US</h2>
+        </div>
+
+        {/* CONTENT LEFT | IMAGE RIGHT */}
+        <div className="mission-main">
+          {/* LEFT CONTENT */}
+          <div className="mission-content">
+
             <p>
-              To deliver practical, industry-aligned education that bridges the
-              gap between academics and real-world applications.
+          
+              Data Lakshya is a learning-driven organization with a strong motive
+              to serve and grow the data and computer science domain through
+              quality education, practical training, and academic guidance.
+            </p>
+
+            <p>
+              We provide focused training in Data Science, Artificial
+              Intelligence, Machine Learning, Natural Language Processing, and
+              other related technologies with strong fundamentals and real-world
+              applications.
+            </p>
+
+            <p>
+              Our goal is not just to teach, but to guide, mentor, and support
+              learners in achieving meaningful careers.
             </p>
           </div>
 
-          <div className="mission-card">
-            <h3>🚀 Career Transformation</h3>
-            <p>
-              Empower students and professionals with skills that accelerate
-              career growth in Data Science, AI, and Analytics.
-            </p>
-          </div>
-
-          <div className="mission-card">
-            <h3>🌍 Accessible Quality Education</h3>
-            <p>
-              Make high-quality technical education affordable and accessible
-              for learners from all backgrounds.
-            </p>
-          </div>
-
-          {/* 🔥 NEW BOX */}
-          <div className="mission-card">
-            <h3>🤝 Mentorship & Support</h3>
-            <p>
-              Provide continuous mentorship, doubt-solving sessions, and
-              guidance to help learners stay motivated and succeed.
-            </p>
+          {/* RIGHT IMAGE */}
+          <div className="mission-image">
+            <img src={mission} alt="Our Mission" />
           </div>
         </div>
+
+        {/* CARDS */}
+        <div className="mission-grid">
+          <div className="mission-item">
+            <h3> Industry-Focused Learning</h3>
+            <p>Deliver practical, job-ready education aligned with industry.</p>
+          </div>
+
+          <div className="mission-item">
+            <h3>Career Growth</h3>
+            <p>Equip learners with in-demand skills for success.</p>
+          </div>
+
+          <div className="mission-item">
+            <h3>Accessible Education</h3>
+            <p>Provide affordable and inclusive technical education.</p>
+          </div>
+
+          <div className="mission-item">
+            <h3>Mentorship & Support</h3>
+            <p>Offer continuous guidance to help learners achieve goals.</p>
+          </div>
+        </div>
+
       </div>
     </section>
   );

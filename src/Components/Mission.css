@@ -1,102 +1,98 @@
+/* RESET */
+.mission-section *,
+.mission-section *::before,
+.mission-section *::after {
+  border: none !important;
+  box-shadow: none !important;
+}
+
+/* Section */
 .mission-section {
-  padding: 90px 20px;
-  background: linear-gradient(180deg, #ffffff, #f8fafc);
-  text-align: center;
+  padding: 80px 20px;
+  background:#c5cadb;
 }
 
 /* Container */
 .mission-container {
-  max-width: 1200px;
+  max-width: 1100px;
   margin: auto;
 }
 
-/* Title */
-.mission-title {
+/* Header */
+.mission-header {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.mission-header h2 {
   font-size: 36px;
-  font-weight: 800;
+  font-weight: 700;
   color: #0f172a;
-  margin-bottom: 10px;
-  letter-spacing: -0.5px;
 }
 
-/* Subtitle */
-.mission-subtitle {
-  max-width: 760px;
-  margin: 0 auto 60px;
-  font-size: 16.5px;
-  color: #475569;
-  line-height: 1.7;
-}
-
-/* Cards Wrapper */
-.mission-cards {
+/* MAIN LAYOUT */
+.mission-main {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  grid-template-columns: 1.2fr 1fr; /* content left, image right */
+  gap: 40px;
+  align-items: center;
+  margin-bottom: 70px;
+}
+
+/* Content */
+.mission-content p {
+  font-size: 20px;
+  color: #000000;
+  line-height: 1.8;
+  margin-bottom: 16px;
+  font-family:Georgia, 'Times New Roman', Times, serif;
+}
+
+/* Image */
+.mission-image img {
+  width: 100%;
+  border-radius: 14px;
+  object-fit: cover;
+}
+
+/* Cards */
+.mission-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
   gap: 32px;
 }
 
-/* Card */
-.mission-card {
-  background: #ffffff;
-  padding: 36px 28px;
-  border-radius: 18px;
-  border: 1px solid #e5e7eb;
-  box-shadow: 0 12px 28px rgba(2, 6, 23, 0.06);
-  transition: all 0.35s ease;
-  position: relative;
-  overflow: hidden;
-  text-align: left;
+.mission-item {
+  background: #e9ebf5;
+  padding: 28px;
+  border-radius: 12px;
+  border: 1px solid #e5e7eb !important;
 }
 
-/* Accent line */
-.mission-card::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  height: 4px;
-  width: 100%;
-  background: linear-gradient(90deg, #2563eb, #38bdf8);
-  opacity: 0;
-  transition: opacity 0.3s ease;
+.mission-item h3 {
+  font-size: 18px;
+  font-weight: 600;
+  color: #1e293b;
+  margin-bottom: 8px;
 }
 
-.mission-card:hover::before {
-  opacity: 1;
-}
-
-.mission-card:hover {
-  transform: translateY(-10px);
-  box-shadow: 0 25px 45px rgba(37, 99, 235, 0.18);
-}
-
-/* Card title */
-.mission-card h3 {
-  font-size: 20px;
-  color: #2563eb;
-  margin-bottom: 12px;
-  font-weight: 700;
-}
-
-/* Text */
-.mission-card p {
+.mission-item p {
   font-size: 15px;
   color: #475569;
-  line-height: 1.75;
+  line-height: 1.6;
 }
 
 /* Responsive */
 @media (max-width: 768px) {
-  .mission-title {
-    font-size: 30px;
+  .mission-main {
+    grid-template-columns: 1fr; /* mobile me image niche aayegi */
   }
 
-  .mission-subtitle {
-    font-size: 15px;
-    margin-bottom: 40px;
+  .mission-grid {
+    grid-template-columns: 1fr;
   }
 
-  .mission-card {
-    padding: 30px 22px;
+  .mission-header h2 {
+    font-size: 28px;
   }
 }

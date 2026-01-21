@@ -1,0 +1,152 @@
+/* ================= BANNER ================= */
+.banner {
+  min-height: 70vh;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 90px 120px;
+  background: radial-gradient(circle at right, #3a1c10, #0b0b0b 65%);
+  color: white;
+  overflow-x: hidden;
+}
+
+/* ================= LEFT ================= */
+.banner-left {
+  max-width: 50%;
+}
+
+.hero-title {
+  font-size: 56px;
+  font-weight: 800;
+  margin-bottom: 16px;
+}
+
+.dl-data {
+  color: #1e90ff;
+}
+
+.dl-lakshya {
+  color: #ff8c00;
+}
+
+.hero-subtitle {
+  font-size: 18px;
+  margin-bottom: 32px;
+  color: #e0e0e0;
+}
+
+/* ================= BUTTON ================= */
+.banner-btn {
+  padding: 14px 34px;
+  font-size: 16px;
+  font-weight: 600;
+  border-radius: 30px;
+  border: none;
+  cursor: pointer;
+  background: linear-gradient(135deg, #1e90ff, #ff8c00);
+  color: white;
+  transition: 0.4s ease;
+}
+
+.banner-btn:hover {
+  transform: translateY(-3px) scale(1.05);
+}
+
+/* ================= RIGHT ================= */
+.banner-right {
+  display: flex;
+  justify-content: center;
+}
+
+.banner-card {
+  width: 380px;
+  background: white;
+  padding: 14px;
+  border-radius: 18px;
+  box-shadow: 0 25px 55px rgba(0,0,0,0.45);
+  animation: float 4s ease-in-out infinite;
+}
+
+.banner-card img {
+  width: 100%;
+  border-radius: 14px;
+}
+
+/* ================= FLOAT ================= */
+@keyframes float {
+  0% { transform: translateY(0); }
+  50% { transform: translateY(-12px); }
+  100% { transform: translateY(0); }
+}
+
+/* ================= TYPING ================= */
+.typing {
+  width: fit-content;
+  overflow: hidden;
+  white-space: nowrap;
+  border-right: 3px solid #ff8c00;
+  animation: typing 3s steps(28, end), blink 0.8s infinite;
+}
+
+@keyframes typing {
+  from { width: 0 }
+  to { width: 100% }
+}
+
+@keyframes blink {
+  50% { border-color: transparent; }
+}
+
+/* ================= TABLET ================= */
+@media (max-width: 768px) {
+  .banner {
+    flex-direction: column;
+    padding: 70px 30px;
+    text-align: center;
+  }
+
+  .banner-left {
+    max-width: 100%;
+    margin-bottom: 30px;
+  }
+
+  .hero-title {
+    font-size: 38px;
+  }
+
+  .banner-card {
+    width: 320px;
+  }
+}
+
+/* ================= MOBILE (FIXED) ================= */
+@media (max-width: 480px) {
+  .banner {
+    padding: 40px 16px 30px;
+    min-height: auto;
+  }
+
+  .banner-left {
+    margin-bottom: 16px;
+  }
+
+  .hero-title {
+    font-size: 18px;
+  }
+
+  .hero-subtitle {
+    font-size: 15px;
+    margin-bottom: 18px;
+  }
+
+  .banner-btn {
+    padding: 12px 24px;
+    font-size: 14px;
+  }
+
+  .banner-card {
+    width: 260px;
+    margin: 0 auto;
+    animation: none; /* ❗ float band, AOS ON */
+  }
+}

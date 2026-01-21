@@ -1,7 +1,7 @@
 import React from "react";
 import "./Home.css";
 
-import banner from "./homeimages20/al.png";
+import banner from "./homeimages20/bannerimg.jpeg";
 
 /* Student Review Images */
 import studentimg1 from "./homeimages20/studentimg1.jpg";
@@ -28,44 +28,22 @@ import VisionMentors from "./VisionMentors";
 import MissionSection from "./Mission";
 import CompitiveExam from "./CompitiveExam";
 import Features from "./Features";
+ import Banner from "./Banner"; 
 
 const Home = () => {
   return (
     <>
       <div className="home">
 
-        {/* 🌟 Hero Section */}
-        <section
-          className="hero"
-          style={{
-            backgroundImage: `url(${banner})`,
-            backgroundSize: "cover",
-            backgroundPosition: "center",
-            height: "40vh",
-            display: "flex",
-            alignItems: "center",
-            justifyContent: "center",
-            textAlign: "center",
-            color: "#fff",
-            position: "relative",
-          }}
-        >
-          <div className="overlay"></div>
 
-          <div className="hero-content">
-            {/* ✅ ONLY THIS PART CHANGED */}
-            <h1 className="hero-title">
-              Welcome to <span className="dl-data">Data</span>{" "}
-              <span className="dl-lakshya">Lakshya</span>
-            </h1>
+<Banner />
 
-            <h6>Empowering Minds with Data and AI</h6>
 
-            <a href="#courses" className="btn">
-              Explore Courses
-            </a>
-          </div>
-        </section>
+
+  
+
+
+
 
         {/* 🎓 Courses Section */}
         <section className="courses" id="courses">
@@ -91,9 +69,9 @@ const Home = () => {
             </div>
           </div>
         </section>
-
-        <VisionMentors />
-        <MissionSection />
+         <MissionSection />
+      
+   
         <CompitiveExam />
         <Features />
 
@@ -121,7 +99,7 @@ const Home = () => {
             </div>
           </div>
         </section>
-
+             <VisionMentors />
         {/* 📞 Contact + WhatsApp */}
         <section className="contact-whatsapp-wrapper">
           <div className="contact-whatsapp-container">

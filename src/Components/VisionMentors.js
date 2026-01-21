@@ -1,5 +1,5 @@
 import React from "react";
-import './VisionMentors.css';
+import "./VisionMentors.css";
 
 import img1 from "./homeimages20/mentorimage1.jpg";
 import img2 from "./homeimages20/mentorimage2.jpg";
@@ -33,32 +33,27 @@ const mentors = [
   },
   {
     img: img4,
-    name: " Dr.Annu Pathak",
+    name: "Dr. Annu Pathak",
     role: "Engineering Maths",
     work: "5+ Years",
     teach: "3+ Years",
     desc: "Specialist in Engineering Mathematics with strong academic expertise."
-  },
+  }
 ];
 
 const VisionMentors = () => {
   return (
     <section className="dl-mentor-section">
-
       {/* HEADER */}
       <div className="dl-mentor-header">
-        <div>
-      
-          <h2>Meet our Top Mentors</h2>
-          <div className="dl-underline"></div>
-        </div>
+        <h2>Meet our Top Mentors</h2>
+        <div className="dl-underline"></div>
       </div>
 
       {/* CARDS */}
       <div className="dl-mentor-cards">
         {mentors.map((m, i) => (
           <div className="dl-card" key={i}>
-
             <div className="dl-img-wrap">
               <img src={m.img} alt={m.name} />
             </div>
@@ -68,17 +63,15 @@ const VisionMentors = () => {
               <p className="dl-role">{m.role}</p>
 
               <div className="dl-exp">
-                <span><b>{m.work}</b> Work Exp.</span>
-                <span><b>{m.teach}</b> Teaching Exp.</span>
+                <span><b>{m.work}</b> Work</span>
+                <span><b>{m.teach}</b> Teaching</span>
               </div>
 
               <p className="dl-desc">{m.desc}</p>
             </div>
-
           </div>
         ))}
       </div>
-
     </section>
   );
 };
