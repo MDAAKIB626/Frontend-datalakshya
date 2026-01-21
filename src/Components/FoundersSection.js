@@ -1,7 +1,7 @@
 import React from "react";
 import "./Founders.css";
 
-import founder2 from "./Founderimage/founder2.jpg";
+
 import founder1 from "./Founderimage/mentorimage1.jpg";
 
 const FoundersSection = () => {
