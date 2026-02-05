@@ -20,7 +20,6 @@ import deeplearningimages from "./Coursesimages/deep learning.jpg";
 import powerbiimages from "./Coursesimages/powerbi.jpg";
 
 import WhatsAppSection from "./WhatAppSection";
-import Contact from "./Contact";
 import FoundersSection from "./FoundersSection";
 import MissionSection from "./Mission";
 import CompitiveExam from "./CompitiveExam";
@@ -31,43 +30,49 @@ const Home = () => {
   const sliderRef = useRef(null);
   const autoScrollRef = useRef(null);
 
-  /* ================= AUTO SCROLL ================= */
-  useEffect(() => {
-    startAutoScroll();
-    return () => stopAutoScroll();
-  }, []);
+ /* ================= AUTO SCROLL ================= */
 
-  const startAutoScroll = () => {
-    stopAutoScroll();
-    autoScrollRef.current = setInterval(() => {
-      if (sliderRef.current) {
-        sliderRef.current.scrollBy({
-          left: 1,       // speed (increase for faster)
-          behavior: "smooth",
-        });
-      }
-    }, 20);
-  };
+const stopAutoScroll = () => {
+  if (autoScrollRef.current) {
+    clearInterval(autoScrollRef.current);
+    autoScrollRef.current = null;
+  }
+};
 
-  const stopAutoScroll = () => {
-    if (autoScrollRef.current) {
-      clearInterval(autoScrollRef.current);
+const startAutoScroll = () => {
+  stopAutoScroll();
+  autoScrollRef.current = setInterval(() => {
+    if (sliderRef.current) {
+      sliderRef.current.scrollBy({
+        left: 1,
+        behavior: "smooth",
+      });
     }
-  };
+  }, 20);
+};
 
-  /* ================= ARROWS ================= */
-  const scrollLeft = () => {
-    stopAutoScroll();
+useEffect(() => {
+  startAutoScroll();
+  return () => stopAutoScroll();
+}, []);
+
+/* ================= ARROWS ================= */
+
+const scrollLeft = () => {
+  stopAutoScroll();
+  if (sliderRef.current) {
     sliderRef.current.scrollBy({ left: -300, behavior: "smooth" });
-    setTimeout(startAutoScroll, 2000);
-  };
+  }
+  setTimeout(startAutoScroll, 2000);
+};
 
-  const scrollRight = () => {
-    stopAutoScroll();
+const scrollRight = () => {
+  stopAutoScroll();
+  if (sliderRef.current) {
     sliderRef.current.scrollBy({ left: 300, behavior: "smooth" });
-    setTimeout(startAutoScroll, 2000);
-  };
-
+  }
+  setTimeout(startAutoScroll, 2000);
+};
 
 
 
