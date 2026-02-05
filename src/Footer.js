@@ -1,13 +1,15 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import {
-  FaFacebookF,
-  FaTwitter,
   FaInstagram,
   FaLinkedinIn,
   FaPhoneAlt,
   FaEnvelope,
+  FaYoutube,
+  FaTelegram
 } from "react-icons/fa"; // <-- added phone & email icons
 import "./Footer.css";
+
 
 const Footer = () => {
   return (
@@ -15,34 +17,59 @@ const Footer = () => {
       <div className="footer-top">
         {/* About Section */}
         <div className="footer-section">
-          <h1>About</h1>
+          <h1>Data Lakshya</h1>
           <div>
-            <h3>Our Mission</h3>
-            <h3>Our Team</h3>
-            <h3>News</h3>
-            <h3>Impact</h3>
+           <Link to="/blog" className="footer-link">
+       <h3>Data Lakshya AI</h3></Link>
+       <Link to="/exam/gateda" className="no-link-style">
+        <h3>Competitive Exams</h3>
+         </Link>
+           <Link to="/training/dataanalytics " className="no-link-style"  >AI Courses </Link>
+           
           </div>
         </div>
 
-        {/* Courses Section */}
-        <div className="footer-section">
-          <h1>Courses</h1>
-          <div>
-            <h3>Artificial Intelligence</h3>
-            <h3>Machine Learning</h3>
-            <h3>Data Science</h3>
-            <h3>Data Analytics</h3>
-          </div>
-        </div>
+         
+
 
         {/* Get Involved Section */}
         <div className="footer-section">
-          <h1>Get Involved</h1>
+          <h1>Follow US</h1>
           <div>
-            <h3>Donate</h3>
-            <h3>Volunteer</h3>
-            <h3>Careers</h3>
-            <h3>Internships</h3>
+              <div className="social-icons">
+          
+          
+            <a
+              href="https://www.instagram.com/datalakshya_1729?igsh=ZnQ1N3Z0ZHVmaWV1&utm_source=ig_contact_invite"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <FaInstagram />
+            </a>
+            <a
+              href="https://www.linkedin.com/company/data-lakshya/?viewAsMember=true/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <FaLinkedinIn />
+            </a>
+             <a
+              href="https://youtube.com/@datalakshya?si=GGwUNV3VAbC7ATF3"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <FaYoutube />
+            </a>
+             <a
+              href="https://t.me/iitgateda_dl"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <FaTelegram />
+            </a>
+
+           
+          </div>
           </div>
         </div>
 
@@ -57,48 +84,13 @@ const Footer = () => {
               <FaEnvelope className="icon" /> info@datalakshya.com
             </p>
           </div>
-          <div className="social-icons">
-            <a
-              href="https://facebook.com/"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <FaFacebookF />
-            </a>
-            <a
-              href="https://twitter.com/"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <FaTwitter />
-            </a>
-            <a
-              href="https://instagram.com/"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <FaInstagram />
-            </a>
-            <a
-              href="https://www.linkedin.com/company/data-lakshya/?viewAsMember=true/"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <FaLinkedinIn />
-            </a>
-          </div>
+       
         </div>
       </div>
 
       {/* Footer Bottom */}
       <div className="footer-bottom">
-        <p>Copyright © 2025. All Rights Reserved ❤️ HandCrafted by    <a
-              href="https://in.linkedin.com/in/md-aakib-hussain-8a4890301"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-           Aakib
-            </a></p>
+        <p>Copyright © 2025. All Rights Reserved  </p>
       </div>
     </footer>
   );

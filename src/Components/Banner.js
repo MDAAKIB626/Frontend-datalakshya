@@ -7,7 +7,7 @@ export default function Banner() {
       <div className="banner-left" data-aos="fade-right">
         <h1 className="hero-title typing">
           Welcome to <span className="dl-data">Data</span>{" "}
-          <span className="dl-lakshya">Lakshya</span>
+          <span className="dl-lakshya">Lakshya!</span>
         </h1>
 
         <h6 className="hero-subtitle">

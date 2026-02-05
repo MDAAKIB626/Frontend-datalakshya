@@ -99,7 +99,7 @@ const Navbar = () => {
                     }`}
                     to="/exam/ugenet"
                   >
-                    UGC NET CS
+                    UGC NET Computer Science
                   </Link>
                 </li>
               </ul>
@@ -156,16 +156,7 @@ const Navbar = () => {
               </Link>
             </li>
 
-            {/* Contact */}
-            <li className="nav-item">
-              <Link
-                className={`nav-link ${isActive("/contact") ? "active-link" : ""}`}
-                to="/contact"
-              >
-                Contact Us
-              </Link>
-            </li>
-
+      
           </ul>
         </div>
       </div>

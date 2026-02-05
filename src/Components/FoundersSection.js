@@ -11,12 +11,16 @@ const FoundersSection = () => {
 
         {/* LEFT CONTENT */}
         <div className="founders-left">
-          <span className="founders-badge">Meet our Founder ✨</span>
+          <span className="founders-badge">Founder’s Message ✨</span>
 
-          <h1 className="founders-quote">
-            “The new wave of technology is <br />
-            <span>here to change our lives forever!</span>”
-          </h1>
+         <h1 className="founders-quote">
+  At Data Lakshya, we believe success is built at the intersection of clear concepts,
+  disciplined effort, and strong belief. Whether your goal is mastering AI and Data Science
+  or cracking competitive exams like GATE and UGC NET, the journey demands consistency and
+  the right guidance. We are here to mentor, motivate, and support you at every step—turning
+  challenges into confidence and ambition into achievement.
+</h1>
+
         </div>
 
         {/* RIGHT IMAGE */}

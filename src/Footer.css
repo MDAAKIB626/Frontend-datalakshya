@@ -172,6 +172,40 @@
   }
 }
 
+
+.footer-links a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.footer-links h3 {
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+.footer-links h3:hover {
+  color: #0d6efd; /* Bootstrap blue */
+}
+.footer-link {
+  text-decoration: none;
+  color: inherit;
+}
+
+.footer-link h3 {
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+.footer-link h3:hover {
+  color: #0d6efd; /* same as navbar active color */
+}
+.no-link-style {
+  text-decoration: none;
+  color: inherit;
+  cursor: pointer;
+}
+
+
 /* Small mobile */
 @media (max-width: 480px) {
   .footer-section h1 {

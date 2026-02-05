@@ -1,35 +1,96 @@
+/* ================= PAGE WRAPPER ================= */
+.ai-page {
+  max-width: 1100px;
+  margin: auto;
+  padding: 40px 20px;
+  font-family: "Segoe UI", system-ui, sans-serif;
+}
 
+/* ================= TITLE ================= */
+.ai-page h1 {
+  font-size: 2.4rem;
+  font-weight: 700;
+  color: #1e293b;
+  margin-bottom: 10px;
+}
 
-/* src/pages/training/AI.css */
-
-.container {
+/* ================= INTRO TEXT ================= */
+.ai-page .lead {
+  font-size: 1.05rem;
+  line-height: 1.7;
+  color: #334155;
   max-width: 900px;
+  margin: auto;
 }
 
-h1 {
-  font-size: 2.2rem;
+/* ================= SECTION CARD ================= */
+.ai-page .mb-5 {
+  background: #ffffff;
+  border-radius: 14px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.06);
+  padding: 22px 24px;
+  margin-bottom: 22px;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
 }
 
-h3 {
-  border-left: 5px solid #0d6efd;
-  padding-left: 10px;
-  margin-bottom: 15px;
+.ai-page .mb-5:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 14px 30px rgba(0, 0, 0, 0.08);
 }
 
-ul {
-  list-style-type: square;
-  margin-left: 20px;
+/* ================= SECTION HEADING ================= */
+.ai-page h3 {
+  font-size: 1.4rem;
+  font-weight: 600;
+  color: #0f172a;
+  margin-bottom: 12px;
 }
 
-p, li {
+/* ================= TEXT ================= */
+.ai-page p {
   font-size: 1rem;
   line-height: 1.7;
+  color: #475569;
 }
 
-.text-center {
-  text-align: center;
+/* ================= LIST ================= */
+.ai-page ul {
+  padding-left: 20px;
+  margin-top: 10px;
 }
 
-.text-primary {
-  color: #0d6efd !important;
+.ai-page li {
+  font-size: 0.95rem;
+  margin-bottom: 7px;
+  color: #475569;
+}
+
+/* ================= STRONG TEXT ================= */
+.ai-page strong {
+  color: #1e293b;
+  font-weight: 600;
+}
+
+/* ================= OUTCOME BOX ================= */
+.ai-page .text-center {
+  background: linear-gradient(135deg, #e0f2fe, #f0f9ff);
+  border-radius: 18px;
+  padding: 30px 20px;
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.06);
+}
+
+.ai-page h4 {
+  font-size: 1.45rem;
+  margin-bottom: 14px;
+}
+
+/* ================= RESPONSIVE ================= */
+@media (max-width: 768px) {
+  .ai-page h1 {
+    font-size: 1.9rem;
+  }
+
+  .ai-page .mb-5 {
+    padding: 18px 18px;
+  }
 }

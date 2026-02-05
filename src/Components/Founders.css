@@ -43,13 +43,13 @@
   color: #ff6b00;
 }
 
-/* QUOTE (FOOTER STYLE BLUE) */
 .founders-quote {
-  font-size: 42px;
-  font-weight: 700;
-  line-height: 1.35;
-  color: #2f80ff;
+  text-align: justify;   /* 🔥 left + right same */
+  line-height: 1.8;
+  font-size: 15px;;
 }
+
+
 
 .founders-quote span {
   color: #2f80ff;

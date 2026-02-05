@@ -1,33 +1,96 @@
-/* src/pages/training/DataScience.css */
+/* ================= PAGE WRAPPER ================= */
+.ds-page {
+  max-width: 1100px;
+  margin: auto;
+  padding: 40px 20px;
+  font-family: "Segoe UI", system-ui, sans-serif;
+}
 
-.container {
+/* ================= TITLE ================= */
+.ds-page h1 {
+  font-size: 2.4rem;
+  font-weight: 700;
+  color: #6d28d9; /* Data Science Purple */
+  margin-bottom: 10px;
+}
+
+/* ================= INTRO TEXT ================= */
+.ds-page .lead {
+  font-size: 1.05rem;
+  line-height: 1.7;
+  color: #334155;
   max-width: 900px;
+  margin: auto;
 }
 
-h1 {
-  font-size: 2.2rem;
+/* ================= SECTION CARD ================= */
+.ds-page .mb-5 {
+  background: #ffffff;
+  border-radius: 14px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.06);
+  padding: 22px 24px;
+  margin-bottom: 22px;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
 }
 
-h3 {
-  border-left: 5px solid #0d6efd;
-  padding-left: 10px;
-  margin-bottom: 15px;
+.ds-page .mb-5:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 14px 30px rgba(0, 0, 0, 0.08);
 }
 
-ul {
-  list-style-type: square;
-  margin-left: 20px;
+/* ================= SECTION HEADING ================= */
+.ds-page h3 {
+  font-size: 1.4rem;
+  font-weight: 600;
+  color: #5b21b6;
+  margin-bottom: 12px;
 }
 
-p, li {
+/* ================= TEXT ================= */
+.ds-page p {
   font-size: 1rem;
   line-height: 1.7;
+  color: #475569;
 }
 
-.text-center {
-  text-align: center;
+/* ================= LIST ================= */
+.ds-page ul {
+  padding-left: 20px;
+  margin-top: 10px;
 }
 
-.text-primary {
-  color: #0d6efd !important;
+.ds-page li {
+  font-size: 0.95rem;
+  margin-bottom: 7px;
+  color: #475569;
+}
+
+/* ================= STRONG TEXT ================= */
+.ds-page strong {
+  color: #6d28d9;
+  font-weight: 600;
+}
+
+/* ================= OUTCOME / TIPS BOX ================= */
+.ds-page .text-center {
+  background: linear-gradient(135deg, #ede9fe, #f5f3ff);
+  border-radius: 18px;
+  padding: 30px 20px;
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.06);
+}
+
+.ds-page h4 {
+  font-size: 1.45rem;
+  margin-bottom: 14px;
+}
+
+/* ================= RESPONSIVE ================= */
+@media (max-width: 768px) {
+  .ds-page h1 {
+    font-size: 1.9rem;
+  }
+
+  .ds-page .mb-5 {
+    padding: 18px 18px;
+  }
 }

@@ -1,107 +1,130 @@
-/* ================= GLOBAL RESET ================= */
-html,
-body {
-  margin: 0;
-  padding: 0;
-  width: 100%;
-  overflow-x: hidden;
-  background-color: #e5e5e5;
-  font-family: "Inter", "Segoe UI", Roboto, sans-serif;
+/* ================= CONTAINER ================= */
+.ug-net-container {
+  max-width: 1100px;
+  margin: auto;
+  padding: 40px 20px;
+  font-family: "Segoe UI", system-ui, sans-serif;
 }
 
-/* ================= BOOTSTRAP CONTAINER OVERRIDE ================= */
-/* Removes left-right space caused by .container */
-.container {
-  max-width: 100% !important;
-  width: 100%;
-  padding-left: 80px !important;
-  padding-right: 80px !important;
-  background: #ffffff;
-}
-
-/* ================= PAGE TITLE ================= */
-h1 {
-  font-size: 2.6rem;
+/* ================= TITLE ================= */
+.ug-net-title {
+  text-align: center;
+  font-size: 2.4rem;
   font-weight: 700;
-  color: #0d6efd;
+  color: #1e293b;
+  margin-bottom: 10px;
 }
 
-/* ================= INTRO TEXT ================= */
-.lead {
-  max-width: 1000px;
-  margin: 0 auto 60px;
-  font-size: 1.05rem;
-  color: #4b5563;
+/* ================= BADGE ================= */
+.ug-net-badge {
+  text-align: center;
+  background: linear-gradient(90deg, #16a34a, #22c55e);
+  color: #fff;
+  display: block;
+  width: fit-content;
+  margin: 0 auto 25px;
+  padding: 6px 18px;
+  border-radius: 20px;
+  font-size: 0.9rem;
 }
 
-/* ================= CONTENT SECTIONS ================= */
-.container > div {
-  max-width: 1000px;
-  margin: 0 auto 40px;
-  background: #f8fafc;
-  padding: 28px 32px;
+/* ================= INTRO / PARA ================= */
+.ug-net-intro,
+.ug-net-para {
+  font-size: 1rem;
+  line-height: 1.7;
+  color: #334155;
+  margin-bottom: 18px;
+}
+
+/* ================= SECTION ================= */
+.ug-net-section {
+  margin-top: 40px;
+}
+
+.ug-net-section h2 {
+  font-size: 1.6rem;
+  margin-bottom: 20px;
+  color: #0f172a;
+}
+
+/* ================= SUBJECT CARD ================= */
+.subject-card {
+  background: #ffffff;
   border-radius: 14px;
-  border: 1px solid #e5e7eb;
-  box-shadow: 0 8px 22px rgba(0, 0, 0, 0.05);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.06);
+  padding: 18px 20px;
+  margin-bottom: 18px;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
 }
 
-/* ================= SECTION HEADINGS ================= */
-h3 {
-  font-size: 1.45rem;
-  margin-bottom: 14px;
-  color: #0f172a;
+.subject-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 14px 30px rgba(0, 0, 0, 0.08);
 }
 
-h4 {
-  color: #0f172a;
+/* ================= SUBJECT HEADER ================= */
+.subject-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 15px;
+}
+
+.subject-title {
+  font-size: 1.05rem;
   font-weight: 600;
+  color: #1e293b;
 }
 
-/* ================= LIST STYLING ================= */
-ul {
+/* ================= BUTTON ================= */
+.details-btn {
+  background: linear-gradient(135deg, #22c55e, #16a34a);
+  color: #ffffff;
+  border: none;
+  padding: 7px 16px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  border-radius: 20px;
+  cursor: pointer;
+  transition: all 0.25s ease;
+}
+
+.details-btn:hover {
+  background: linear-gradient(135deg, #15803d, #166534);
+  transform: scale(1.05);
+}
+
+/* ================= TOPICS ================= */
+.subject-topics {
+  margin-top: 14px;
+  padding-top: 12px;
+  border-top: 1px solid #e5e7eb;
+  overflow: hidden;
+}
+
+.subject-topics ul {
   padding-left: 20px;
 }
 
-ul li {
-  margin-bottom: 8px;
-  font-size: 1rem;
-  color: #1f2937;
-}
-
-/* ================= CENTERED SECTION FIX ================= */
-.text-center {
-  background: #f8fafc;
+.subject-topics li {
+  font-size: 0.95rem;
+  margin-bottom: 6px;
+  color: #475569;
 }
 
 /* ================= RESPONSIVE ================= */
-@media (max-width: 1024px) {
-  .container {
-    padding-left: 40px !important;
-    padding-right: 40px !important;
-  }
-}
-
 @media (max-width: 768px) {
-  .container {
-    padding-left: 20px !important;
-    padding-right: 20px !important;
+  .ug-net-title {
+    font-size: 1.9rem;
   }
 
-  h1 {
-    font-size: 2rem;
+  .subject-header {
+    flex-direction: column;
+    align-items: flex-start;
   }
 
-  .lead {
-    font-size: 1rem;
-  }
-}
-
-@media (max-width: 480px) {
-  h1 {
-    font-size: 1.6rem;
-  }
-
-  .container > div {
-    padding: 22px;
+  .details-btn {
+    margin-top: 8px;
   }
 }

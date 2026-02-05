@@ -1,94 +1,125 @@
-// src/pages/training/DataScience.js
 import React from "react";
 import "./Datascience.css";
 
 const DataScience = () => {
   return (
-    <div className="container py-5">
+    <div className="container py-5 ds-page">
+
+      {/* TITLE */}
       <h1 className="text-center text-primary fw-bold mb-4">
-        Data Science Training Program
+        Data Science – Industry Oriented Training Program
       </h1>
 
+      {/* INTRO */}
       <p className="lead text-muted text-center mb-5">
-        Master the art of turning raw data into powerful insights!  
-        This comprehensive Data Science program covers Python, Machine Learning,  
-        Statistics, and Data Visualization to prepare you for real-world analytics roles.
+        This Data Science program is designed as per
+        <strong> real industry and company requirements</strong>.
+        Learn how to work with <strong>real datasets, machine learning models,</strong>
+        and <strong>business-driven analytics problems</strong> used in real companies.
       </p>
 
-      {/* About the Course */}
+      {/* ABOUT */}
       <div className="mb-5">
-        <h3 className="text-secondary fw-semibold">📘 About the Program</h3>
+        <h3 className="fw-semibold text-secondary">📘 About the Program</h3>
         <p>
-          The Data Science course is designed to help learners understand how to
-          process, visualize, and analyze data. It combines theory and hands-on
-          projects to teach essential concepts such as Python programming,
-          Machine Learning algorithms, and data-driven decision-making.
+          This program prepares you for roles such as
+          <strong> Data Scientist, Machine Learning Engineer, and AI Analyst</strong>.
+          You will gain hands-on experience with
+          <strong> Python, Statistics, Machine Learning, and Deep Learning</strong>
+          along with real-world case studies.
         </p>
       </div>
 
-      {/* Skills Covered */}
+      {/* COURSE DETAILS */}
       <div className="mb-5">
-        <h3 className="text-secondary fw-semibold">🧠 Key Skills You Will Learn</h3>
+        <h3 className="fw-semibold text-secondary">📋 Course Details (Real)</h3>
+        <ul>
+          <li><strong>Duration:</strong> 5 – 7 Months</li>
+          <li><strong>Mode:</strong> Online / Offline</li>
+          <li><strong>Prerequisites:</strong> Python Basics, 12th Level Maths</li>
+          <li><strong>Level:</strong> Beginner → Advanced</li>
+          <li><strong>Hands-on:</strong> 75% Practical, 25% Theory</li>
+        </ul>
+      </div>
+
+      {/* SKILLS */}
+      <div className="mb-5">
+        <h3 className="fw-semibold text-secondary">🧠 Skills You Will Actually Learn</h3>
+        <ul>
+          <li>Python for Data Science</li>
+          <li>Data Cleaning & Feature Engineering</li>
+          <li>Exploratory Data Analysis (EDA)</li>
+          <li>Statistics & Probability for Data Science</li>
+          <li>Machine Learning Algorithms</li>
+          <li>Model Evaluation & Optimization</li>
+          <li>Deep Learning with Neural Networks</li>
+          <li>Data Storytelling & Business Insights</li>
+        </ul>
+      </div>
+
+      {/* CURRICULUM */}
+      <div className="mb-5">
+        <h3 className="fw-semibold text-secondary">📚 Real-World Curriculum</h3>
         <ul>
           <li>Python Programming for Data Science</li>
-          <li>Statistical Analysis & Hypothesis Testing</li>
-          <li>Data Cleaning and Preprocessing</li>
-          <li>Exploratory Data Analysis (EDA)</li>
-          <li>Machine Learning (Supervised & Unsupervised)</li>
-          <li>Deep Learning with TensorFlow / Keras</li>
-          <li>Data Visualization using Power BI & Matplotlib</li>
+          <li>Statistics, Probability & Linear Algebra</li>
+          <li>Data Wrangling with Pandas & NumPy</li>
+          <li>Machine Learning (Regression, Classification, Clustering)</li>
+          <li>Advanced ML (Ensemble Models)</li>
+          <li>Deep Learning (ANN, CNN Basics)</li>
+          <li>Data Visualization & Storytelling</li>
+          <li>Capstone Project with Real Business Data</li>
         </ul>
       </div>
 
-      {/* Course Modules */}
+      {/* TOOLS */}
       <div className="mb-5">
-        <h3 className="text-secondary fw-semibold">📚 Course Curriculum Overview</h3>
-        <ul>
-          <li>Module 1: Python for Data Science</li>
-          <li>Module 2: Statistics & Probability</li>
-          <li>Module 3: Data Wrangling with Pandas & NumPy</li>
-          <li>Module 4: Machine Learning Algorithms</li>
-          <li>Module 5: Deep Learning & Neural Networks</li>
-          <li>Module 6: Data Visualization & Storytelling</li>
-          <li>Module 7: Capstone Project (Real-World Data)</li>
-        </ul>
-      </div>
-
-      {/* Tools & Technologies */}
-      <div className="mb-5">
-        <h3 className="text-secondary fw-semibold">🛠️ Tools & Technologies Covered</h3>
+        <h3 className="fw-semibold text-secondary">🛠️ Tools Used in Industry</h3>
         <ul>
           <li>Python, Jupyter Notebook</li>
           <li>Pandas, NumPy, Scikit-learn</li>
           <li>TensorFlow, Keras</li>
-          <li>Power BI, Tableau</li>
-          <li>SQL & Excel for Data Handling</li>
+          <li>Power BI / Tableau</li>
+          <li>SQL & Excel</li>
+          <li>Git & GitHub</li>
         </ul>
       </div>
 
-      {/* Career Opportunities */}
+      {/* PROJECTS */}
       <div className="mb-5">
-        <h3 className="text-secondary fw-semibold">🎯 Career Opportunities After Training</h3>
+        <h3 className="fw-semibold text-secondary">💼 Real Projects (Hands-On)</h3>
+        <ul>
+          <li>Customer Churn Prediction System</li>
+          <li>Sales Forecasting Model</li>
+          <li>Credit Risk Analysis</li>
+          <li>Recommendation System</li>
+          <li>End-to-End Data Science Capstone Project</li>
+        </ul>
+      </div>
+
+      {/* CAREER */}
+      <div className="mb-5">
+        <h3 className="fw-semibold text-secondary">🎯 Career Opportunities</h3>
         <ul>
           <li>Data Scientist</li>
           <li>Machine Learning Engineer</li>
-          <li>AI Researcher</li>
+          <li>AI Engineer</li>
           <li>Business Intelligence Analyst</li>
-          <li>Data Engineer</li>
+          <li>Data Analyst (Advanced)</li>
         </ul>
       </div>
 
-      {/* Preparation Tips */}
+      {/* OUTCOMES */}
       <div className="text-center">
-        <h4 className="fw-bold text-success">🚀 Preparation & Learning Tips</h4>
+        <h4 className="fw-bold text-success"> What You Will Be Able To Do</h4>
         <ul className="list-unstyled">
-          <li>• Learn Python thoroughly before diving into ML.</li>
-          <li>• Practice with open datasets (Kaggle, UCI ML Repository).</li>
-          <li>• Build small projects regularly (EDA, Regression models).</li>
-          <li>• Revise math foundations: Linear Algebra, Probability, Statistics.</li>
-          <li>• Participate in Data Science hackathons & competitions.</li>
+          <li>• Work with real-world datasets</li>
+          <li>• Build ML & Data Science pipelines</li>
+          <li>• Deploy models for real use cases</li>
+          <li>• Crack Data Science fresher interviews</li>
         </ul>
       </div>
+
     </div>
   );
 };

@@ -120,10 +120,12 @@ p {
    COURSES SECTION
 ================================================== */
 
+/* ================= COURSES SECTION ================= */
+
 .courses {
   padding: 60px 20px;
   text-align: center;
-  background-color:#ced9e0 ;
+  background-color: #ced9e0;
 }
 
 .courses h2 {
@@ -132,15 +134,36 @@ p {
   margin-bottom: 40px;
 }
 
-.course-slider {
-  overflow: hidden;
+/* ================= SLIDER WRAPPER ================= */
+
+.course-slider-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
 }
+
+/* ================= SLIDER ================= */
+
+.course-slider {
+  overflow-x: auto;              /* 🔥 manual scroll */
+  scroll-behavior: smooth;
+  scrollbar-width: none;
+  max-width: 100%;
+}
+
+.course-slider::-webkit-scrollbar {
+  display: none;
+}
+
+/* ================= TRACK ================= */
 
 .course-track {
   display: flex;
-  width: max-content;
-  animation: scrollCourses 25s linear infinite;
+  width: max-content;            /* cards line me rahenge */
 }
+
+/* ================= CARD ================= */
 
 .course-card {
   width: 280px;
@@ -148,7 +171,7 @@ p {
   padding: 25px;
   margin: 0 15px;
   border-radius: 16px;
-  box-shadow: 0 8px 22px rgba(0,0,0,0.08);
+  box-shadow: 0 8px 22px rgba(0, 0, 0, 0.08);
   text-align: center;
   flex-shrink: 0;
   transition: transform 0.3s ease;
@@ -158,17 +181,35 @@ p {
   transform: translateY(-8px);
 }
 
+/* ================= IMAGE ================= */
+
 .course-img {
   width: 100%;
   height: 180px;
   object-fit: contain;
   margin-bottom: 15px;
-   
 }
 
-.course-slider:hover .course-track {
-  animation-play-state: paused;
+/* ================= ARROWS ================= */
+
+.arrow {
+  background: #007bff;
+  color: #fff;
+  border: none;
+  font-size: 22px;
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
+
+.arrow:hover {
+  background: #0056b3;
+}
+
 
 /* ==================================================
    ABOUT / VISION
@@ -202,6 +243,16 @@ p {
   padding: 90px 20px;
   background:#d0ced6;
   text-align: center;
+}
+.review-course {
+  display: inline-block;
+  margin: 6px 0 10px;
+  padding: 4px 12px;
+
+  color: gold;
+  border-radius: 14px;
+  font-size: 20px;
+  font-weight: 800;
 }
 
 .review-slider {

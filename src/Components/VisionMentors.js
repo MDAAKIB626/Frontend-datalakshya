@@ -1,17 +1,21 @@
 import React from "react";
+
+/*
+================= CSS =================
 import "./VisionMentors.css";
 
+================= IMAGES =================
 import img1 from "./homeimages20/mentorimage1.jpg";
 import img2 from "./homeimages20/mentorimage2.jpg";
 import img3 from "./homeimages20/mentorimage3.jpg";
 import img4 from "./homeimages20/mentorimages4.jpg";
 
+================= DATA =================
 const mentors = [
   {
     img: img1,
     name: "Siraj Ahmad",
     role: "Data Science & Maths",
-    work: "5+ Years",
     teach: "3+ Years",
     desc: "Experienced mentor with strong background in Data Science and teaching."
   },
@@ -41,16 +45,16 @@ const mentors = [
   }
 ];
 
+================= COMPONENT =================
 const VisionMentors = () => {
   return (
     <section className="dl-mentor-section">
-      {/* HEADER */}
+
       <div className="dl-mentor-header">
         <h2>Meet our Top Mentors</h2>
         <div className="dl-underline"></div>
       </div>
 
-      {/* CARDS */}
       <div className="dl-mentor-cards">
         {mentors.map((m, i) => (
           <div className="dl-card" key={i}>
@@ -63,8 +67,8 @@ const VisionMentors = () => {
               <p className="dl-role">{m.role}</p>
 
               <div className="dl-exp">
-                <span><b>{m.work}</b> Work</span>
                 <span><b>{m.teach}</b> Teaching</span>
+                <span> & Guidance</span>
               </div>
 
               <p className="dl-desc">{m.desc}</p>
@@ -72,8 +76,10 @@ const VisionMentors = () => {
           </div>
         ))}
       </div>
+
     </section>
   );
 };
 
 export default VisionMentors;
+*/

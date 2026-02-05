@@ -1,41 +1,83 @@
 .whatsapp-section {
-  background: #f0fff4;
-  padding: 60px 0;
-}
-
-.whatsapp-content {
+  width: 100%;
   display: flex;
-  align-items: center;
   justify-content: center;
 }
 
+.whatsapp-card {
+  width: 100%;
+  max-width: 900px;
+
+  background: transparent;   /* ✅ white hata */
+  box-shadow: none;          /* ✅ shadow hata */
+  border-radius: 0;          /* ✅ rounded hata */
+
+  padding: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* LEFT */
 .whatsapp-left {
-  max-width: 600px;
-  text-align: center;
+  width: 50%;
 }
 
 .whatsapp-left h2 {
-  color: #075e54;
-  margin-bottom: 15px;
+  font-size: 28px;
+  margin-bottom: 12px;
 }
 
 .whatsapp-left p {
-  color: #333;
-  margin-bottom: 25px;
-  font-size: 16px;
+  color: #555;
+  line-height: 1.6;
 }
 
+/* RIGHT */
+.whatsapp-right {
+  width: 45%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 24px;
+  flex-direction: column;   /* 👈 YAHI MAIN FIX */
+}
+
+.whatsapp-right img {
+  width: 180px;
+  height: 180px;
+  object-fit: contain;
+  border-radius: 50px;
+}
+
+/* BUTTON */
 .whatsapp-btn {
-  background-color: #25d366;
-  color: #fff;
-  padding: 12px 28px;
-  font-size: 16px;
+  background: #25d366;
+  color: white;
+  padding: 10px 20px;
   border-radius: 30px;
+  font-weight: 600;
   text-decoration: none;
-  transition: 0.3s ease;
+  white-space: nowrap;
 }
 
 .whatsapp-btn:hover {
-  background-color: #1ebe5d;
-  color: #fff;
+  transform: translateY(-2px);
+}
+
+/* MOBILE */
+@media (max-width: 768px) {
+  .whatsapp-card {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .whatsapp-left,
+  .whatsapp-right {
+    width: 100%;
+  }
+
+  .whatsapp-right {
+    flex-direction: column;
+  }
 }

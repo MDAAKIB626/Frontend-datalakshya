@@ -1,0 +1,96 @@
+/* ================= PAGE WRAPPER ================= */
+.ml-page {
+  max-width: 1100px;
+  margin: auto;
+  padding: 40px 20px;
+  font-family: "Segoe UI", system-ui, sans-serif;
+}
+
+/* ================= TITLE ================= */
+.ml-page h1 {
+  font-size: 2.4rem;
+  font-weight: 700;
+  color: #14532d;
+  margin-bottom: 10px;
+}
+
+/* ================= INTRO TEXT ================= */
+.ml-page .lead {
+  font-size: 1.05rem;
+  line-height: 1.7;
+  color: #334155;
+  max-width: 900px;
+  margin: auto;
+}
+
+/* ================= SECTION CARD ================= */
+.ml-page .mb-5 {
+  background: #ffffff;
+  border-radius: 14px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.06);
+  padding: 22px 24px;
+  margin-bottom: 22px;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.ml-page .mb-5:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 14px 30px rgba(0, 0, 0, 0.08);
+}
+
+/* ================= SECTION HEADING ================= */
+.ml-page h3 {
+  font-size: 1.4rem;
+  font-weight: 600;
+  color: #064e3b;
+  margin-bottom: 12px;
+}
+
+/* ================= TEXT ================= */
+.ml-page p {
+  font-size: 1rem;
+  line-height: 1.7;
+  color: #475569;
+}
+
+/* ================= LIST ================= */
+.ml-page ul {
+  padding-left: 20px;
+  margin-top: 10px;
+}
+
+.ml-page li {
+  font-size: 0.95rem;
+  margin-bottom: 7px;
+  color: #475569;
+}
+
+/* ================= STRONG TEXT ================= */
+.ml-page strong {
+  color: #14532d;
+  font-weight: 600;
+}
+
+/* ================= OUTCOME BOX ================= */
+.ml-page .text-center {
+  background: linear-gradient(135deg, #dcfce7, #f0fdf4);
+  border-radius: 18px;
+  padding: 30px 20px;
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.06);
+}
+
+.ml-page h4 {
+  font-size: 1.45rem;
+  margin-bottom: 14px;
+}
+
+/* ================= RESPONSIVE ================= */
+@media (max-width: 768px) {
+  .ml-page h1 {
+    font-size: 1.9rem;
+  }
+
+  .ml-page .mb-5 {
+    padding: 18px 18px;
+  }
+}

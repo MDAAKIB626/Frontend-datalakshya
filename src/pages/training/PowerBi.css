@@ -1,38 +1,96 @@
+/* ================= PAGE WRAPPER ================= */
+.bi-page {
+  max-width: 1100px;
+  margin: auto;
+  padding: 40px 20px;
+  font-family: "Segoe UI", system-ui, sans-serif;
+}
 
+/* ================= TITLE ================= */
+.bi-page h1 {
+  font-size: 2.4rem;
+  font-weight: 700;
+  color: #ca8a04; /* Power BI yellow */
+  margin-bottom: 10px;
+}
 
-.container {
+/* ================= INTRO TEXT ================= */
+.bi-page .lead {
+  font-size: 1.05rem;
+  line-height: 1.7;
+  color: #334155;
   max-width: 900px;
+  margin: auto;
 }
 
-h1, h3, h4 {
-  font-family: "Poppins", sans-serif;
+/* ================= SECTION CARD ================= */
+.bi-page .mb-5 {
+  background: #ffffff;
+  border-radius: 14px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.06);
+  padding: 22px 24px;
+  margin-bottom: 22px;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
 }
 
-ul {
-  line-height: 1.8;
+.bi-page .mb-5:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 14px 30px rgba(0, 0, 0, 0.08);
 }
 
-.lead {
-  font-size: 1.1rem;
+/* ================= SECTION HEADING ================= */
+.bi-page h3 {
+  font-size: 1.4rem;
+  font-weight: 600;
+  color: #854d0e;
+  margin-bottom: 12px;
 }
 
-.text-warning {
-  color:#198754 !important;
+/* ================= TEXT ================= */
+.bi-page p {
+  font-size: 1rem;
+  line-height: 1.7;
+  color: #475569;
 }
 
-.text-secondary {
-  color: #6c757d !important;
+/* ================= LIST ================= */
+.bi-page ul {
+  padding-left: 20px;
+  margin-top: 10px;
 }
 
-.text-success {
-  color: #28a745 !important;
+.bi-page li {
+  font-size: 0.95rem;
+  margin-bottom: 7px;
+  color: #475569;
 }
 
+/* ================= STRONG TEXT ================= */
+.bi-page strong {
+  color: #ca8a04;
+  font-weight: 600;
+}
+
+/* ================= OUTCOME / TIPS BOX ================= */
+.bi-page .text-center {
+  background: linear-gradient(135deg, #fef9c3, #fffbeb);
+  border-radius: 18px;
+  padding: 30px 20px;
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.06);
+}
+
+.bi-page h4 {
+  font-size: 1.45rem;
+  margin-bottom: 14px;
+}
+
+/* ================= RESPONSIVE ================= */
 @media (max-width: 768px) {
-  .container {
-    padding: 1rem;
+  .bi-page h1 {
+    font-size: 1.9rem;
   }
-  h1 {
-    font-size: 1.6rem;
+
+  .bi-page .mb-5 {
+    padding: 18px 18px;
   }
 }

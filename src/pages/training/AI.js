@@ -4,90 +4,121 @@ import "./AI.css";
 
 const AI = () => {
   return (
-    <div className="container py-5">
+    <div className="container py-5 ai-page">
+
       <h1 className="text-center text-primary fw-bold mb-4">
-        Artificial Intelligence (AI) Training Program
+        Artificial Intelligence (AI) – Industry Oriented Training
       </h1>
 
       <p className="lead text-muted text-center mb-5">
-        Master Artificial Intelligence concepts and real-world problem-solving skills.
-        This program focuses on **Machine Learning, Deep Learning, Neural Networks,**
-        and **AI applications** across various industries.
+        This Artificial Intelligence program is designed as per
+        <strong> real industry requirements</strong> and focuses on
+        <strong> Machine Learning, Deep Learning, NLP, Computer Vision</strong>,
+        and <strong> real-world AI project development</strong>.
       </p>
 
-      {/* About the Course */}
+      {/* ABOUT */}
       <div className="mb-5">
-        <h3 className="text-secondary fw-semibold">📘 About the Program</h3>
+        <h3 className="fw-semibold text-secondary">📘 About the Program</h3>
         <p>
-          This AI training course helps learners build a strong foundation in
-          artificial intelligence by combining theory with hands-on practice.
-          You'll work on real datasets, understand AI algorithms, and build
-          intelligent systems capable of reasoning and learning.
+          This AI training program is built for students and developers who want
+          to work in real AI-based companies. The course focuses on
+          <strong> practical coding, mathematical foundations, model building</strong>,
+          and <strong> deployment-ready AI solutions</strong>.
         </p>
       </div>
 
-      {/* Skills Covered */}
+      {/* COURSE DETAILS */}
       <div className="mb-5">
-        <h3 className="text-secondary fw-semibold">🧠 Key Skills You Will Learn</h3>
+        <h3 className="fw-semibold text-secondary">📋 Course Details (Real)</h3>
         <ul>
-          <li>Machine Learning Algorithms (Supervised & Unsupervised)</li>
-          <li>Deep Learning with Neural Networks (ANN, CNN, RNN)</li>
-          <li>Natural Language Processing (NLP)</li>
-          <li>Computer Vision & Image Recognition</li>
-          <li>Python for AI (NumPy, Pandas, TensorFlow, PyTorch)</li>
-          <li>AI Model Deployment & Optimization</li>
+          <li><strong>Duration:</strong> 4 – 6 Months</li>
+          <li><strong>Mode:</strong> Online / Offline</li>
+          <li><strong>Prerequisites:</strong> Basic Python, Maths (12th level)</li>
+          <li><strong>Level:</strong> Beginner → Advanced</li>
+          <li><strong>Hands-on:</strong> 70% Practical, 30% Theory</li>
         </ul>
       </div>
 
-      {/* Curriculum */}
+      {/* REAL SKILLS */}
       <div className="mb-5">
-        <h3 className="text-secondary fw-semibold">📚 Course Curriculum Overview</h3>
+        <h3 className="fw-semibold text-secondary">🧠 Skills You Will Actually Learn</h3>
         <ul>
-          <li>Introduction to Artificial Intelligence</li>
-          <li>Mathematics for AI – Linear Algebra, Probability, and Statistics</li>
-          <li>Python Programming & Data Handling</li>
-          <li>Machine Learning Fundamentals</li>
-          <li>Deep Learning and Neural Networks</li>
-          <li>Natural Language Processing</li>
-          <li>AI in Real-world Applications (Healthcare, Finance, Robotics)</li>
-          <li>Capstone Project on AI</li>
+          <li>Python for AI (NumPy, Pandas, Matplotlib)</li>
+          <li>Statistics & Probability for ML</li>
+          <li>Machine Learning Algorithms (Regression, Classification)</li>
+          <li>Model Evaluation, Bias–Variance Tradeoff</li>
+          <li>Deep Learning with Neural Networks</li>
+          <li>NLP – Text Classification, Chatbots</li>
+          <li>Computer Vision – Image Classification</li>
+          <li>Model Deployment using Flask / FastAPI</li>
         </ul>
       </div>
 
-      {/* Tools & Technologies */}
+      {/* REAL CURRICULUM */}
       <div className="mb-5">
-        <h3 className="text-secondary fw-semibold">🛠️ Tools & Technologies Covered</h3>
+        <h3 className="fw-semibold text-secondary">📚 Real-World Curriculum</h3>
         <ul>
-          <li>Python, TensorFlow, PyTorch, Keras</li>
-          <li>OpenCV, Scikit-learn, NumPy, Pandas</li>
-          <li>Google Colab, Jupyter Notebook</li>
-          <li>Hugging Face, NLTK, SpaCy</li>
+          <li>AI Fundamentals & Industry Use Cases</li>
+          <li>Linear Algebra & Probability for AI</li>
+          <li>Python for Data Science</li>
+          <li>Machine Learning (Scikit-learn)</li>
+          <li>Deep Learning (ANN, CNN basics)</li>
+          <li>NLP (Text Processing, Sentiment Analysis)</li>
+          <li>Computer Vision (Image Classification)</li>
+          <li>AI Model Deployment</li>
+          <li>Capstone Project (Industry-style)</li>
         </ul>
       </div>
 
-      {/* Career Opportunities */}
+      {/* TOOLS */}
       <div className="mb-5">
-        <h3 className="text-secondary fw-semibold">🎯 Career Opportunities After Training</h3>
+        <h3 className="fw-semibold text-secondary">🛠️ Tools Used in Industry</h3>
         <ul>
-          <li>AI Engineer / Research Scientist</li>
-          <li>Machine Learning Engineer</li>
-          <li>Data Scientist / Analyst</li>
-          <li>Computer Vision Engineer</li>
-          <li>NLP Engineer / Chatbot Developer</li>
-          <li>AI Product Manager</li>
+          <li>Python 3.x</li>
+          <li>NumPy, Pandas, Matplotlib</li>
+          <li>Scikit-learn</li>
+          <li>TensorFlow / Keras (Basics)</li>
+          <li>Jupyter Notebook & Google Colab</li>
+          <li>Git & GitHub</li>
         </ul>
       </div>
 
-      {/* Learning Outcomes */}
+      {/* REAL PROJECTS */}
+      <div className="mb-5">
+        <h3 className="fw-semibold text-secondary">💼 Real Projects (Hands-On)</h3>
+        <ul>
+          <li>House Price Prediction System</li>
+          <li>Spam Email Detection</li>
+          <li>Customer Churn Prediction</li>
+          <li>Movie Recommendation System</li>
+          <li>AI Chatbot (Basic NLP)</li>
+        </ul>
+      </div>
+
+      {/* CAREER */}
+      <div className="mb-5">
+        <h3 className="fw-semibold text-secondary">🎯 Career Opportunities</h3>
+        <ul>
+          <li>AI / ML Engineer (Fresher Level)</li>
+          <li>Data Analyst</li>
+          <li>Junior Data Scientist</li>
+          <li>Python AI Developer</li>
+          <li>Research Assistant (AI)</li>
+        </ul>
+      </div>
+
+      {/* OUTCOMES */}
       <div className="text-center">
-        <h4 className="fw-bold text-success">🚀 Learning Outcomes</h4>
+        <h4 className="fw-bold text-success"> What You Will Be Able To Do</h4>
         <ul className="list-unstyled">
-          <li>• Build, train, and evaluate ML & AI models.</li>
-          <li>• Apply AI concepts to solve real-world business problems.</li>
-          <li>• Understand neural networks and model optimization.</li>
-          <li>• Deploy AI models using cloud tools and APIs.</li>
+          <li>• Build AI & ML models from scratch</li>
+          <li>• Work with real datasets</li>
+          <li>• Deploy AI models as web APIs</li>
+          <li>• Crack AI/ML fresher interviews</li>
         </ul>
       </div>
+
     </div>
   );
 };

@@ -1,13 +1,16 @@
 .comp-exam-section {
-  padding: 80px 20px;
+  padding: 60px 20px;
   background: #dfe6e5;
   text-align: center;
+
 }
 
 .comp-title {
   font-size: 34px;
   font-weight: 700;
   color: #0f172a;
+   margin-bottom: 40px;
+
 }
 
 /* Scroll Wrapper */

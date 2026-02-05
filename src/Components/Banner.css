@@ -59,9 +59,9 @@
 }
 
 .banner-card {
-  width: 380px;
+  width: 450px;
   background: white;
-  padding: 14px;
+  padding: 10px;
   border-radius: 18px;
   box-shadow: 0 25px 55px rgba(0,0,0,0.45);
   animation: float 4s ease-in-out infinite;
@@ -84,7 +84,7 @@
   width: fit-content;
   overflow: hidden;
   white-space: nowrap;
-  border-right: 3px solid #ff8c00;
+
   animation: typing 3s steps(28, end), blink 0.8s infinite;
 }
 

@@ -1,104 +1,175 @@
-// src/pages/exam/UGENET.js
-import React from "react";
+// src/pages/exam/UGENETe.jsx
+import React, { useState } from "react";
+import { motion, AnimatePresence } from "framer-motion";
 import "./UGENETe.css";
 
+/* ================= ANIMATION ================= */
+const sectionAnim = {
+  hidden: { opacity: 0, y: 40 },
+  visible: { opacity: 1, y: 0 },
+};
+
+/* ================= SUBJECT DATA ================= */
+const subjects = [
+  {
+    title: "Paper I – Teaching & Research Aptitude (100 Marks)",
+    topics: [
+      "Teaching Aptitude",
+      "Research Aptitude",
+      "Reading Comprehension",
+      "Communication",
+      "Reasoning (Logical & Analytical)",
+      "Data Interpretation",
+      "ICT & Higher Education System",
+    ],
+  },
+  {
+    title: "Computer System Architecture",
+    topics: [
+      "Digital Logic",
+      "Processor Architecture",
+      "Memory Hierarchy",
+      "I/O Systems",
+    ],
+  },
+  {
+    title: "Data Structures & Algorithms",
+    topics: [
+      "Arrays, Linked Lists, Stacks, Queues",
+      "Trees & Graphs",
+      "Searching & Sorting",
+      "Algorithm Complexity",
+    ],
+  },
+  {
+    title: "Operating Systems",
+    topics: [
+      "Processes & Threads",
+      "CPU Scheduling",
+      "Deadlocks",
+      "Memory Management",
+      "File Systems",
+    ],
+  },
+  {
+    title: "DBMS",
+    topics: [
+      "ER Model & Relational Model",
+      "Normalization",
+      "SQL Queries",
+      "Transactions & Concurrency Control",
+    ],
+  },
+  {
+    title: "Computer Networks & Web Technology",
+    topics: [
+      "OSI & TCP/IP Models",
+      "Routing & Switching",
+      "HTTP, FTP, DNS",
+      "Web Technologies Basics",
+    ],
+  },
+  {
+    title: "Theory of Computation",
+    topics: [
+      "Finite Automata",
+      "Context Free Grammar",
+      "Turing Machine",
+      "Decidability",
+    ],
+  },
+  {
+    title: "AI, ML & Emerging Technologies",
+    topics: [
+      "Artificial Intelligence Basics",
+      "Machine Learning Concepts",
+      "Data Mining",
+      "Cloud Computing",
+      "IoT Fundamentals",
+    ],
+  },
+];
+
+/* ================= COMPONENT ================= */
 const UGENETe = () => {
+  const [openIndex, setOpenIndex] = useState(null);
+
+  const toggleDetails = (index) => {
+    setOpenIndex(openIndex === index ? null : index);
+  };
+
   return (
-    <div className="container py-5">
-      <h1 className="text-center mb-4 text-primary fw-bold">
+    <div className="ug-net-container">
+
+      <h1 className="ug-net-title">
         UGC NET – Computer Science
       </h1>
 
-      <p className="lead text-muted text-center mb-5">
-        The **UGC NET (University Grants Commission – National Eligibility Test)**
-        is a national-level exam conducted by **NTA** to determine eligibility for
-        **Assistant Professorship and Junior Research Fellowship (JRF)** in Indian
-        universities and colleges for the **Computer Science & Applications** subject.
+      <p className="ug-net-badge">
+        Conducted by NTA | Eligibility for Assistant Professor & JRF
       </p>
 
-      {/* About the Exam */}
-      <div className="mb-5">
-        <h3 className="text-secondary fw-semibold">📘 About the Exam</h3>
-        <p>
-          UGC NET Computer Science evaluates candidates on their knowledge of core
-          computer science concepts, programming, and research aptitude. It is held
-          twice a year (June & December) in **Computer-Based Test (CBT)** mode by
-          the National Testing Agency (NTA).
-        </p>
-      </div>
+      <p className="ug-net-intro">
+        <strong>UGC NET (Computer Science)</strong> is a national-level exam
+        conducted by <strong>NTA</strong> for eligibility to become
+        <strong> Assistant Professor</strong> and for
+        <strong> Junior Research Fellowship (JRF)</strong>.
+      </p>
 
-      {/* Eligibility */}
-      <div className="mb-5">
-        <h3 className="text-secondary fw-semibold">🎯 Eligibility Criteria</h3>
-        <ul>
-          <li>
-            Master’s degree in Computer Science, Information Technology, or related
-            discipline with **at least 55% marks** (50% for reserved categories).
-          </li>
-          <li>
-            Final year postgraduate students are also eligible to apply.
-          </li>
-          <li>No upper age limit for Assistant Professor eligibility.</li>
-          <li>For JRF, age must be **less than 30 years** (relaxation applicable).</li>
-        </ul>
-      </div>
+      {/* SUBJECT SECTION */}
+      <motion.section
+        className="ug-net-section"
+        variants={sectionAnim}
+        initial="hidden"
+        whileInView="visible"
+        transition={{ duration: 0.6 }}
+        viewport={{ once: true }}
+      >
+        <h2>Paper-wise Syllabus & Topics</h2>
 
-      {/* Exam Pattern */}
-      <div className="mb-5">
-        <h3 className="text-secondary fw-semibold">🧾 Exam Pattern</h3>
-        <ul>
-          <li>Mode: Computer-Based Test (CBT)</li>
-          <li>Paper I: General Teaching & Research Aptitude (50 questions, 100 marks)</li>
-          <li>Paper II: Computer Science (100 questions, 200 marks)</li>
-          <li>Total Duration: 3 hours (no break between papers)</li>
-          <li>All questions are Multiple Choice Questions (MCQs)</li>
-        </ul>
-      </div>
+        {subjects.map((sub, index) => (
+          <div key={index} className="subject-card">
 
-      {/* Syllabus */}
-      <div className="mb-5">
-        <h3 className="text-secondary fw-semibold">🧠 Major Topics Covered</h3>
-        <ul>
-          <li>Computer System Architecture</li>
-          <li>Data Structures and Algorithms</li>
-          <li>Programming Languages and Compilers</li>
-          <li>Operating Systems</li>
-          <li>Database Management Systems (DBMS)</li>
-          <li>Computer Networks and Web Technologies</li>
-          <li>Software Engineering</li>
-          <li>Theory of Computation and Automata</li>
-          <li>Artificial Intelligence and Machine Learning</li>
-          <li>Data Mining, Cloud Computing, and IoT Fundamentals</li>
-          <li>Discrete Mathematics and Graph Theory</li>
-          <li>Research Methodology and Emerging Technologies</li>
-        </ul>
-      </div>
+            <div className="subject-header">
+              <span className="subject-title">{sub.title}</span>
 
-      {/* Career Opportunities */}
-      <div className="mb-5">
-        <h3 className="text-secondary fw-semibold">🎓 Career Opportunities</h3>
-        <p>
-          Qualifying UGC NET Computer Science allows candidates to:
-        </p>
-        <ul>
-          <li>Become **Assistant Professors** in universities and colleges.</li>
-          <li>Qualify for **Junior Research Fellowship (JRF)** positions.</li>
-          <li>Work in **Research Labs, PSUs, and Educational Institutes**.</li>
-          <li>Pursue **Ph.D. in Computer Science** or **AI/ML/Data Science** domains.</li>
-        </ul>
-      </div>
+              <button
+                className="details-btn"
+                onClick={() => toggleDetails(index)}
+              >
+                {openIndex === index ? "Hide Details" : "View Details"}
+              </button>
+            </div>
 
-      {/* Preparation Tips */}
-      <div className="text-center">
-        <h4 className="fw-bold text-success">🚀 Preparation Tips</h4>
-        <ul className="list-unstyled">
-          <li>• Study from standard books like Galvin, Ullman, and Tanenbaum.</li>
-          <li>• Follow latest UGC NET syllabus released by NTA.</li>
-          <li>• Practice mock tests and previous year question papers.</li>
-          <li>• Focus on Paper I for reasoning & teaching aptitude.</li>
-          <li>• Revise formulas and definitions before the exam.</li>
-        </ul>
-      </div>
+            <AnimatePresence>
+              {openIndex === index && (
+                <motion.div
+                  className="subject-topics"
+                  initial={{ height: 0, opacity: 0 }}
+                  animate={{ height: "auto", opacity: 1 }}
+                  exit={{ height: 0, opacity: 0 }}
+                  transition={{ duration: 0.4 }}
+                >
+                  <ul>
+                    {sub.topics.map((topic, i) => (
+                      <li key={i}>{topic}</li>
+                    ))}
+                  </ul>
+                </motion.div>
+              )}
+            </AnimatePresence>
+
+          </div>
+        ))}
+      </motion.section>
+
+      <p className="ug-net-para">
+        🎯 <strong>Strategy:</strong>  
+        Paper I ko lightly mat lena — 100 marks guaranteed hote hain.
+        Paper II me <strong>DSA, OS, DBMS, TOC</strong> sabse scoring hain.
+        Previous Year Questions (PYQs) repeatedly practice kar.
+      </p>
+
     </div>
   );
 };
