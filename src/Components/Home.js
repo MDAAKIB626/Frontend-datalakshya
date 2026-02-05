@@ -1,4 +1,5 @@
-import React, { useRef, useEffect } from "react";
+import React, { useRef, useEffect, useCallback } from "react";
+
 import "./Home.css";
 
 /* Student Review Images */
@@ -32,14 +33,14 @@ const Home = () => {
 
  /* ================= AUTO SCROLL ================= */
 
-const stopAutoScroll = () => {
+const stopAutoScroll = useCallback(() => {
   if (autoScrollRef.current) {
     clearInterval(autoScrollRef.current);
     autoScrollRef.current = null;
   }
-};
+}, []);
 
-const startAutoScroll = () => {
+const startAutoScroll = useCallback(() => {
   stopAutoScroll();
   autoScrollRef.current = setInterval(() => {
     if (sliderRef.current) {
@@ -49,12 +50,13 @@ const startAutoScroll = () => {
       });
     }
   }, 20);
-};
+}, [stopAutoScroll]);
 
 useEffect(() => {
   startAutoScroll();
   return () => stopAutoScroll();
-}, []);
+}, [startAutoScroll, stopAutoScroll]);
+
 
 /* ================= ARROWS ================= */
 
