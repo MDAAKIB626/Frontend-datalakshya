@@ -144,12 +144,7 @@ const GATEDAe = () => {
         ))}
       </motion.section>
 
-      <p className="gate-da-para">
-        🔥 <strong>Preparation Strategy:</strong>  
-        Focus first on <strong>Mathematics + Machine Learning</strong>.  
-        Practice Python-based problems and revise formulas regularly.
-        Solving <strong>GATE CS PYQs</strong> also helps in logic building.
-      </p>
+     
 
     </div>
   );

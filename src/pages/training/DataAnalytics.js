@@ -1,122 +1,155 @@
-import React from "react";
+import React, { useState } from "react";
 import "./DataAnalytics.css";
 
 const DataAnalytics = () => {
+  const [activeTab, setActiveTab] = useState("foundations");
+
   return (
-    <div className="container py-5 data-page">
+    <div className="da-wrapper">
 
-      {/* TITLE */}
-      <h1 className="text-center text-primary fw-bold mb-4">
-        Data Analytics – Industry Oriented Training Program
-      </h1>
+      {/* ================= HERO ================= */}
+      <section className="da-hero">
+        <div className="da-hero-left">
+          <span className="tag">#IndustryOriented</span>
+          <h1>Data Analytics Training Program</h1>
+          <p>
+            Learn how to collect, clean, analyze, and visualize data to support
+            real business decisions using industry-standard tools.
+          </p>
 
-      {/* INTRO */}
-      <p className="lead text-muted text-center mb-5">
-        This Data Analytics training program is designed as per
-        <strong> real business and industry requirements</strong>.
-        Learn how to <strong>collect, clean, analyze, and visualize data</strong>
-        to support data-driven decision making in real companies.
-      </p>
+          <button className="buy-btn">Enroll Now</button>
+          <p className="emi">Internship & Placement Guidance</p>
+        </div>
 
-      {/* ABOUT */}
-      <div className="mb-5">
-        <h3 className="fw-semibold text-secondary">📘 About the Program</h3>
-        <p>
-          This program prepares you for real-world roles such as
-          <strong> Data Analyst, Business Analyst, and BI Analyst</strong>.
-          You will work with <strong>real datasets, dashboards, and case studies</strong>
-          used by companies for sales, marketing, finance, and operations.
-        </p>
-      </div>
+        <div className="da-hero-right">
+          <img
+            src="https://images.unsplash.com/photo-1551288049-bebda4e38f71"
+            alt="data-analytics"
+          />
+        </div>
+      </section>
 
-      {/* COURSE DETAILS */}
-      <div className="mb-5">
-        <h3 className="fw-semibold text-secondary">📋 Course Details (Real)</h3>
-        <ul>
-          <li><strong>Duration:</strong> 3 – 4 Months</li>
-          <li><strong>Mode:</strong> Online / Offline</li>
-          <li><strong>Prerequisites:</strong> Basic Computer Knowledge</li>
-          <li><strong>Level:</strong> Beginner → Intermediate</li>
-          <li><strong>Hands-on:</strong> 80% Practical, 20% Theory</li>
-        </ul>
-      </div>
+      {/* ================= INFO BAR ================= */}
+      <section className="da-info">
+        <div><b>Live Training</b><br />Mentor Led</div>
+        <div><b>Apr 2026</b><br />Start Date</div>
+        <div><b>4 Months</b><br />Duration</div>
+        <div><b>Online / Offline</b><br />Mode</div>
+        <div><b>English / Hinglish</b><br />Language</div>
+      </section>
 
-      {/* SKILLS */}
-      <div className="mb-5">
-        <h3 className="fw-semibold text-secondary">🧠 Skills You Will Actually Learn</h3>
-        <ul>
-          <li>Data Cleaning & Data Preprocessing</li>
-          <li>Exploratory Data Analysis (EDA)</li>
-          <li>Data Visualization & Dashboard Design</li>
-          <li>SQL Queries for Business Analysis</li>
-          <li>Excel for Reports & Automation</li>
-          <li>Python for Data Analysis (Pandas, NumPy)</li>
-          <li>Statistical Analysis & Hypothesis Testing</li>
-          <li>Business & KPI Analysis</li>
-        </ul>
-      </div>
+      {/* ================= ABOUT ================= */}
+      <section className="da-about">
+        <div className="about-left">
+          <h2>About Data Analytics Program</h2>
+          <ul>
+            <li>Industry-focused analytics curriculum</li>
+            <li>80% practical, real datasets</li>
+            <li>Business case studies</li>
+            <li>Dashboard & reporting skills</li>
+            <li>Interview-oriented training</li>
+          </ul>
+        </div>
 
-      {/* CURRICULUM */}
-      <div className="mb-5">
-        <h3 className="fw-semibold text-secondary">📚 Real-World Curriculum</h3>
-        <ul>
-          <li>Data Analytics Fundamentals & Use Cases</li>
-          <li>Excel (Formulas, Pivot Tables, Dashboards)</li>
-          <li>SQL (SELECT, JOIN, GROUP BY, Subqueries)</li>
-          <li>Data Visualization (Power BI / Tableau)</li>
-          <li>Python for Data Analysis</li>
-          <li>EDA & Statistical Techniques</li>
-          <li>Business Case Studies</li>
-          <li>Capstone Project with Real Data</li>
-        </ul>
-      </div>
+        <div className="about-right">
+          <img
+            src="https://images.unsplash.com/photo-1556155092-8707de31f9c4"
+            alt="about-data-analytics"
+          />
+        </div>
+      </section>
 
-      {/* TOOLS */}
-      <div className="mb-5">
-        <h3 className="fw-semibold text-secondary">🛠️ Tools Used in Industry</h3>
-        <ul>
-          <li>Microsoft Excel</li>
-          <li>SQL / MySQL</li>
-          <li>Python (Pandas, NumPy, Matplotlib)</li>
-          <li>Power BI / Tableau</li>
-          <li>Google Sheets</li>
-        </ul>
-      </div>
+      {/* ================= OFFERINGS ================= */}
+      <section className="da-offerings">
+        <h2>What This Program Offers</h2>
 
-      {/* PROJECTS */}
-      <div className="mb-5">
-        <h3 className="fw-semibold text-secondary">💼 Real Projects (Hands-On)</h3>
-        <ul>
-          <li>Sales Performance Dashboard</li>
-          <li>Customer Behavior Analysis</li>
-          <li>Marketing Campaign Analysis</li>
-          <li>Financial Report Automation</li>
-          <li>Business KPI Dashboard</li>
-        </ul>
-      </div>
+        <div className="offer-grid">
+          <div>Excel for Analytics</div>
+          <div>SQL for Business Queries</div>
+          <div>Data Cleaning</div>
+          <div>EDA Techniques</div>
+          <div>Power BI / Tableau</div>
+          <div>Python for Analysis</div>
+          <div>Business KPIs</div>
+          <div>Capstone Project</div>
+        </div>
+      </section>
 
-      {/* CAREER */}
-      <div className="mb-5">
-        <h3 className="fw-semibold text-secondary">🎯 Career Opportunities</h3>
-        <ul>
-          <li>Data Analyst</li>
-          <li>Business Analyst</li>
-          <li>BI (Business Intelligence) Analyst</li>
-          <li>Reporting Analyst</li>
-          <li>Operations / Marketing Analyst</li>
-        </ul>
-      </div>
+      {/* ================= CURRICULUM ================= */}
+      <section className="da-curriculum">
+        <div className="tabs">
+          {[
+            ["foundations", "Analytics Foundations"],
+            ["excel", "Excel"],
+            ["sql", "SQL"],
+            ["viz", "Data Visualization"],
+            ["python", "Python"],
+            ["projects", "Projects"],
+          ].map(([key, label]) => (
+            <button
+              key={key}
+              className={activeTab === key ? "active" : ""}
+              onClick={() => setActiveTab(key)}
+            >
+              {label}
+            </button>
+          ))}
+        </div>
 
-      {/* OUTCOMES */}
-      <div className="text-center">
-        <h4 className="fw-bold text-success"> What You Will Be Able To Do</h4>
-        <ul className="list-unstyled">
-          <li>• Analyze real business datasets</li>
-          <li>• Build dashboards used by management</li>
-          <li>• Answer business questions using data</li>
-          <li>• Clear Data Analyst interviews (Fresher)</li>
-        </ul>
-      </div>
+        <div className="curriculum-box">
+          {activeTab === "foundations" && (
+            <ul>
+              <li>What is Data Analytics </li>
+              <li>Analytics vs Data Science </li>
+              <li>Types of Analytics </li>
+              <li>Business Use Cases </li>
+              <li>Analytics Workflow </li>
+            </ul>
+          )}
+
+          {activeTab === "excel" && (
+            <ul>
+              <li>Excel Basics & Functions </li>
+              <li>Pivot Tables </li>
+              <li>Dashboards </li>
+              <li>Reports Automation </li>
+            </ul>
+          )}
+
+          {activeTab === "sql" && (
+            <ul>
+              <li>SELECT, WHERE </li>
+              <li>JOINS </li>
+              <li>GROUP BY & HAVING </li>
+              <li>Subqueries </li>
+            </ul>
+          )}
+
+          {activeTab === "viz" && (
+            <ul>
+              <li>Power BI Basics </li>
+              <li>Tableau Fundamentals </li>
+              <li>Interactive Dashboards </li>
+            </ul>
+          )}
+
+          {activeTab === "python" && (
+            <ul>
+              <li>Pandas & NumPy </li>
+              <li>Data Cleaning </li>
+              <li>EDA with Python </li>
+            </ul>
+          )}
+
+          {activeTab === "projects" && (
+            <ul>
+              <li>Sales Dashboard Project </li>
+              <li>Customer Analysis </li>
+              <li>Business KPI Dashboard </li>
+            </ul>
+          )}
+        </div>
+      </section>
 
     </div>
   );

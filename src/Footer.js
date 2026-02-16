@@ -32,7 +32,7 @@ const Footer = () => {
          
 
 
-        {/* Get Involved Section */}
+        {/* Follow US */}
         <div className="footer-section">
           <h1>Follow US</h1>
           <div>

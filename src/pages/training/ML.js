@@ -1,128 +1,157 @@
-import React from "react";
+import React, { useState } from "react";
 import "./ML.css";
 
-const ML = () => {
+const MachineLearning = () => {
+  const [activeTab, setActiveTab] = useState("foundations");
+
   return (
-    <div className="container py-5 ml-page">
+    <div className="ml-wrapper">
 
-      {/* TITLE */}
-      <h1 className="text-center text-success fw-bold mb-4">
-        Machine Learning (ML) – Industry Oriented Training
-      </h1>
+      {/* ================= HERO ================= */}
+      <section className="ml-hero">
+        <div className="ml-hero-left">
+          <span className="tag">#AIReady</span>
+          <h1>Machine Learning Training Program</h1>
+          <p>
+            Learn how to build intelligent systems using Machine Learning,
+            Python, and real-world datasets with hands-on projects.
+          </p>
 
-      {/* INTRO */}
-      <p className="lead text-muted text-center mb-5">
-        This Machine Learning program is designed according to
-        <strong> real-world industry requirements</strong> and focuses on
-        <strong> data-driven model building, evaluation, and deployment</strong>
-        using modern ML tools and techniques.
-      </p>
+          <button className="buy-btn">Enroll Now</button>
+          <p className="emi">Internship & Placement Guidance</p>
+        </div>
 
-      {/* ABOUT */}
-      <div className="mb-5">
-        <h3 className="fw-semibold text-secondary">📘 About the Program</h3>
-        <p>
-          This ML training program is built for students and developers who want
-          to work as <strong>Machine Learning Engineers or Data Scientists</strong>.
-          The course emphasizes <strong>practical coding, mathematics behind ML</strong>,
-          and <strong>real industry-style projects</strong>.
-        </p>
-      </div>
+        <div className="ml-hero-right">
+          <img
+            src="https://images.openai.com/static-rsc-3/SkBJsmYj2Dps4yisSGQf7IierM0RWtVQ6Eeqh-GWQ1dKjTQsVGWPigmEqgD6cx6UjPMlcVxKLjzwgrPh8QRmjuSsKfmHzjjQJ9p-YAMLII0?purpose=fullsize&v=1"
+            alt="machine-learning"
+          />
+        </div>
+      </section>
 
-      {/* COURSE DETAILS */}
-      <div className="mb-5">
-        <h3 className="fw-semibold text-secondary">📋 Course Details (Real)</h3>
-        <ul>
-          <li><strong>Duration:</strong> 3 – 5 Months</li>
-          <li><strong>Mode:</strong> Online / Offline</li>
-          <li><strong>Prerequisites:</strong> Python Basics, 12th Level Maths</li>
-          <li><strong>Level:</strong> Beginner → Intermediate</li>
-          <li><strong>Hands-on:</strong> 75% Practical, 25% Theory</li>
-        </ul>
-      </div>
+      {/* ================= INFO BAR ================= */}
+      <section className="ml-info">
+        <div><b>Live Training</b><br />Mentor Led</div>
+        <div><b>May 2026</b><br />Start Date</div>
+        <div><b>5 Months</b><br />Duration</div>
+        <div><b>Online / Offline</b><br />Mode</div>
+        <div><b>English / Hinglish</b><br />Language</div>
+      </section>
 
-      {/* SKILLS */}
-      <div className="mb-5">
-        <h3 className="fw-semibold text-secondary">🧠 Skills You Will Actually Learn</h3>
-        <ul>
-          <li>Python for Machine Learning</li>
-          <li>Data Cleaning & Feature Engineering</li>
-          <li>Supervised Learning (Regression, Classification)</li>
-          <li>Unsupervised Learning (Clustering, PCA)</li>
-          <li>Model Evaluation & Optimization</li>
-          <li>Bias–Variance Tradeoff</li>
-          <li>Hyperparameter Tuning</li>
-          <li>ML Model Deployment (Flask / Streamlit)</li>
-        </ul>
-      </div>
+      {/* ================= ABOUT ================= */}
+      <section className="ml-about">
+        <div className="about-left">
+          <h2>About Machine Learning Program</h2>
+          <ul>
+            <li>Strong ML & AI foundations</li>
+            <li>Hands-on model building</li>
+            <li>Real-world datasets</li>
+            <li>Industry use cases</li>
+            <li>Interview-focused preparation</li>
+          </ul>
+        </div>
 
-      {/* CURRICULUM */}
-      <div className="mb-5">
-        <h3 className="fw-semibold text-secondary">📚 Real-World Curriculum</h3>
-        <ul>
-          <li>Introduction to Machine Learning & Use Cases</li>
-          <li>Statistics & Probability for ML</li>
-          <li>Data Preprocessing & Feature Scaling</li>
-          <li>Regression Algorithms (Linear, Polynomial)</li>
-          <li>Classification Algorithms (Logistic, KNN, SVM)</li>
-          <li>Decision Trees & Random Forest</li>
-          <li>Clustering (K-Means, Hierarchical)</li>
-          <li>Model Evaluation & Cross Validation</li>
-          <li>ML Model Deployment</li>
-        </ul>
-      </div>
+        <div className="about-right">
+          <img
+            src="https://images.unsplash.com/photo-1581091215367-59ab6b0a6b9c"
+            alt="about-ml"
+          />
+        </div>
+      </section>
 
-      {/* TOOLS */}
-      <div className="mb-5">
-        <h3 className="fw-semibold text-secondary">🛠️ Tools Used in Industry</h3>
-        <ul>
-          <li>Python 3.x</li>
-          <li>NumPy, Pandas, Matplotlib, Seaborn</li>
-          <li>Scikit-learn</li>
-          <li>Jupyter Notebook / Google Colab</li>
-          <li>Flask / Streamlit</li>
-          <li>Git & GitHub</li>
-        </ul>
-      </div>
+      {/* ================= OFFERINGS ================= */}
+      <section className="ml-offerings">
+        <h2>What This Program Offers</h2>
 
-      {/* PROJECTS */}
-      <div className="mb-5">
-        <h3 className="fw-semibold text-secondary">💼 Real Projects (Hands-On)</h3>
-        <ul>
-          <li>House Price Prediction System</li>
-          <li>Spam Email Detection</li>
-          <li>Customer Churn Prediction</li>
-          <li>Credit Card Fraud Detection</li>
-          <li>Movie Recommendation System</li>
-        </ul>
-      </div>
+        <div className="offer-grid">
+          <div>Python for ML</div>
+          <div>Statistics & Probability</div>
+          <div>Supervised Learning</div>
+          <div>Unsupervised Learning</div>
+          <div>Model Evaluation</div>
+          <div>Scikit-learn</div>
+          <div>Feature Engineering</div>
+          <div>Capstone Project</div>
+        </div>
+      </section>
 
-      {/* CAREER */}
-      <div className="mb-5">
-        <h3 className="fw-semibold text-secondary">🎯 Career Opportunities</h3>
-        <ul>
-          <li>Machine Learning Engineer (Fresher)</li>
-          <li>Data Analyst</li>
-          <li>Junior Data Scientist</li>
-          <li>AI / ML Developer</li>
-          <li>Research Assistant</li>
-        </ul>
-      </div>
+      {/* ================= CURRICULUM ================= */}
+      <section className="ml-curriculum">
+        <div className="tabs">
+          {[
+            ["foundations", "ML Foundations"],
+            ["python", "Python"],
+            ["supervised", "Supervised ML"],
+            ["unsupervised", "Unsupervised ML"],
+            ["advanced", "Advanced ML"],
+            ["projects", "Projects"],
+          ].map(([key, label]) => (
+            <button
+              key={key}
+              className={activeTab === key ? "active" : ""}
+              onClick={() => setActiveTab(key)}
+            >
+              {label}
+            </button>
+          ))}
+        </div>
 
-      {/* OUTCOME */}
-      <div className="text-center">
-        <h4 className="fw-bold text-success"> What You Will Be Able To Do</h4>
-        <ul className="list-unstyled">
-          <li>• Build ML models from scratch</li>
-          <li>• Work with real datasets</li>
-          <li>• Evaluate & optimize ML models</li>
-          <li>• Deploy ML models as web apps</li>
-          <li>• Crack ML fresher interviews</li>
-        </ul>
-      </div>
+        <div className="curriculum-box">
+          {activeTab === "foundations" && (
+            <ul>
+              <li>What is Machine Learning </li>
+              <li>AI vs ML vs DL </li>
+              <li>ML Workflow </li>
+              <li>Types of ML </li>
+              <li>Real-world Applications </li>
+            </ul>
+          )}
+
+          {activeTab === "python" && (
+            <ul>
+              <li>Python Basics </li>
+              <li>NumPy & Pandas </li>
+              <li>Data Preprocessing </li>
+            </ul>
+          )}
+
+          {activeTab === "supervised" && (
+            <ul>
+              <li>Linear Regression </li>
+              <li>Logistic Regression </li>
+              <li>Decision Trees </li>
+              <li>Random Forest </li>
+            </ul>
+          )}
+
+          {activeTab === "unsupervised" && (
+            <ul>
+              <li>K-Means Clustering </li>
+              <li>Hierarchical Clustering </li>
+              <li>PCA </li>
+            </ul>
+          )}
+
+          {activeTab === "advanced" && (
+            <ul>
+              <li>Model Tuning </li>
+              <li>Cross Validation </li>
+              <li>Overfitting & Underfitting </li>
+            </ul>
+          )}
+
+          {activeTab === "projects" && (
+            <ul>
+              <li>House Price Prediction </li>
+              <li>Customer Churn Prediction </li>
+              <li>ML Capstone Project </li>
+            </ul>
+          )}
+        </div>
+      </section>
 
     </div>
   );
 };
 
-export default ML;
+export default MachineLearning;

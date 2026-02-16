@@ -139,6 +139,11 @@ const Navbar = () => {
                   </Link>
                 </li>
                 <li>
+                  <Link className={`dropdown-item ${isActive("/training/DeepLearning") ? "active-dropdown" : ""}`} to="/training/DeepLearning">
+                    Deep Learning
+                  </Link>
+                </li>
+                <li>
                   <Link className={`dropdown-item ${isActive("/training/powerbi") ? "active-dropdown" : ""}`} to="/training/powerbi">
                     Power BI
                   </Link>

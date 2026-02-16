@@ -193,14 +193,7 @@ const GATECSe = () => {
         ))}
       </motion.section>
 
-      {/* SCORING STRATEGY */}
-      <p className="gatecs-para">
-        To maximize your GATE CS score, focus first on
-        <strong> Engineering Mathematics</strong> and
-        <strong> Data Structures & Algorithms</strong>.
-        Practice <strong>previous year questions (PYQs)</strong> topic-wise
-        and analyze mistakes regularly to improve accuracy and speed.
-      </p>
+      
 
     </div>
   );

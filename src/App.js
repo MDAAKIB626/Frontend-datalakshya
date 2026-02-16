@@ -15,7 +15,7 @@ import GATECS from "./pages/exam/GATECSe";
 import GATEDA from "./pages/exam/GATEDAe";
 import UGENET from "./pages/exam/UGENETe";
 
-// Training & Skills Pages
+// Training Pages
 import AI from "./pages/training/AI";
 import ML from "./pages/training/ML";
 import DataAnalytics from "./pages/training/DataAnalytics";
@@ -23,12 +23,15 @@ import DataScience from "./pages/training/DataScience";
 import DeepLearning from "./pages/training/DeepLearning";
 import PowerBi from "./pages/training/PowerBi";
 
+
+
+
 /* 🔥 AOS REFRESH ON ROUTE CHANGE */
 function ScrollAOS() {
   const location = useLocation();
 
   useEffect(() => {
-    AOS.refreshHard();   // 👈 THIS IS THE MAGIC
+    AOS.refreshHard();
   }, [location]);
 
   return null;
@@ -37,7 +40,7 @@ function ScrollAOS() {
 function App() {
   return (
     <BrowserRouter>
-      <ScrollAOS />   {/* 🔥 very important */}
+      <ScrollAOS />
       <Navbar />
 
       <main style={{ minHeight: "70vh" }}>
@@ -53,13 +56,16 @@ function App() {
           <Route path="/exam/gateda" element={<GATEDA />} />
           <Route path="/exam/ugenet" element={<UGENET />} />
 
-          {/* Training */}
+          {/* Training (Normal Pages) */}
           <Route path="/training/ai" element={<AI />} />
-          <Route path="/training/ml" element={<ML />} />
           <Route path="/training/dataanalytics" element={<DataAnalytics />} />
           <Route path="/training/datascience" element={<DataScience />} />
           <Route path="/training/deeplearning" element={<DeepLearning />} />
           <Route path="/training/powerbi" element={<PowerBi />} />
+             <Route path="/training/ml" element={<ML />} />
+
+        
+
         </Routes>
       </main>
 

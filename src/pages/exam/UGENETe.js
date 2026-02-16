@@ -163,12 +163,7 @@ const UGENETe = () => {
         ))}
       </motion.section>
 
-      <p className="ug-net-para">
-        🎯 <strong>Strategy:</strong>  
-        Paper I ko lightly mat lena — 100 marks guaranteed hote hain.
-        Paper II me <strong>DSA, OS, DBMS, TOC</strong> sabse scoring hain.
-        Previous Year Questions (PYQs) repeatedly practice kar.
-      </p>
+    
 
     </div>
   );

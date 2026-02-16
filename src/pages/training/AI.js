@@ -1,123 +1,163 @@
-// src/pages/training/AI.js
-import React from "react";
+import React, { useState } from "react";
 import "./AI.css";
 
 const AI = () => {
+  const [activeTab, setActiveTab] = useState("foundations");
+
   return (
-    <div className="container py-5 ai-page">
+    <div className="ai-wrapper">
 
-      <h1 className="text-center text-primary fw-bold mb-4">
-        Artificial Intelligence (AI) – Industry Oriented Training
-      </h1>
+      {/* ================= HERO ================= */}
+      <section className="ai-hero">
+        <div className="ai-hero-left">
+          <span className="tag">#IndustryReady</span>
+          <h1>Artificial Intelligence Training Program</h1>
+          <p>
+            Learn Artificial Intelligence from scratch with hands-on experience
+            in Machine Learning, Deep Learning, NLP, and Computer Vision.
+          </p>
 
-      <p className="lead text-muted text-center mb-5">
-        This Artificial Intelligence program is designed as per
-        <strong> real industry requirements</strong> and focuses on
-        <strong> Machine Learning, Deep Learning, NLP, Computer Vision</strong>,
-        and <strong> real-world AI project development</strong>.
-      </p>
+          <button className="buy-btn">Enroll Now</button>
+          <p className="emi">Internship & Placement Support</p>
+        </div>
 
-      {/* ABOUT */}
-      <div className="mb-5">
-        <h3 className="fw-semibold text-secondary">📘 About the Program</h3>
-        <p>
-          This AI training program is built for students and developers who want
-          to work in real AI-based companies. The course focuses on
-          <strong> practical coding, mathematical foundations, model building</strong>,
-          and <strong> deployment-ready AI solutions</strong>.
-        </p>
-      </div>
+        <div className="ai-hero-right">
+          <img
+            src="https://images.unsplash.com/photo-1677442136019-21780ecad995"
+            alt="Artificial Intelligence"
+          />
+        </div>
+      </section>
 
-      {/* COURSE DETAILS */}
-      <div className="mb-5">
-        <h3 className="fw-semibold text-secondary">📋 Course Details (Real)</h3>
-        <ul>
-          <li><strong>Duration:</strong> 4 – 6 Months</li>
-          <li><strong>Mode:</strong> Online / Offline</li>
-          <li><strong>Prerequisites:</strong> Basic Python, Maths (12th level)</li>
-          <li><strong>Level:</strong> Beginner → Advanced</li>
-          <li><strong>Hands-on:</strong> 70% Practical, 30% Theory</li>
-        </ul>
-      </div>
+      {/* ================= INFO BAR ================= */}
+      <section className="ai-info">
+        <div><b>Live Training</b><br />Mentor Led</div>
+        <div><b>Mar 2026</b><br />Start Date</div>
+        <div><b>5 Months</b><br />Duration</div>
+        <div><b>Online</b><br />Mode</div>
+        <div><b>English</b><br />Language</div>
+      </section>
 
-      {/* REAL SKILLS */}
-      <div className="mb-5">
-        <h3 className="fw-semibold text-secondary">🧠 Skills You Will Actually Learn</h3>
-        <ul>
-          <li>Python for AI (NumPy, Pandas, Matplotlib)</li>
-          <li>Statistics & Probability for ML</li>
-          <li>Machine Learning Algorithms (Regression, Classification)</li>
-          <li>Model Evaluation, Bias–Variance Tradeoff</li>
-          <li>Deep Learning with Neural Networks</li>
-          <li>NLP – Text Classification, Chatbots</li>
-          <li>Computer Vision – Image Classification</li>
-          <li>Model Deployment using Flask / FastAPI</li>
-        </ul>
-      </div>
+      {/* ================= ABOUT ================= */}
+      <section className="ai-about">
+        <div className="about-left">
+          <h2>About AI Program</h2>
+          <ul>
+            <li>Industry-aligned AI curriculum</li>
+            <li>Hands-on model building</li>
+            <li>Strong ML & DL fundamentals</li>
+            <li>Real-world AI use cases</li>
+            <li>Interview & placement focused</li>
+          </ul>
+        </div>
 
-      {/* REAL CURRICULUM */}
-      <div className="mb-5">
-        <h3 className="fw-semibold text-secondary">📚 Real-World Curriculum</h3>
-        <ul>
-          <li>AI Fundamentals & Industry Use Cases</li>
-          <li>Linear Algebra & Probability for AI</li>
-          <li>Python for Data Science</li>
-          <li>Machine Learning (Scikit-learn)</li>
-          <li>Deep Learning (ANN, CNN basics)</li>
-          <li>NLP (Text Processing, Sentiment Analysis)</li>
-          <li>Computer Vision (Image Classification)</li>
-          <li>AI Model Deployment</li>
-          <li>Capstone Project (Industry-style)</li>
-        </ul>
-      </div>
+        <div className="about-right">
+          <img
+            src="https://images.unsplash.com/photo-1581092918056-0c4c3acd3789"
+            alt="AI Training"
+          />
+        </div>
+      </section>
 
-      {/* TOOLS */}
-      <div className="mb-5">
-        <h3 className="fw-semibold text-secondary">🛠️ Tools Used in Industry</h3>
-        <ul>
-          <li>Python 3.x</li>
-          <li>NumPy, Pandas, Matplotlib</li>
-          <li>Scikit-learn</li>
-          <li>TensorFlow / Keras (Basics)</li>
-          <li>Jupyter Notebook & Google Colab</li>
-          <li>Git & GitHub</li>
-        </ul>
-      </div>
+      {/* ================= OFFERINGS ================= */}
+      <section className="ai-offerings">
+        <h2>What This AI Program Offers</h2>
 
-      {/* REAL PROJECTS */}
-      <div className="mb-5">
-        <h3 className="fw-semibold text-secondary">💼 Real Projects (Hands-On)</h3>
-        <ul>
-          <li>House Price Prediction System</li>
-          <li>Spam Email Detection</li>
-          <li>Customer Churn Prediction</li>
-          <li>Movie Recommendation System</li>
-          <li>AI Chatbot (Basic NLP)</li>
-        </ul>
-      </div>
+        <div className="offer-grid">
+          <div>Python Programming</div>
+          <div>Maths for ML</div>
+          <div>Machine Learning</div>
+          <div>Deep Learning</div>
+          <div>NLP</div>
+          <div>Computer Vision</div>
+          <div>Model Deployment</div>
+          <div>Capstone Project</div>
+        </div>
+      </section>
 
-      {/* CAREER */}
-      <div className="mb-5">
-        <h3 className="fw-semibold text-secondary">🎯 Career Opportunities</h3>
-        <ul>
-          <li>AI / ML Engineer (Fresher Level)</li>
-          <li>Data Analyst</li>
-          <li>Junior Data Scientist</li>
-          <li>Python AI Developer</li>
-          <li>Research Assistant (AI)</li>
-        </ul>
-      </div>
+      {/* ================= CURRICULUM ================= */}
+      <section className="ai-curriculum">
+        <div className="tabs">
+          {[
+            ["foundations", "AI Foundations"],
+            ["python", "Python"],
+            ["ml", "Machine Learning"],
+            ["dl", "Deep Learning"],
+            ["nlp", "NLP"],
+            ["cv", "Computer Vision"],
+            ["projects", "Projects"],
+          ].map(([key, label]) => (
+            <button
+              key={key}
+              className={activeTab === key ? "active" : ""}
+              onClick={() => setActiveTab(key)}
+            >
+              {label}
+            </button>
+          ))}
+        </div>
 
-      {/* OUTCOMES */}
-      <div className="text-center">
-        <h4 className="fw-bold text-success"> What You Will Be Able To Do</h4>
-        <ul className="list-unstyled">
-          <li>• Build AI & ML models from scratch</li>
-          <li>• Work with real datasets</li>
-          <li>• Deploy AI models as web APIs</li>
-          <li>• Crack AI/ML fresher interviews</li>
-        </ul>
-      </div>
+        <div className="curriculum-box">
+
+          {activeTab === "foundations" && (
+            <ul>
+              <li>What is Artificial Intelligence </li>
+              <li>AI vs ML vs Deep Learning </li>
+              <li>Applications of AI </li>
+              <li>AI Development Lifecycle </li>
+            </ul>
+          )}
+
+          {activeTab === "python" && (
+            <ul>
+              <li>Python Basics </li>
+              <li>NumPy & Pandas </li>
+              <li>Data Handling </li>
+            </ul>
+          )}
+
+          {activeTab === "ml" && (
+            <ul>
+              <li>Supervised Learning </li>
+              <li>Unsupervised Learning </li>
+              <li>Model Evaluation </li>
+            </ul>
+          )}
+
+          {activeTab === "dl" && (
+            <ul>
+              <li>Neural Networks </li>
+              <li>TensorFlow / PyTorch </li>
+              <li>CNN & RNN </li>
+            </ul>
+          )}
+
+          {activeTab === "nlp" && (
+            <ul>
+              <li>Text Processing </li>
+              <li>Sentiment Analysis </li>
+              <li>Chatbot Basics </li>
+            </ul>
+          )}
+
+          {activeTab === "cv" && (
+            <ul>
+              <li>Image Processing </li>
+              <li>Object Detection </li>
+              <li>OpenCV </li>
+            </ul>
+          )}
+
+          {activeTab === "projects" && (
+            <ul>
+              <li>AI Chatbot Project </li>
+              <li>Image Classification </li>
+              <li>AI Capstone Project </li>
+            </ul>
+          )}
+
+        </div>
+      </section>
 
     </div>
   );

@@ -1,124 +1,156 @@
-import React from "react";
+import React, { useState } from "react";
 import "./Datascience.css";
 
 const DataScience = () => {
+  const [activeTab, setActiveTab] = useState("foundations");
+
   return (
-    <div className="container py-5 ds-page">
+    <div className="ds-wrapper">
 
-      {/* TITLE */}
-      <h1 className="text-center text-primary fw-bold mb-4">
-        Data Science – Industry Oriented Training Program
-      </h1>
+      {/* ================= HERO ================= */}
+      <section className="ds-hero">
+        <div className="ds-hero-left">
+          <span className="tag">#Bestseller</span>
+          <h1>Data Science With Generative AI</h1>
+          <p>
+            Become an industry-ready Data Scientist. Learn Machine Learning,
+            NLP, and Generative AI with real-world projects.
+          </p>
 
-      {/* INTRO */}
-      <p className="lead text-muted text-center mb-5">
-        This Data Science program is designed as per
-        <strong> real industry and company requirements</strong>.
-        Learn how to work with <strong>real datasets, machine learning models,</strong>
-        and <strong>business-driven analytics problems</strong> used in real companies.
-      </p>
+          <button className="buy-btn">Buy Now</button>
+          <p className="emi">EMI Options Available</p>
+        </div>
 
-      {/* ABOUT */}
-      <div className="mb-5">
-        <h3 className="fw-semibold text-secondary">📘 About the Program</h3>
-        <p>
-          This program prepares you for roles such as
-          <strong> Data Scientist, Machine Learning Engineer, and AI Analyst</strong>.
-          You will gain hands-on experience with
-          <strong> Python, Statistics, Machine Learning, and Deep Learning</strong>
-          along with real-world case studies.
-        </p>
-      </div>
+        <div className="ds-hero-right">
+          <img
+            src="https://images.unsplash.com/photo-1555949963-aa79dcee981c"
+            alt="data-science"
+          />
+        </div>
+      </section>
 
-      {/* COURSE DETAILS */}
-      <div className="mb-5">
-        <h3 className="fw-semibold text-secondary">📋 Course Details (Real)</h3>
-        <ul>
-          <li><strong>Duration:</strong> 5 – 7 Months</li>
-          <li><strong>Mode:</strong> Online / Offline</li>
-          <li><strong>Prerequisites:</strong> Python Basics, 12th Level Maths</li>
-          <li><strong>Level:</strong> Beginner → Advanced</li>
-          <li><strong>Hands-on:</strong> 75% Practical, 25% Theory</li>
-        </ul>
-      </div>
+      {/* ================= INFO BAR ================= */}
+      <section className="ds-info">
+        <div><b>Job Assistance</b><br />For Pro Plan</div>
+        <div><b>16 Feb 2026</b><br />Start Date</div>
+        <div><b>8 Months</b><br />Duration</div>
+        <div><b>Live</b><br />Mode</div>
+        <div><b>Hinglish</b><br />Language</div>
+      </section>
 
-      {/* SKILLS */}
-      <div className="mb-5">
-        <h3 className="fw-semibold text-secondary">🧠 Skills You Will Actually Learn</h3>
-        <ul>
-          <li>Python for Data Science</li>
-          <li>Data Cleaning & Feature Engineering</li>
-          <li>Exploratory Data Analysis (EDA)</li>
-          <li>Statistics & Probability for Data Science</li>
-          <li>Machine Learning Algorithms</li>
-          <li>Model Evaluation & Optimization</li>
-          <li>Deep Learning with Neural Networks</li>
-          <li>Data Storytelling & Business Insights</li>
-        </ul>
-      </div>
+      {/* ================= ABOUT ================= */}
+      <section className="ds-about">
+        <div className="about-left">
+          <h2>About Data Science With Generative AI</h2>
+          <ul>
+            <li>Industry Professional Led Sessions</li>
+            <li>Career Assistance</li>
+            <li>Learn Industry Skills</li>
+            <li>Project Portfolio</li>
+            <li>Dedicated Peer Network</li>
+          </ul>
+        </div>
 
-      {/* CURRICULUM */}
-      <div className="mb-5">
-        <h3 className="fw-semibold text-secondary">📚 Real-World Curriculum</h3>
-        <ul>
-          <li>Python Programming for Data Science</li>
-          <li>Statistics, Probability & Linear Algebra</li>
-          <li>Data Wrangling with Pandas & NumPy</li>
-          <li>Machine Learning (Regression, Classification, Clustering)</li>
-          <li>Advanced ML (Ensemble Models)</li>
-          <li>Deep Learning (ANN, CNN Basics)</li>
-          <li>Data Visualization & Storytelling</li>
-          <li>Capstone Project with Real Business Data</li>
-        </ul>
-      </div>
+        <div className="about-right">
+          <img
+            src="https://images.unsplash.com/photo-1603791440384-56cd371ee9a7"
+            alt="about-data-science"
+          />
+        </div>
+      </section>
 
-      {/* TOOLS */}
-      <div className="mb-5">
-        <h3 className="fw-semibold text-secondary">🛠️ Tools Used in Industry</h3>
-        <ul>
-          <li>Python, Jupyter Notebook</li>
-          <li>Pandas, NumPy, Scikit-learn</li>
-          <li>TensorFlow, Keras</li>
-          <li>Power BI / Tableau</li>
-          <li>SQL & Excel</li>
-          <li>Git & GitHub</li>
-        </ul>
-      </div>
+      {/* ================= OFFERINGS ================= */}
+      <section className="ds-offerings">
+        <h2>Exclusive Course Offerings</h2>
 
-      {/* PROJECTS */}
-      <div className="mb-5">
-        <h3 className="fw-semibold text-secondary">💼 Real Projects (Hands-On)</h3>
-        <ul>
-          <li>Customer Churn Prediction System</li>
-          <li>Sales Forecasting Model</li>
-          <li>Credit Risk Analysis</li>
-          <li>Recommendation System</li>
-          <li>End-to-End Data Science Capstone Project</li>
-        </ul>
-      </div>
+        <div className="offer-grid">
+          <div>Industry-Oriented Curriculum</div>
+          <div>Comprehensive Learning</div>
+          <div>Weekend Live Sessions</div>
+          <div>Capstone Project</div>
+          <div>Practice Exercises</div>
+          <div>Assignments & Projects</div>
+          <div>Certification</div>
+          <div>Career Guidance</div>
+          <div>Email Support</div>
+          <div>SME Support Session</div>
+        </div>
+      </section>
 
-      {/* CAREER */}
-      <div className="mb-5">
-        <h3 className="fw-semibold text-secondary">🎯 Career Opportunities</h3>
-        <ul>
-          <li>Data Scientist</li>
-          <li>Machine Learning Engineer</li>
-          <li>AI Engineer</li>
-          <li>Business Intelligence Analyst</li>
-          <li>Data Analyst (Advanced)</li>
-        </ul>
-      </div>
+      {/* ================= CURRICULUM ================= */}
+      <section className="ds-curriculum">
+        <div className="tabs">
+          {[
+            ["foundations", "DS Foundations"],
+            ["python", "Python"],
+            ["stats", "Statistics"],
+            ["ml", "Machine Learning"],
+            ["sql", "SQL"],
+            ["mlops", "MLOps"],
+          ].map(([key, label]) => (
+            <button
+              key={key}
+              className={activeTab === key ? "active" : ""}
+              onClick={() => setActiveTab(key)}
+            >
+              {label}
+            </button>
+          ))}
+        </div>
 
-      {/* OUTCOMES */}
-      <div className="text-center">
-        <h4 className="fw-bold text-success"> What You Will Be Able To Do</h4>
-        <ul className="list-unstyled">
-          <li>• Work with real-world datasets</li>
-          <li>• Build ML & Data Science pipelines</li>
-          <li>• Deploy models for real use cases</li>
-          <li>• Crack Data Science fresher interviews</li>
-        </ul>
-      </div>
+        <div className="curriculum-box">
+
+          {activeTab === "foundations" && (
+            <ul>
+              <li>What is Data Science </li>
+              <li>Roles & Skills in Data Science </li>
+              <li>DS Lifecycle </li>
+              <li>Industry Use Cases </li>
+            </ul>
+          )}
+
+          {activeTab === "python" && (
+            <ul>
+              <li>Python Basics </li>
+              <li>NumPy & Pandas </li>
+              <li>Data Analysis </li>
+            </ul>
+          )}
+
+          {activeTab === "stats" && (
+            <ul>
+              <li>Statistics Fundamentals </li>
+              <li>Probability </li>
+              <li>Hypothesis Testing </li>
+            </ul>
+          )}
+
+          {activeTab === "ml" && (
+            <ul>
+              <li>Supervised Learning </li>
+              <li>Unsupervised Learning </li>
+              <li>Model Evaluation </li>
+            </ul>
+          )}
+
+          {activeTab === "sql" && (
+            <ul>
+              <li>SQL Basics </li>
+              <li>Joins & Subqueries </li>
+              <li>Business Queries </li>
+            </ul>
+          )}
+
+          {activeTab === "mlops" && (
+            <ul>
+              <li>Model Deployment </li>
+              <li>CI/CD Pipelines </li>
+              <li>Monitoring & Scaling </li>
+            </ul>
+          )}
+
+        </div>
+      </section>
 
     </div>
   );

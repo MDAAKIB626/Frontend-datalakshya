@@ -1,123 +1,156 @@
-import React from "react";
+import React, { useState } from "react";
 import "./PowerBi.css";
 
 const PowerBI = () => {
+  const [activeTab, setActiveTab] = useState("foundations");
+
   return (
-    <div className="container py-5 bi-page">
+    <div className="bi-wrapper">
 
-      {/* TITLE */}
-      <h1 className="text-center text-warning fw-bold mb-4">
-        Power BI – Industry Oriented Business Intelligence Training
-      </h1>
+      {/* ================= HERO ================= */}
+      <section className="bi-hero">
+        <div className="bi-hero-left">
+          <span className="tag">#IndustryReady</span>
+          <h1>Power BI Training Program</h1>
+          <p>
+            Become an industry-ready Power BI Developer. Learn data modeling,
+            DAX, dashboards and business reporting with real-world projects.
+          </p>
 
-      {/* INTRO */}
-      <p className="lead text-muted text-center mb-5">
-        This Power BI training program is designed according to
-        <strong> real business intelligence and analytics requirements</strong>.
-        Learn how companies use <strong>Power BI dashboards, DAX calculations,</strong>
-        and <strong>data models</strong> to drive business decisions.
-      </p>
+          <button className="buy-btn">Enroll Now</button>
+          <p className="emi">Industry Projects & Career Support</p>
+        </div>
 
-      {/* ABOUT */}
-      <div className="mb-5">
-        <h3 className="fw-semibold text-secondary">📘 About the Program</h3>
-        <p>
-          Power BI is one of the most widely used <strong>Business Intelligence (BI)</strong> tools
-          in enterprises. This program focuses on
-          <strong> real corporate reporting, KPI dashboards, and management reports</strong>.
-          You will work with datasets related to <strong>sales, finance, HR, and operations</strong>.
-        </p>
-      </div>
+        <div className="bi-hero-right">
+          <img
+            src="https://images.unsplash.com/photo-1545239351-1141bd82e8a6"
+            alt="power-bi"
+          />
+        </div>
+      </section>
 
-      {/* COURSE DETAILS */}
-      <div className="mb-5">
-        <h3 className="fw-semibold text-secondary">📋 Course Details (Real)</h3>
-        <ul>
-          <li><strong>Duration:</strong> 1.5 – 2.5 Months</li>
-          <li><strong>Mode:</strong> Online / Offline</li>
-          <li><strong>Prerequisites:</strong> Basic Excel & Computer Knowledge</li>
-          <li><strong>Level:</strong> Beginner → Intermediate</li>
-          <li><strong>Hands-on:</strong> 80% Practical, 20% Theory</li>
-        </ul>
-      </div>
+      {/* ================= INFO BAR ================= */}
+      <section className="bi-info">
+        <div><b>Hands-on Projects</b><br />Industry Based</div>
+        <div><b>Mar 2026</b><br />Start Date</div>
+        <div><b>2 Months</b><br />Duration</div>
+        <div><b>Live</b><br />Mode</div>
+        <div><b>English</b><br />Language</div>
+      </section>
 
-      {/* SKILLS */}
-      <div className="mb-5">
-        <h3 className="fw-semibold text-secondary">🧠 Skills You Will Actually Learn</h3>
-        <ul>
-          <li>Data Cleaning & Transformation using Power Query</li>
-          <li>Building Data Models & Relationships</li>
-          <li>Creating Interactive Dashboards</li>
-          <li>DAX Measures, Calculated Columns & KPIs</li>
-          <li>Time Intelligence (YTD, MTD, YoY)</li>
-          <li>Row Level Security (RLS)</li>
-          <li>Performance Optimization of Reports</li>
-          <li>Publishing & Sharing Reports via Power BI Service</li>
-        </ul>
-      </div>
+      {/* ================= ABOUT ================= */}
+      <section className="bi-about">
+        <div className="about-left">
+          <h2>About Power BI Program</h2>
+          <ul>
+            <li>Business Intelligence fundamentals</li>
+            <li>Corporate dashboards & KPIs</li>
+            <li>Data modeling & relationships</li>
+            <li>DAX calculations</li>
+            <li>Deployment using Power BI Service</li>
+          </ul>
+        </div>
 
-      {/* CURRICULUM */}
-      <div className="mb-5">
-        <h3 className="fw-semibold text-secondary">📚 Real-World Curriculum</h3>
-        <ul>
-          <li>BI Fundamentals & Power BI Architecture</li>
-          <li>Power Query (Data Cleaning & ETL)</li>
-          <li>Data Modeling (Star Schema, Relationships)</li>
-          <li>DAX Fundamentals & Advanced Measures</li>
-          <li>KPIs, Filters, Slicers & Drill-through</li>
-          <li>Dashboard Design Best Practices</li>
-          <li>Power BI Service & Workspace Management</li>
-          <li>Capstone Project – Business Dashboard</li>
-        </ul>
-      </div>
+        <div className="about-right">
+          <img
+            src="https://images.unsplash.com/photo-1556155092-8707de31f9c4"
+            alt="powerbi-about"
+          />
+        </div>
+      </section>
 
-      {/* TOOLS */}
-      <div className="mb-5">
-        <h3 className="fw-semibold text-secondary">🛠️ Tools Used in Industry</h3>
-        <ul>
-          <li>Power BI Desktop</li>
-          <li>Power BI Service & Mobile</li>
-          <li>Power Query & DAX</li>
-          <li>Microsoft Excel</li>
-          <li>SQL Server / MySQL</li>
-          <li>Azure Data Sources</li>
-        </ul>
-      </div>
+      {/* ================= OFFERINGS ================= */}
+      <section className="bi-offerings">
+        <h2>Exclusive Course Offerings</h2>
 
-      {/* PROJECTS */}
-      <div className="mb-5">
-        <h3 className="fw-semibold text-secondary">💼 Real Projects (Hands-On)</h3>
-        <ul>
-          <li>Sales Performance Dashboard</li>
-          <li>Financial KPI Dashboard</li>
-          <li>HR Analytics Dashboard</li>
-          <li>Supply Chain & Inventory Dashboard</li>
-          <li>Executive Management Dashboard</li>
-        </ul>
-      </div>
+        <div className="offer-grid">
+          <div>Power BI Desktop</div>
+          <div>Power Query</div>
+          <div>Data Cleaning</div>
+          <div>Data Modeling</div>
+          <div>DAX Measures</div>
+          <div>Time Intelligence</div>
+          <div>Dashboards</div>
+          <div>Power BI Service</div>
+          <div>Report Sharing</div>
+          <div>Capstone Project</div>
+        </div>
+      </section>
 
-      {/* CAREER */}
-      <div className="mb-5">
-        <h3 className="fw-semibold text-secondary">🎯 Career Opportunities</h3>
-        <ul>
-          <li>Power BI Developer</li>
-          <li>Business Intelligence Analyst</li>
-          <li>Data Analyst</li>
-          <li>Reporting Analyst</li>
-          <li>BI Consultant (Junior)</li>
-        </ul>
-      </div>
+      {/* ================= CURRICULUM ================= */}
+      <section className="bi-curriculum">
+        <div className="tabs">
+          {[
+            ["foundations", "BI Foundations"],
+            ["query", "Power Query"],
+            ["modeling", "Data Modeling"],
+            ["dax", "DAX"],
+            ["viz", "Visualization"],
+            ["deployment", "Deployment"],
+          ].map(([key, label]) => (
+            <button
+              key={key}
+              className={activeTab === key ? "active" : ""}
+              onClick={() => setActiveTab(key)}
+            >
+              {label}
+            </button>
+          ))}
+        </div>
 
-      {/* OUTCOMES */}
-      <div className="text-center">
-        <h4 className="fw-bold text-success"> What You Will Be Able To Do</h4>
-        <ul className="list-unstyled">
-          <li>• Build corporate-level dashboards</li>
-          <li>• Write real DAX measures used in companies</li>
-          <li>• Answer business questions using data</li>
-          <li>• Clear Power BI / BI Analyst interviews</li>
-        </ul>
-      </div>
+        <div className="curriculum-box">
+
+          {activeTab === "foundations" && (
+            <ul>
+              <li>Introduction to Business Intelligence </li>
+              <li>Power BI Architecture </li>
+              <li>BI vs Analytics </li>
+              <li>Corporate BI Use Cases </li>
+            </ul>
+          )}
+
+          {activeTab === "query" && (
+            <ul>
+              <li>Power Query Basics </li>
+              <li>Data Cleaning </li>
+              <li>ETL Process </li>
+            </ul>
+          )}
+
+          {activeTab === "modeling" && (
+            <ul>
+              <li>Star Schema </li>
+              <li>Relationships </li>
+              <li>Fact & Dimension Tables </li>
+            </ul>
+          )}
+
+          {activeTab === "dax" && (
+            <ul>
+              <li>DAX Basics </li>
+              <li>Measures & Columns </li>
+              <li>Time Intelligence </li>
+            </ul>
+          )}
+
+          {activeTab === "viz" && (
+            <ul>
+              <li>Charts & Visuals </li>
+              <li>Slicers & Filters </li>
+              <li>Drill-through </li>
+            </ul>
+          )}
+
+          {activeTab === "deployment" && (
+            <ul>
+              <li>Power BI Service </li>
+              <li>Publishing Reports </li>
+              <li>Sharing & Security </li>
+            </ul>
+          )}
+
+        </div>
+      </section>
 
     </div>
   );

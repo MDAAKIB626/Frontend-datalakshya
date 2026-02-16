@@ -1,96 +1,234 @@
-/* ================= PAGE WRAPPER ================= */
-.data-page {
-  max-width: 1100px;
-  margin: auto;
-  padding: 40px 20px;
-  font-family: "Segoe UI", system-ui, sans-serif;
+/* ================= ROOT ================= */
+.da-wrapper {
+  font-family: "Segoe UI", sans-serif;
+  color: #1e293b;
 }
 
-/* ================= TITLE ================= */
-.data-page h1 {
-  font-size: 2.4rem;
+/* ================= HERO ================= */
+.da-hero {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 80px 10%;
+  background: linear-gradient(135deg, #eef2ff, #f8fafc);
+  gap: 40px;
+}
+
+.da-hero-left {
+  max-width: 550px;
+}
+
+.tag {
+  display: inline-block;
+  background: #2563eb;
+  color: #fff;
+  padding: 6px 14px;
+  border-radius: 20px;
+  font-size: 13px;
+  margin-bottom: 15px;
+}
+
+.da-hero-left h1 {
+  font-size: 42px;
   font-weight: 700;
-  color: #1e40af; /* analytics blue */
-  margin-bottom: 10px;
+  margin-bottom: 15px;
 }
 
-/* ================= INTRO TEXT ================= */
-.data-page .lead {
-  font-size: 1.05rem;
-  line-height: 1.7;
-  color: #334155;
-  max-width: 900px;
-  margin: auto;
-}
-
-/* ================= SECTION CARD ================= */
-.data-page .mb-5 {
-  background: #ffffff;
-  border-radius: 14px;
-  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.06);
-  padding: 22px 24px;
-  margin-bottom: 22px;
-  transition: transform 0.25s ease, box-shadow 0.25s ease;
-}
-
-.data-page .mb-5:hover {
-  transform: translateY(-4px);
-  box-shadow: 0 14px 30px rgba(0, 0, 0, 0.08);
-}
-
-/* ================= SECTION HEADING ================= */
-.data-page h3 {
-  font-size: 1.4rem;
-  font-weight: 600;
-  color: #1e3a8a;
-  margin-bottom: 12px;
-}
-
-/* ================= TEXT ================= */
-.data-page p {
-  font-size: 1rem;
-  line-height: 1.7;
+.da-hero-left p {
+  font-size: 16px;
+  line-height: 1.6;
   color: #475569;
+  margin-bottom: 25px;
 }
 
-/* ================= LIST ================= */
-.data-page ul {
-  padding-left: 20px;
+.buy-btn {
+  background: #2563eb;
+  color: #fff;
+  padding: 14px 28px;
+  border: none;
+  border-radius: 8px;
+  font-size: 15px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.buy-btn:hover {
+  background: #1d4ed8;
+}
+
+.emi {
   margin-top: 10px;
+  font-size: 14px;
+  color: #16a34a;
 }
 
-.data-page li {
-  font-size: 0.95rem;
-  margin-bottom: 7px;
+/* ================= HERO IMAGE ================= */
+.da-hero-right img {
+  width: 420px;
+  max-width: 100%;
+  border-radius: 16px;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+}
+
+/* ================= INFO BAR ================= */
+.da-info {
+  display: flex;
+  justify-content: space-around;
+  padding: 25px 10%;
+  background: #ffffff;
+  border-bottom: 1px solid #e5e7eb;
+  text-align: center;
+}
+
+.da-info div {
+  font-size: 14px;
   color: #475569;
 }
 
-/* ================= STRONG TEXT ================= */
-.data-page strong {
-  color: #1e40af;
-  font-weight: 600;
+/* ================= ABOUT ================= */
+.da-about {
+  display: flex;
+  align-items: center;
+  padding: 70px 10%;
+  gap: 40px;
 }
 
-/* ================= OUTCOME BOX ================= */
-.data-page .text-center {
-  background: linear-gradient(135deg, #dbeafe, #eff6ff);
-  border-radius: 18px;
-  padding: 30px 20px;
-  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.06);
+.da-about h2 {
+  font-size: 32px;
+  margin-bottom: 20px;
 }
 
-.data-page h4 {
-  font-size: 1.45rem;
-  margin-bottom: 14px;
+.da-about ul {
+  list-style: none;
+  padding: 0;
+}
+
+.da-about ul li {
+  margin-bottom: 12px;
+  padding-left: 22px;
+  position: relative;
+}
+
+.da-about ul li::before {
+  content: "✔";
+  color: #2563eb;
+  position: absolute;
+  left: 0;
+}
+
+.about-right img {
+  width: 420px;
+  max-width: 100%;
+  border-radius: 14px;
+}
+
+/* ================= OFFERINGS ================= */
+.da-offerings {
+  padding: 60px 10%;
+  background: #f8fafc;
+}
+
+.da-offerings h2 {
+  text-align: center;
+  font-size: 30px;
+  margin-bottom: 35px;
+}
+
+.offer-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 20px;
+}
+
+.offer-grid div {
+  background: #ffffff;
+  padding: 18px;
+  text-align: center;
+  border-radius: 12px;
+  font-weight: 500;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.05);
+}
+
+/* ================= CURRICULUM ================= */
+.da-curriculum {
+  padding: 70px 10%;
+}
+
+.tabs {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-bottom: 30px;
+}
+
+.tabs button {
+  padding: 10px 20px;
+  border: 1px solid #c7d2fe;
+  background: #eef2ff;
+  border-radius: 20px;
+  cursor: pointer;
+  font-size: 14px;
+  transition: 0.3s;
+}
+
+.tabs button.active,
+.tabs button:hover {
+  background: #2563eb;
+  color: #ffffff;
+}
+
+.curriculum-box {
+  background: #ffffff;
+  padding: 30px;
+  border-radius: 16px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+}
+
+.curriculum-box ul {
+  list-style: none;
+  padding: 0;
+}
+
+.curriculum-box li {
+  padding: 12px 0;
+  border-bottom: 1px solid #e5e7eb;
+  font-size: 15px;
+}
+
+.curriculum-box li:last-child {
+  border-bottom: none;
 }
 
 /* ================= RESPONSIVE ================= */
-@media (max-width: 768px) {
-  .data-page h1 {
-    font-size: 1.9rem;
+@media (max-width: 992px) {
+  .da-hero,
+  .da-about {
+    flex-direction: column;
+    text-align: center;
   }
 
-  .data-page .mb-5 {
-    padding: 18px 18px;
+  .da-hero-left h1 {
+    font-size: 34px;
+  }
+
+  .da-info {
+    flex-wrap: wrap;
+    gap: 20px;
+  }
+}
+
+@media (max-width: 576px) {
+  .da-hero {
+    padding: 50px 6%;
+  }
+
+  .da-about,
+  .da-offerings,
+  .da-curriculum {
+    padding: 50px 6%;
+  }
+
+  .da-hero-left h1 {
+    font-size: 28px;
   }
 }
