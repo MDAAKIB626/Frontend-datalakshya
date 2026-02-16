@@ -53,7 +53,7 @@ const MachineLearning = () => {
 
         <div className="about-right">
           <img
-            src="https://images.unsplash.com/photo-1581091215367-59ab6b0a6b9c"
+            src="https://techblog.smc.it/static/c5256a11117134b1d5f3bd35c479db40/a41d1/ml.jpg"
             alt="about-ml"
           />
         </div>
