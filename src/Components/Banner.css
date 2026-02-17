@@ -1,26 +1,31 @@
 /* ================= BANNER ================= */
 .banner {
-  min-height: 70vh;
+  min-height: 80vh;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 90px 120px;
+  padding: 90px 8%;
   background: radial-gradient(circle at right, #3a1c10, #0b0b0b 65%);
   color: white;
-  overflow-x: hidden;
+  gap: 40px;
+  overflow: visible;
 }
 
 /* ================= LEFT ================= */
 .banner-left {
-  max-width: 50%;
+  flex: 1;
+  max-width: 650px;
 }
 
 .hero-title {
-  font-size: 56px;
+  font-size: clamp(28px, 4vw, 60px);
   font-weight: 800;
-  margin-bottom: 16px;
+  margin-bottom: 18px;
+  line-height: 1.2;
+  word-break: break-word;   /* ✅ text cut fix */
 }
 
+/* COLORS */
 .dl-data {
   color: #1e90ff;
 }
@@ -30,7 +35,7 @@
 }
 
 .hero-subtitle {
-  font-size: 18px;
+  font-size: clamp(15px, 1.5vw, 20px);
   margin-bottom: 32px;
   color: #e0e0e0;
 }
@@ -38,7 +43,7 @@
 /* ================= BUTTON ================= */
 .banner-btn {
   padding: 14px 34px;
-  font-size: 16px;
+  font-size: clamp(14px, 1vw, 17px);
   font-weight: 600;
   border-radius: 30px;
   border: none;
@@ -54,23 +59,29 @@
 
 /* ================= RIGHT ================= */
 .banner-right {
+  flex: 1;
   display: flex;
   justify-content: center;
 }
 
 .banner-card {
-  width: 450px;
+  width: clamp(260px, 40vw, 480px);
   background: white;
-  padding: 10px;
-  border-radius: 18px;
+  padding: 12px;
+  border-radius: 20px;
   box-shadow: 0 25px 55px rgba(0,0,0,0.45);
   animation: float 4s ease-in-out infinite;
+  overflow: hidden;        /* ✅ important */
 }
 
 .banner-card img {
   width: 100%;
+  height: auto;            /* ✅ fix */
+  display: block;          /* ✅ removes bottom gap */
   border-radius: 14px;
 }
+
+
 
 /* ================= FLOAT ================= */
 @keyframes float {
@@ -79,74 +90,74 @@
   100% { transform: translateY(0); }
 }
 
-/* ================= TYPING ================= */
+/* ================= TYPING CURSOR SAFE ================= */
+/* ❗ Width animation hata diya — responsive safe */
 .typing {
-  width: fit-content;
-  overflow: hidden;
-  white-space: nowrap;
-
-  animation: typing 3s steps(28, end), blink 0.8s infinite;
-}
-
-@keyframes typing {
-  from { width: 0 }
-  to { width: 100% }
+  display: inline-block;
+  border-right: none;
+  padding-right: 5px;
+  animation: blink 0.8s infinite;
 }
 
 @keyframes blink {
   50% { border-color: transparent; }
 }
 
+/* ================= SMALL LAPTOP ================= */
+@media (max-width: 1280px) {
+
+  .hero-title {
+    font-size: 44px;
+  }
+
+}
+
 /* ================= TABLET ================= */
-@media (max-width: 768px) {
+@media (max-width: 1024px) {
+
   .banner {
     flex-direction: column;
-    padding: 70px 30px;
     text-align: center;
+    padding: 70px 30px;
   }
 
   .banner-left {
     max-width: 100%;
-    margin-bottom: 30px;
   }
 
-  .hero-title {
-    font-size: 38px;
+  .banner-right {
+    margin-top: 30px;
   }
 
-  .banner-card {
-    width: 320px;
-  }
 }
 
-/* ================= MOBILE (FIXED) ================= */
+/* ================= MOBILE ================= */
 @media (max-width: 480px) {
+
   .banner {
-    padding: 40px 16px 30px;
+    padding: 50px 18px;
     min-height: auto;
   }
 
-  .banner-left {
-    margin-bottom: 16px;
+  .banner-card {
+    animation: none;
+  }
+
+}
+
+/* ================= LARGE DESKTOP ================= */
+@media (min-width: 1400px) {
+
+  .banner {
+    padding: 120px 12%;
   }
 
   .hero-title {
-    font-size: 18px;
-  }
-
-  .hero-subtitle {
-    font-size: 15px;
-    margin-bottom: 18px;
-  }
-
-  .banner-btn {
-    padding: 12px 24px;
-    font-size: 14px;
+    font-size: 68px;
   }
 
   .banner-card {
-    width: 260px;
-    margin: 0 auto;
-    animation: none; /* ❗ float band, AOS ON */
+    width: 520px;
   }
+
 }
