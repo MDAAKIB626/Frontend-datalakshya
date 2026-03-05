@@ -12,7 +12,6 @@ const Contact = () => {
 
   const [loading, setLoading] = useState(false);
 
-
   const handleChange = (e) => {
     setFormData({
       ...formData,
@@ -20,22 +19,23 @@ const Contact = () => {
     });
   };
 
-
   const handleSubmit = async (e) => {
 
     e.preventDefault();
-
     setLoading(true);
 
     try {
 
-      const res = await fetch("http://localhost:5000/api/contact", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json"
-        },
-        body: JSON.stringify(formData)
-      });
+      const res = await fetch(
+        "https://data-lakshya-back-end-1.onrender.com/api/contact",
+        {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json"
+          },
+          body: JSON.stringify(formData)
+        }
+      );
 
       const data = await res.json();
 
@@ -63,7 +63,6 @@ const Contact = () => {
 
     setLoading(false);
   };
-
 
   return (
     <section className="contact" id="contact">

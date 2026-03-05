@@ -12,7 +12,6 @@ const AdminDashboard = () => {
 
   const navigate = useNavigate();
 
-
   // 🔐 Protect Route
   useEffect(() => {
 
@@ -24,7 +23,6 @@ const AdminDashboard = () => {
 
   }, [navigate]);
 
-
   // ✅ Save Quiz
   const saveQuiz = async () => {
 
@@ -32,37 +30,52 @@ const AdminDashboard = () => {
 
       const token = localStorage.getItem("token");
 
-      const res = await fetch("http://localhost:5000/api/quiz", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-          Authorization: `Bearer ${token}`
-        },
-        body: JSON.stringify(quiz)
-      });
+      const res = await fetch(
+        "https://data-lakshya-back-end-1.onrender.com/api/quiz",
+        {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+            Authorization: `Bearer ${token}`
+          },
+          body: JSON.stringify(quiz)
+        }
+      );
 
       const data = await res.json();
 
       if (res.ok) {
+
         alert("Quiz Saved Successfully");
+
+        setQuiz({
+          title: "",
+          description: "",
+          link: ""
+        });
+
       } else {
+
         alert(data.msg || "Error");
+
       }
 
     } catch (error) {
+
       console.log(error);
       alert("Server Error");
-    }
-  };
 
+    }
+
+  };
 
   const logout = () => {
     localStorage.removeItem("token");
     navigate("/auth");
   };
 
-
   return (
+
     <div className="admin-container">
 
       <h2 className="admin-title">

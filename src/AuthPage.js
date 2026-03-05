@@ -13,50 +13,58 @@ const AuthPage = () => {
     password: ""
   });
 
-
   const handleSubmit = async () => {
 
     try {
 
       if (isLogin) {
 
-        const res = await fetch("http://localhost:5000/api/auth/login", {
-          method: "POST",
-          headers: {
-            "Content-Type": "application/json"
-          },
-          body: JSON.stringify(form)
-        });
+        const res = await fetch(
+          "https://data-lakshya-back-end-1.onrender.com/api/auth/login",
+          {
+            method: "POST",
+            headers: {
+              "Content-Type": "application/json"
+            },
+            body: JSON.stringify(form)
+          }
+        );
 
         const data = await res.json();
 
-         if (res.ok && data.token) {
+        if (res.ok && data.token) {
 
-  localStorage.setItem("token", data.token);
+          localStorage.setItem("token", data.token);
 
-  alert("Login Successful");
+          alert("Login Successful");
 
-  navigate("/admindashboard");
+          navigate("/AdminDashboard");
 
-} else {
-  alert(data.msg || "Login Failed");
-}
+        } else {
+
+          alert(data.msg || "Login Failed");
+
+        }
 
       } else {
 
-        const res = await fetch("http://localhost:5000/api/auth/signup", {
-          method: "POST",
-          headers: {
-            "Content-Type": "application/json"
-          },
-          body: JSON.stringify(form)
-        });
+        const res = await fetch(
+          "https://data-lakshya-back-end-1.onrender.com/api/auth/signup",
+          {
+            method: "POST",
+            headers: {
+              "Content-Type": "application/json"
+            },
+            body: JSON.stringify(form)
+          }
+        );
 
         const data = await res.json();
 
         alert(data.msg || "Signup Successful");
 
         setIsLogin(true);
+
       }
 
     } catch (error) {
@@ -65,10 +73,11 @@ const AuthPage = () => {
       alert("Server Error");
 
     }
+
   };
 
-
   return (
+
     <div className="admin-container">
 
       <h2 className="admin-title">
@@ -113,6 +122,7 @@ const AuthPage = () => {
 
     </div>
   );
+
 };
 
 export default AuthPage;
