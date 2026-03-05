@@ -1,0 +1,109 @@
+/* ===== ADMIN DASHBOARD STYLE ===== */
+
+body {
+  background: #f4f6fb;
+  margin: 0;
+  font-family: "Segoe UI", sans-serif;
+}
+
+.admin-container {
+  max-width: 650px;
+  margin: 50px auto;
+  background: #ffffff;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+}
+
+.admin-title {
+  text-align: center;
+  font-size: 24px;
+  font-weight: 700;
+  margin-bottom: 25px;
+  color: #333;
+}
+
+/* Inputs */
+
+.admin-input,
+.admin-textarea {
+  width: 100%;
+  padding: 12px 14px;
+  margin-bottom: 15px;
+  border-radius: 8px;
+  border: 1px solid #ddd;
+  font-size: 15px;
+  transition: 0.3s;
+}
+
+.admin-input:focus,
+.admin-textarea:focus {
+  border-color: #7b5cff;
+  outline: none;
+  box-shadow: 0 0 0 2px rgba(123, 92, 255, 0.1);
+}
+
+.admin-textarea {
+  height: 120px;
+  resize: none;
+}
+
+/* Button */
+
+.admin-button {
+  width: 100%;
+  padding: 12px;
+  background: linear-gradient(135deg, #7b5cff, #b272ed);
+  border: none;
+  color: white;
+  font-size: 16px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: 0.3s;
+}
+
+.admin-button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 18px rgba(123, 92, 255, 0.3);
+}
+
+.admin-button:active {
+  transform: scale(0.98);
+}
+
+
+
+
+/* Logout Button */
+
+.logout-button {
+  width: 100%;
+  padding: 12px;
+  margin-top: 12px;
+  background: linear-gradient(135deg, #ff4b4b, #ff7a7a);
+  border: none;
+  color: white;
+  font-size: 16px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: 0.3s;
+}
+
+.logout-button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 18px rgba(255, 75, 75, 0.35);
+}
+
+.logout-button:active {
+  transform: scale(0.98);
+}
+/* Responsive */
+
+@media (max-width: 600px) {
+  .admin-container {
+    margin: 20px;
+    padding: 20px;
+  }
+}

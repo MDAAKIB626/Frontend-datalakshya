@@ -1,139 +1,46 @@
-/* ================= CONTAINER ================= */
-.gatecs-container,
-.gate-da-container {
-  max-width: 1100px;
-  margin: auto;
-  padding: 40px 20px;
-  font-family: "Segoe UI", system-ui, sans-serif;
-}
-
-/* ================= TITLE ================= */
-.gatecs-title,
-.gate-da-title {
-  text-align: center;
-  font-size: 2.4rem;
-  font-weight: 700;
-  color: #1e293b;
-  margin-bottom: 10px;
-}
-
-/* ================= BADGE ================= */
-.gatecs-badge,
-.gate-da-badge {
-  text-align: center;
-  background: linear-gradient(90deg, #2563eb, #4f46e5);
-  color: #fff;
-  display: inline-block;
-  padding: 6px 16px;
-  border-radius: 20px;
-  font-size: 0.9rem;
-  margin: 0 auto 25px;
-  display: block;
-  width: fit-content;
-}
-
-/* ================= INTRO ================= */
-.gatecs-intro,
-.gate-da-intro,
-.gatecs-para,
-.gate-da-para {
-  font-size: 1rem;
-  line-height: 1.7;
-  color: #334155;
-  margin-bottom: 18px;
-}
-
-/* ================= SECTION ================= */
-.gatecs-section,
-.gate-da-section {
-  margin-top: 40px;
-}
-
-.gatecs-section h2,
-.gate-da-section h2 {
-  font-size: 1.6rem;
-  margin-bottom: 20px;
-  color: #0f172a;
-}
-
-/* ================= SUBJECT CARD ================= */
-.subject-card {
+.gatecs-container {
+  max-width: 1000px;
+  margin: 40px auto;
+  padding: 30px 40px;
   background: #ffffff;
-  border-radius: 14px;
-  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.06);
-  padding: 18px 20px;
-  margin-bottom: 18px;
-  transition: transform 0.25s ease, box-shadow 0.25s ease;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+  font-family: "Segoe UI", sans-serif;
+  line-height: 1.7;
+  color: #333;
 }
 
-.subject-card:hover {
-  transform: translateY(-4px);
-  box-shadow: 0 14px 30px rgba(0, 0, 0, 0.08);
+.gatecs-container h1 {
+  text-align: center;
+  color: #0b3d91;
+  border-bottom: 3px solid #0b3d91;
+  padding-bottom: 10px;
 }
 
-/* ================= SUBJECT HEADER ================= */
-.subject-header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  gap: 15px;
+.gatecs-container h2 {
+  margin-top: 30px;
+  color: #1a73e8;
+  border-left: 5px solid #1a73e8;
+  padding-left: 12px;
 }
 
-.subject-title {
-  font-size: 1.05rem;
-  font-weight: 600;
-  color: #1e293b;
+.gatecs-container h3 {
+  margin-top: 20px;
+  color: #0b3d91;
 }
 
-/* ================= BUTTON ================= */
-.details-btn {
-  background: linear-gradient(135deg, #6366f1, #3b82f6);
-  color: white;
-  border: none;
-  padding: 7px 16px;
-  font-size: 0.85rem;
-  font-weight: 600;
-  border-radius: 20px;
-  cursor: pointer;
-  transition: all 0.25s ease;
+.gatecs-container ul,
+.gatecs-container ol {
+  margin-left: 20px;
 }
 
-.details-btn:hover {
-  background: linear-gradient(135deg, #4f46e5, #2563eb);
-  transform: scale(1.05);
-}
-
-/* ================= TOPICS ================= */
-.subject-topics {
-  margin-top: 14px;
-  padding-top: 12px;
-  border-top: 1px solid #e5e7eb;
-  overflow: hidden;
-}
-
-.subject-topics ul {
-  padding-left: 20px;
-}
-
-.subject-topics li {
-  font-size: 0.95rem;
+.gatecs-container li {
   margin-bottom: 6px;
-  color: #475569;
 }
 
-/* ================= RESPONSIVE ================= */
 @media (max-width: 768px) {
-  .gatecs-title,
-  .gate-da-title {
-    font-size: 1.9rem;
-  }
-
-  .subject-header {
-    flex-direction: column;
-    align-items: flex-start;
-  }
-
-  .details-btn {
-    margin-top: 8px;
+  .gatecs-container {
+    padding: 20px;
+    margin: 20px;
   }
 }

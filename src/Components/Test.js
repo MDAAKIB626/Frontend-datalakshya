@@ -3,17 +3,45 @@ import img1 from "./homeimages20/quizimg4.png";
 
 const Test = () => {
 
-  const quizLink = "https://docs.google.com/forms/d/e/1FAIpQLSfsvPnX_-fkZHdm5Ats9pwc5yI0jKEAguMlobmEJ_HpvZuFAQ/viewform?usp=publish-editor";
+  const [quizData, setQuizData] = useState(null);
+
+  useEffect(() => {
+    fetch("http://localhost:5000/api/quiz")
+      .then(res => res.json())
+      .then(data => {
+        if (data.length > 0) {
+          setQuizData(data[0]); // latest quiz
+        }
+      })
+      .catch(err => console.log(err));
+  }, []);
+
+  const quizLink =
+    quizData?.link ||
+    "https://default-link.com";
+
+  const title =
+    quizData?.title ||
+    "Test Your Knowledge";
+
+  const description =
+    quizData?.description ||
+    `AI & Machine Learning Quiz
+
+This quiz helps learners strengthen their understanding
+of Artificial Intelligence and Machine Learning.
+
+Best of luck!`;
 
   const [timeLeft, setTimeLeft] = useState(3600);
 
-  useEffect(() => {
-    const timer = setInterval(() => {
-      setTimeLeft((prev) => (prev > 0 ? prev - 1 : 0));
-    }, 1000);
-    return () => clearInterval(timer);
-  }, []);
+useEffect(() => {
+  const timer = setInterval(() => {
+    setTimeLeft(prev => (prev > 0 ? prev - 1 : 0));
+  }, 1000);
 
+  return () => clearInterval(timer);
+}, []);
   const formatTime = () => {
     const hours = Math.floor(timeLeft / 3600);
     const minutes = Math.floor((timeLeft % 3600) / 60);
@@ -36,16 +64,9 @@ const Test = () => {
 
             <div className="col-md-6">
               <h5 className="text-warning fw-bold"> Online Skill Challenge</h5>
-              <h1 className="display-4 fw-bold">Test Your Knowledge</h1>
-              
-              <p>AI & Machine Learning Quiz
+              <h1 className="display-4 fw-bold">{title}</h1>
 
-       The AI & Machine Learning Quiz is designed based on important concepts, latest AI developments, and practical applications discussed in our daily AI updates and learning modules. This quiz helps learners strengthen their understanding of Artificial Intelligence, Machine Learning, Data Science, and emerging technologies.
-
-    Regular practice will help you improve conceptual clarity, problem-solving ability, and stay updated with current trends in the AI industry.
-
-      Best of luck! 
-</p>
+              <p>{description}</p>
 
               <div className="mb-3">
                 <strong>⏳ Quiz Ends In: {formatTime()}</strong>
@@ -74,7 +95,7 @@ const Test = () => {
         </div>
       </div>
 
-      {/* FEATURES SECTION */}
+      {/* FEATURES */}
       <div className="container py-5">
         <h2 className="text-center fw-bold mb-4">✨ Quiz Features</h2>
         <div className="row text-center">
@@ -102,13 +123,12 @@ const Test = () => {
         </div>
       </div>
 
-      {/* PRIZE SECTION */}
+      {/* PRIZE */}
       <div className="container-fluid bg-light py-5">
         <div className="container text-center">
           <h2 className="fw-bold mb-4">🏆 Prize Breakdown</h2>
 
           <div className="row">
-
             <div className="col-md-4">
               <h4>🥇 1st Prize</h4>
               <p>₹1000 + Certificate</p>
@@ -123,33 +143,29 @@ const Test = () => {
               <h4>🥉 3rd Prize</h4>
               <p>₹300 + Certificate</p>
             </div>
-
           </div>
+
         </div>
       </div>
-       {/* WHY PARTICIPATE */}
-<div className="container py-5">
-  <h2 className="text-center fw-bold mb-4">Why Participate?</h2>
 
-  <ul>
-    <li>Boost your confidence</li>
-    <li>Improve problem-solving skills</li>
-    <li>Prepare for exams & interviews</li>
-    <li>Win exciting rewards</li>
-  </ul>
-</div>
+      {/* WHY */}
+      <div className="container py-5">
+        <h2 className="text-center fw-bold mb-4">Why Participate?</h2>
+        <ul>
+          <li>Boost your confidence</li>
+          <li>Improve problem-solving skills</li>
+          <li>Prepare for exams & interviews</li>
+          <li>Win exciting rewards</li>
+        </ul>
+      </div>
 
-
-      {/* LEADERBOARD PREVIEW */}
+      {/* LEADERBOARD */}
       <div className="container-fluid bg-dark text-white py-5">
         <div className="container text-center">
           <h2 className="fw-bold mb-4">🏅 Leaderboard Preview</h2>
           <p>Results will be announced after quiz completion.</p>
         </div>
       </div>
-
-  
-      
 
     </div>
   );

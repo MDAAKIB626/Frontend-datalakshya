@@ -22,6 +22,9 @@ import DataAnalytics from "./pages/training/DataAnalytics";
 import DataScience from "./pages/training/DataScience";
 import DeepLearning from "./pages/training/DeepLearning";
 import PowerBi from "./pages/training/PowerBi";
+import AdminDashboard from "./Admindashboard";
+import AuthPage from "./AuthPage";
+
 
 
 
@@ -64,7 +67,8 @@ function App() {
           <Route path="/training/powerbi" element={<PowerBi />} />
              <Route path="/training/ml" element={<ML />} />
 
-        
+               <Route path="AdminDashboard" element={<AdminDashboard />} />
+                 <Route path="/auth" element={<AuthPage />} />
 
         </Routes>
       </main>

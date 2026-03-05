@@ -157,9 +157,19 @@ const Navbar = () => {
                 className={`nav-link ${isActive("/test") ? "active-link" : ""}`}
                 to="/test"
               >
-                Lakshya TestUp
+               TestUp
               </Link>
             </li>
+
+             <li className="nav-item">
+              <Link
+                className={`nav-link ${isActive("/test") ? "active-link" : ""}`}
+                to="/contact"
+              >
+               Contact
+              </Link>
+            </li>
+
 
       
           </ul>

@@ -193,9 +193,9 @@ p {
 /* ================= ARROWS ================= */
 
 .arrow {
-  background: #007bff;
-  color: #fff;
-  border: none;
+  background: transparent;   /* 🔥 transparent */
+  color: #007bff;            /* icon color */
+  border: 2px solid #007bff; /* optional border */
   font-size: 22px;
   width: 42px;
   height: 42px;
@@ -204,6 +204,7 @@ p {
   display: flex;
   align-items: center;
   justify-content: center;
+  transition: 0.3s;
 }
 
 .arrow:hover {

@@ -1,150 +1,191 @@
-import React, { useState } from "react";
-import { motion, AnimatePresence } from "framer-motion";
-import "./GATECSe.css";
+import React from "react";
+import "./GATEDAe.css";
 
-/* ================= ANIMATION ================= */
-const sectionAnim = {
-  hidden: { opacity: 0, y: 40 },
-  visible: { opacity: 1, y: 0 },
-};
-
-/* ================= SUBJECT DATA ================= */
-const subjects = [
-  {
-    title: "Mathematics & Statistics (25–30 Marks)",
-    topics: [
-      "Linear Algebra: Matrices, Eigenvalues, Eigenvectors",
-      "Probability: Random Variables, Bayes Theorem",
-      "Statistics: Mean, Variance, Distributions",
-      "Calculus: Differentiation, Optimization",
-      "Discrete Mathematics & Graph Theory",
-    ],
-  },
-  {
-    title: "Programming, DSA & CS Basics (20–25 Marks)",
-    topics: [
-      "Python / C / C++ Programming",
-      "Arrays, Linked Lists, Stacks, Queues",
-      "Trees & Graphs",
-      "Time & Space Complexity",
-      "DBMS & OS (Basic Concepts)",
-      "Computer Networks (Basics)",
-    ],
-  },
-  {
-    title: "Machine Learning (20–25 Marks)",
-    topics: [
-      "Supervised Learning: Linear & Logistic Regression",
-      "Decision Trees, SVM",
-      "Unsupervised Learning: K-Means, PCA",
-      "Model Evaluation & Overfitting",
-    ],
-  },
-  {
-    title: "Artificial Intelligence (15–20 Marks)",
-    topics: [
-      "Neural Networks & Perceptron",
-      "Deep Learning Basics",
-      "Backpropagation",
-      "Natural Language Processing (Basics)",
-      "Reinforcement Learning (Intro)",
-    ],
-  },
-  {
-    title: "Data Analytics & Visualization (10–15 Marks)",
-    topics: [
-      "Data Cleaning & Preprocessing",
-      "Exploratory Data Analysis (EDA)",
-      "Matplotlib & Seaborn",
-      "Big Data Concepts (Hadoop / Spark Overview)",
-    ],
-  },
-  {
-    title: "General Aptitude (15 Marks – Fixed)",
-    topics: [
-      "Verbal Ability",
-      "Numerical Ability",
-      "Logical Reasoning",
-      "Data Interpretation",
-    ],
-  },
-];
-
-/* ================= COMPONENT ================= */
 const GATEDAe = () => {
-  const [openIndex, setOpenIndex] = useState(null);
-
-  const toggleDetails = (index) => {
-    setOpenIndex(openIndex === index ? null : index);
-  };
-
   return (
-    <div className="gate-da-container">
+    <div className="gate-container">
 
-      <h1 className="gate-da-title">
-        GATE – Data Science & Artificial Intelligence (DA)
-      </h1>
+      <h1>GATE Data Science & Artificial Intelligence (DA)</h1>
 
-      <p className="gate-da-badge">
-        Conducted by IITs & IISc | Introduced for AI & Data Science Aspirants
+      <p>
+        The GATE Data Science & Artificial Intelligence (DA) paper is designed
+        for aspirants who aim to build expertise in advanced analytics,
+        machine learning, and intelligent systems. Introduced in GATE 2024 by
+        the Indian Institute of Science (IISc), this paper addresses the rapidly
+        growing demand for skilled professionals in Data Science and AI across
+        academia, research, and industry.
       </p>
 
-      <p className="gate-da-intro">
-        <strong>GATE (DA)</strong> evaluates concepts from
-        <strong> Mathematics, Data Science, Machine Learning</strong> and
-        <strong> Artificial Intelligence</strong>.
-        It is accepted for <strong>M.Tech / MS / PhD</strong> programs
-        in top institutes like <strong>IITs & IISc</strong>.
+      <p>
+        For GATE 2027, the DA paper will be conducted by Indian Institute of
+        Technology Madras as part of the national-level GATE examination.
       </p>
 
-      {/* SUBJECT SECTION */}
-      <motion.section
-        className="gate-da-section"
-        variants={sectionAnim}
-        initial="hidden"
-        whileInView="visible"
-        transition={{ duration: 0.6 }}
-        viewport={{ once: true }}
-      >
-        <h2>Subject-wise Marks & Detailed Topics</h2>
+      <h2>About Data Science & Artificial Intelligence</h2>
 
-        {subjects.map((sub, index) => (
-          <div key={index} className="subject-card">
+      <h3>Data Science</h3>
+      <p>
+        Data Science focuses on extracting meaningful insights from large
+        volumes of structured and unstructured data. It combines statistics,
+        mathematics, programming, and domain knowledge to support
+        data-driven decision-making and predictive modeling.
+      </p>
 
-            <div className="subject-header">
-              <span className="subject-title">{sub.title}</span>
+      <h3>Artificial Intelligence</h3>
+      <p>
+        Artificial Intelligence (AI) enables machines to simulate human
+        intelligence by learning from data, recognizing patterns, reasoning,
+        and making decisions autonomously. AI powers technologies such as
+        recommendation systems, natural language processing, robotics,
+        and computer vision.
+      </p>
 
-              <button
-                className="details-btn"
-                onClick={() => toggleDetails(index)}
-              >
-                {openIndex === index ? "Hide Details" : "View Details"}
-              </button>
-            </div>
+      <h2>GATE  Exam Highlights</h2>
+      <ul>
+        <li>Mode: Computer-Based Test (CBT)</li>
+        <li>Total Questions: 65</li>
+        <li>Total Marks: 100</li>
+        <li>Duration: 3 Hours</li>
+        <li>Conducting Body: IITs & IISc (on rotational basis)</li>
+      </ul>
 
-            <AnimatePresence>
-              {openIndex === index && (
-                <motion.div
-                  className="subject-topics"
-                  initial={{ height: 0, opacity: 0 }}
-                  animate={{ height: "auto", opacity: 1 }}
-                  exit={{ height: 0, opacity: 0 }}
-                  transition={{ duration: 0.4 }}
-                >
-                  <ul>
-                    {sub.topics.map((topic, i) => (
-                      <li key={i}>{topic}</li>
-                    ))}
-                  </ul>
-                </motion.div>
-              )}
-            </AnimatePresence>
+      <h2>Exam Pattern</h2>
+      <ul>
+        <li>General Aptitude — 15 Marks (15%)</li>
+        <li>Core Data Science & AI — 85 Marks (85%)</li>
+        <li>Total — 100 Marks</li>
+      </ul>
 
-          </div>
-        ))}
-      </motion.section>
+      <h3>Question Types</h3>
+      <ul>
+        <li>MCQs — Single correct option</li>
+        <li>MSQs — Multiple correct options</li>
+        <li>NAT — Numerical Answer Type</li>
+      </ul>
 
-     
+      <h2>Negative Marking</h2>
+      <ul>
+        <li>1/3 mark deduction for 1-mark MCQs</li>
+        <li>2/3 mark deduction for 2-mark MCQs</li>
+        <li>No negative marking for NAT questions</li>
+      </ul>
+
+      <h2>Previous Year Cutoff</h2>
+      <ul>
+        <li>2026 — To be announced</li>
+        <li>2025 — General: 29 | OBC: 26.1 | SC/ST: 19.3</li>
+        <li>2024 — General: 37.1 | OBC: 33.3 | SC/ST: 24.7</li>
+      </ul>
+
+      <h2>Detailed Syllabus</h2>
+
+      <h3>Probability and Statistics</h3>
+      <ul>
+        <li>Random variables and probability distributions</li>
+        <li>Bayes theorem</li>
+        <li>Estimation and hypothesis testing</li>
+        <li>Confidence intervals</li>
+      </ul>
+
+      <h3>Linear Algebra</h3>
+      <ul>
+        <li>Matrices and determinants</li>
+        <li>Eigenvalues and eigenvectors</li>
+        <li>Vector spaces</li>
+        <li>Matrix decomposition</li>
+      </ul>
+
+      <h3>Calculus and Optimization</h3>
+      <ul>
+        <li>Limits and continuity</li>
+        <li>Differentiation and integration</li>
+        <li>Taylor series</li>
+        <li>Optimization techniques</li>
+      </ul>
+
+      <h3>Programming, Data Structures, and Algorithms</h3>
+      <ul>
+        <li>Python programming</li>
+        <li>Arrays, stacks, queues, trees</li>
+        <li>Sorting and searching algorithms</li>
+        <li>Graph algorithms</li>
+      </ul>
+
+      <h3>Database Management Systems and Warehousing</h3>
+      <ul>
+        <li>ER modeling</li>
+        <li>SQL and relational algebra</li>
+        <li>Normalization</li>
+        <li>Indexing and data warehousing</li>
+      </ul>
+
+      <h3>Machine Learning</h3>
+      <ul>
+        <li>Supervised and unsupervised learning</li>
+        <li>Regression and classification</li>
+        <li>Support Vector Machines</li>
+        <li>Neural networks</li>
+        <li>Clustering and PCA</li>
+      </ul>
+
+      <h3>Artificial Intelligence</h3>
+      <ul>
+        <li>Intelligent agents</li>
+        <li>Search algorithms</li>
+        <li>Knowledge representation</li>
+        <li>Reasoning under uncertainty</li>
+      </ul>
+
+      <h2>Eligibility Criteria</h2>
+      <ul>
+        <li>Bachelor’s degree (B.E./B.Tech. or equivalent)</li>
+        <li>Computer Science, IT, Electronics, Mathematics background</li>
+        <li>Third-year and final-year students eligible</li>
+      </ul>
+
+      <h2>Career Opportunities After GATE DA</h2>
+
+      <h3>Higher Studies</h3>
+      <ul>
+        <li>Indian Institutes of Technology (IITs)</li>
+        <li>Indian Institute of Science (IISc)</li>
+        <li>National Institutes of Technology (NITs)</li>
+      </ul>
+
+      <h3>Public Sector Undertakings (PSUs)</h3>
+      <ul>
+        <li>BHEL</li>
+        <li>NTPC</li>
+        <li>ISRO</li>
+      </ul>
+
+      <h3>Industry & Research Careers</h3>
+      <ul>
+        <li>Amazon</li>
+        <li>Google</li>
+        <li>Microsoft</li>
+        <li>Data Scientist</li>
+        <li>AI Engineer</li>
+        <li>ML Engineer</li>
+        <li>Research Analyst</li>
+      </ul>
+
+      <h2>Why Choose GATE DA?</h2>
+      <ul>
+        <li>High-demand specialization in emerging technologies</li>
+        <li>Strong research and industry relevance</li>
+        <li>Opportunities in academia, PSUs, and multinational companies</li>
+        <li>Gateway to advanced studies in AI, ML, and Data Science</li>
+      </ul>
+
+      <h2>Start Your Preparation Today</h2>
+      <p>
+        Success in GATE DA requires a structured study plan, conceptual clarity,
+        and consistent practice with previous year questions. With focused
+        preparation and the right strategy, candidates can secure admission to
+        top institutes and unlock rewarding career opportunities in Data Science
+        & Artificial Intelligence.
+      </p>
 
     </div>
   );
